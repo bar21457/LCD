@@ -1,0 +1,569 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\byron\AppData\Local\Temp\xcAs10ls.o
+idloc IDLOC 5 2000 2000 4 2 1
+end_init CODE 0 0 0 3 2 1
+config CONFIG 4 2007 2007 2 2 1
+$dist/default/production\LCD.X.production.o
+cinit CODE 0 7FC 7FC 4 2 1
+idloc IDLOC 5 2000 2000 4 2 1
+text1 CODE 0 722 722 DA 2 1
+text2 CODE 0 54C 54C 3A 2 1
+text3 CODE 0 586 586 44 2 1
+text4 CODE 0 6C0 6C0 62 2 1
+text5 CODE 0 4B8 4B8 1C 2 1
+text6 CODE 0 48D 48D 11 2 1
+text7 CODE 0 4D4 4D4 21 2 1
+text8 CODE 0 517 517 35 2 1
+text9 CODE 0 5CA 5CA 46 2 1
+text10 CODE 0 663 663 5D 2 1
+text11 CODE 0 480 480 D 2 1
+text12 CODE 0 49E 49E 1A 2 1
+text13 CODE 0 4F5 4F5 22 2 1
+maintext CODE 0 610 610 53 2 1
+cstackCOMMON COMMON 1 70 70 E 1 1
+cstackBANK0 BANK0 1 20 20 12 1 1
+strings STRING 0 3 3 13 2 1
+config CONFIG 4 2007 2007 2 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 32-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 32-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 16-47F 2
+CONST 800-1FFF 2
+ENTRY 16-47F 2
+ENTRY 800-1FFF 2
+CODE 16-47F 2
+CODE 800-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+EEDATA 2100-21FF 2
+STRCODE 16-47F 2
+STRCODE 800-1FFF 2
+STRING 16-47F 2
+STRING 800-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\LCD.X.production.o
+7FC cinit CODE >992:C:\Users\byron\AppData\Local\Temp\xcAs10ls.s
+7FC cinit CODE >995:C:\Users\byron\AppData\Local\Temp\xcAs10ls.s
+7FC cinit CODE >1001:C:\Users\byron\AppData\Local\Temp\xcAs10ls.s
+7FC cinit CODE >1003:C:\Users\byron\AppData\Local\Temp\xcAs10ls.s
+7FD cinit CODE >1004:C:\Users\byron\AppData\Local\Temp\xcAs10ls.s
+4F5 text13 CODE >14:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+4F6 text13 CODE >15:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+4FA text13 CODE >16:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+4FE text13 CODE >17:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+4FE text13 CODE >18:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+501 text13 CODE >20:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+505 text13 CODE >21:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+507 text13 CODE >22:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+507 text13 CODE >23:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+508 text13 CODE >25:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+50C text13 CODE >26:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+50E text13 CODE >27:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+50E text13 CODE >28:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+50F text13 CODE >30:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+513 text13 CODE >31:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+515 text13 CODE >32:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+515 text13 CODE >33:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+516 text13 CODE >34:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+49E text12 CODE >36:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+49F text12 CODE >37:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+4A2 text12 CODE >38:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+4A8 text12 CODE >39:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+4AB text12 CODE >40:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+4B4 text12 CODE >41:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+4B7 text12 CODE >42:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+480 text11 CODE >44:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+480 text11 CODE >45:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+486 text11 CODE >46:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+48C text11 CODE >47:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+663 text10 CODE >66:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+663 text10 CODE >67:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+669 text10 CODE >68:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+672 text10 CODE >69:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+678 text10 CODE >70:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+681 text10 CODE >71:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+687 text10 CODE >72:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+68F text10 CODE >73:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+695 text10 CODE >75:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+69B text10 CODE >76:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+6A1 text10 CODE >77:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+6A7 text10 CODE >78:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+6AD text10 CODE >79:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+6B3 text10 CODE >80:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+6B9 text10 CODE >81:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+6BF text10 CODE >82:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+5CA text9 CODE >49:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+5CB text9 CODE >51:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+5D0 text9 CODE >52:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+5D3 text9 CODE >53:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+5D6 text9 CODE >53:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+5D9 text9 CODE >53:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+5DD text9 CODE >54:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+5E0 text9 CODE >55:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+5E6 text9 CODE >56:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+5EC text9 CODE >57:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+5F3 text9 CODE >58:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+5F6 text9 CODE >59:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+5F9 text9 CODE >59:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+5FC text9 CODE >59:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+600 text9 CODE >60:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+603 text9 CODE >61:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+609 text9 CODE >62:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+60F text9 CODE >64:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+517 text8 CODE >84:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+518 text8 CODE >86:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+51B text8 CODE >87:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+51E text8 CODE >88:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+521 text8 CODE >89:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+524 text8 CODE >89:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+527 text8 CODE >89:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+52F text8 CODE >90:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+532 text8 CODE >91:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+537 text8 CODE >92:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+53A text8 CODE >93:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+540 text8 CODE >94:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+543 text8 CODE >95:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+548 text8 CODE >96:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+54B text8 CODE >97:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+4D4 text7 CODE >99:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+4D5 text7 CODE >101:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+4D8 text7 CODE >102:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+4E5 text7 CODE >102:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+4F4 text7 CODE >103:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
+48D text6 CODE >88:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+48D text6 CODE >90:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+490 text6 CODE >91:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+491 text6 CODE >93:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+494 text6 CODE >94:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+495 text6 CODE >95:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+496 text6 CODE >96:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+497 text6 CODE >98:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+49A text6 CODE >99:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+49B text6 CODE >100:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+49C text6 CODE >101:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+49D text6 CODE >102:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+4B8 text5 CODE >13:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
+4B8 text5 CODE >17:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
+4BB text5 CODE >18:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
+4BE text5 CODE >22:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
+4C1 text5 CODE >23:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
+4C2 text5 CODE >25:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
+4C5 text5 CODE >26:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
+4C6 text5 CODE >28:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
+4C7 text5 CODE >30:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
+4CA text5 CODE >31:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
+4CB text5 CODE >32:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
+4CC text5 CODE >33:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
+4CD text5 CODE >35:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
+4CE text5 CODE >37:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
+4D3 text5 CODE >38:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
+6C0 text4 CODE >11:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6C0 text4 CODE >13:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6C7 text4 CODE >15:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6CD text4 CODE >16:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6CE text4 CODE >17:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6CE text4 CODE >19:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6D5 text4 CODE >21:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6DB text4 CODE >22:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6DC text4 CODE >23:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6DC text4 CODE >25:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6DE text4 CODE >25:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6E5 text4 CODE >27:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6EB text4 CODE >28:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6EC text4 CODE >29:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6EC text4 CODE >31:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6F2 text4 CODE >33:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6F8 text4 CODE >34:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6F9 text4 CODE >35:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+6F9 text4 CODE >37:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+700 text4 CODE >39:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+706 text4 CODE >40:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+707 text4 CODE >41:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+707 text4 CODE >43:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+70E text4 CODE >45:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+714 text4 CODE >46:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+715 text4 CODE >47:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+715 text4 CODE >49:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+71C text4 CODE >51:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+720 text4 CODE >52:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+721 text4 CODE >54:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configINTOSC.c
+586 text3 CODE >5:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+586 text3 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+588 text3 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+58E text3 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+590 text3 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+591 text3 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+592 text3 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+596 text3 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+598 text3 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+59C text3 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+5A0 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+5A1 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+5A5 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+5A7 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+5A9 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+5AD text3 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+5B1 text3 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+5B4 text3 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+5B7 text3 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+5B8 text3 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+5B9 text3 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+5BD text3 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+5BF text3 CODE >27:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+5C5 text3 CODE >29:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+5C9 text3 CODE >30:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+54C text2 CODE >5:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+54C text2 CODE >12:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+552 text2 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+554 text2 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+555 text2 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+556 text2 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+55A text2 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+55C text2 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+560 text2 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+564 text2 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+566 text2 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+56A text2 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+56E text2 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+571 text2 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+574 text2 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+575 text2 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+579 text2 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+57B text2 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+581 text2 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+585 text2 CODE >25:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+722 text1 CODE >505:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+725 text1 CODE >550:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+727 text1 CODE >553:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+728 text1 CODE >555:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+72E text1 CODE >558:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+737 text1 CODE >559:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+738 text1 CODE >565:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+739 text1 CODE >848:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+748 text1 CODE >848:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+74D text1 CODE >848:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+750 text1 CODE >848:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+753 text1 CODE >848:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+756 text1 CODE >1285:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+762 text1 CODE >1287:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+766 text1 CODE >1288:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+76A text1 CODE >1289:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+76D text1 CODE >1289:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+76F text1 CODE >1331:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+771 text1 CODE >1332:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+784 text1 CODE >1332:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+788 text1 CODE >1332:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+78D text1 CODE >1333:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+797 text1 CODE >1464:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+79D text1 CODE >1465:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+7A6 text1 CODE >1498:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+7A8 text1 CODE >1500:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+7A9 text1 CODE >1515:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+7D5 text1 CODE >1550:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+7DE text1 CODE >1500:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+7E7 text1 CODE >553:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+7F7 text1 CODE >1564:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+7FB text1 CODE >1567:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+610 maintext CODE >60:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+610 maintext CODE >65:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+615 maintext CODE >66:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+61E maintext CODE >67:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+623 maintext CODE >68:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+628 maintext CODE >72:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+62B maintext CODE >73:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+62F maintext CODE >74:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+630 maintext CODE >75:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+63B maintext CODE >77:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+64C maintext CODE >78:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+651 maintext CODE >79:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+659 maintext CODE >80:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 2 0 ABS 0 - dist/default/production\LCD.X.production.o
+___lwmod@counter 7D 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+__Hspace_0 800 0 ABS 0 - -
+__Hspace_1 7E 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 4010 0 ABS 0 - -
+_Lcd_Init CC6 0 CODE 0 text10 dist/default/production\LCD.X.production.o
+_Lcd_Port 9EA 0 CODE 0 text13 dist/default/production\LCD.X.production.o
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__end_of_Lcd_Init D80 0 CODE 0 text10 dist/default/production\LCD.X.production.o
+__end_of_Lcd_Port A2E 0 CODE 0 text13 dist/default/production\LCD.X.production.o
+__Hstrings 0 0 ABS 0 strings -
+_ADIF 66 0 ABS 0 - dist/default/production\LCD.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\byron\AppData\Local\Temp\xcAs10ls.o
+_main C20 0 CODE 0 maintext dist/default/production\LCD.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production\LCD.X.production.o
+_Lcd_Write_Char A2E 0 CODE 0 text8 dist/default/production\LCD.X.production.o
+start 0 0 CODE 0 init C:\Users\byron\AppData\Local\Temp\xcAs10ls.o
+Lcd_Port@a 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+Lcd_Write_Char@temp 72 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+__Hpowerup 0 0 CODE 0 powerup -
+intlevel0 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs10ls.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs10ls.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs10ls.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs10ls.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs10ls.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs10ls.o
+_setupINTOSC D80 0 CODE 0 text4 dist/default/production\LCD.X.production.o
+_OSCCONbits 8F 0 ABS 0 - dist/default/production\LCD.X.production.o
+wtemp0 7E 0 ABS 0 - dist/default/production\LCD.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+__end_of_Lcd_Write_Char A98 0 CODE 0 text8 dist/default/production\LCD.X.production.o
+_ADRESH 1E 0 ABS 0 - dist/default/production\LCD.X.production.o
+_ANSELH 189 0 ABS 0 - dist/default/production\LCD.X.production.o
+__Lmaintext 0 0 ABS 0 maintext -
+___lwmod@divisor 78 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+__end_of___lwdiv B94 0 CODE 0 text3 dist/default/production\LCD.X.production.o
+__end_of___lwmod B0C 0 CODE 0 text2 dist/default/production\LCD.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\byron\AppData\Local\Temp\xcAs10ls.o
+___stacklo 0 0 ABS 0 - C:\Users\byron\AppData\Local\Temp\xcAs10ls.o
+_dpowers 12 0 STRING 0 strings dist/default/production\LCD.X.production.o
+___lwdiv@quotient 75 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+Lcd_Set_Cursor@temp 79 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+___lwmod@dividend 7A 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+start_initialization FF8 0 CODE 0 cinit dist/default/production\LCD.X.production.o
+_TRISAbits 85 0 ABS 0 - dist/default/production\LCD.X.production.o
+_Lcd_Write_String 9A8 0 CODE 0 text7 dist/default/production\LCD.X.production.o
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+setupINTOSC@OsciladorInterno 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\byron\AppData\Local\Temp\xcAs10ls.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hcinit 1000 0 CODE 0 cinit -
+__Hidloc 4008 0 IDLOC 5 idloc -
+__Hstack 0 0 STACK 2 stack -
+__stringbase 10 0 STRING 0 strings dist/default/production\LCD.X.production.o
+___lwdiv@counter 77 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+__Hmaintext 0 0 ABS 0 maintext -
+__end_of_sprintf FF8 0 CODE 0 text1 dist/default/production\LCD.X.production.o
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4012 0 CONFIG 4 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lcinit FF8 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 5 idloc -
+__Lstack 0 0 STACK 2 stack -
+_PORTDbits 8 0 ABS 0 - dist/default/production\LCD.X.production.o
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 0 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 0 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__S0 800 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+sprintf@val 29 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+__end_of_Lcd_Write_String 9EA 0 CODE 0 text7 dist/default/production\LCD.X.production.o
+__end_of_setupINTOSC E44 0 CODE 0 text4 dist/default/production\LCD.X.production.o
+__end_of_Lcd_Clear 91A 0 CODE 0 text11 dist/default/production\LCD.X.production.o
+__Lintentry 0 0 CODE 0 intentry -
+__stringtab 6 0 STRING 0 strings dist/default/production\LCD.X.production.o
+Lcd_Write_String@a 78 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+Lcd_Write_String@i 76 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\byron\AppData\Local\Temp\xcAs10ls.o
+__end_of_Lcd_Cmd 970 0 CODE 0 text12 dist/default/production\LCD.X.production.o
+sprintf@flag 27 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+sprintf@prec 28 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+__ptext10 CC6 0 CODE 0 text10 dist/default/production\LCD.X.production.o
+__ptext11 900 0 CODE 0 text11 dist/default/production\LCD.X.production.o
+__ptext12 93C 0 CODE 0 text12 dist/default/production\LCD.X.production.o
+__ptext13 9EA 0 CODE 0 text13 dist/default/production\LCD.X.production.o
+_Lcd_Clear 900 0 CODE 0 text11 dist/default/production\LCD.X.production.o
+_Lcd_Set_Cursor B94 0 CODE 0 text9 dist/default/production\LCD.X.production.o
+___lwdiv B0C 0 CODE 0 text3 dist/default/production\LCD.X.production.o
+___lwmod A98 0 CODE 0 text2 dist/default/production\LCD.X.production.o
+__pmaintext C20 0 CODE 0 maintext dist/default/production\LCD.X.production.o
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+___lwdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+_ADCON0bits 1F 0 ABS 0 - dist/default/production\LCD.X.production.o
+_ADCON1bits 9F 0 ABS 0 - dist/default/production\LCD.X.production.o
+__end_of__stringtab 12 0 STRING 0 strings dist/default/production\LCD.X.production.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__Lend_init 0 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization FF8 0 CODE 0 cinit dist/default/production\LCD.X.production.o
+__end_of_Lcd_Set_Cursor C20 0 CODE 0 text9 dist/default/production\LCD.X.production.o
+__Hintentry 0 0 CODE 0 intentry -
+Lcd_Set_Cursor@a 76 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+Lcd_Set_Cursor@b 74 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+Lcd_Set_Cursor@y 78 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+Lcd_Set_Cursor@z 77 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+__Lstrings 0 0 ABS 0 strings -
+___lwdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+?___lwdiv 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+?___lwmod 78 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+__Hreset_vec 0 0 CODE 0 reset_vec -
+_setupADC 970 0 CODE 0 text5 dist/default/production\LCD.X.production.o
+__ptext1 E44 0 CODE 0 text1 dist/default/production\LCD.X.production.o
+__ptext2 A98 0 CODE 0 text2 dist/default/production\LCD.X.production.o
+__ptext3 B0C 0 CODE 0 text3 dist/default/production\LCD.X.production.o
+__ptext4 D80 0 CODE 0 text4 dist/default/production\LCD.X.production.o
+__ptext5 970 0 CODE 0 text5 dist/default/production\LCD.X.production.o
+__ptext6 91A 0 CODE 0 text6 dist/default/production\LCD.X.production.o
+__ptext7 9A8 0 CODE 0 text7 dist/default/production\LCD.X.production.o
+__ptext8 A2E 0 CODE 0 text8 dist/default/production\LCD.X.production.o
+__ptext9 B94 0 CODE 0 text9 dist/default/production\LCD.X.production.o
+_sprintf E44 0 CODE 0 text1 dist/default/production\LCD.X.production.o
+__end_of_setupADC 9A8 0 CODE 0 text5 dist/default/production\LCD.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+sprintf@ap 26 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+sprintf@sp 2B 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of__initialization FF8 0 CODE 0 cinit dist/default/production\LCD.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+Lcd_Cmd@a 73 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+main@string 2F 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext -
+_ANSELbits 188 0 ABS 0 - dist/default/production\LCD.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+__Hend_init 6 0 CODE 0 end_init -
+sprintf@c 2C 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+sprintf@f 20 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+__end_of_main CC6 0 CODE 0 maintext dist/default/production\LCD.X.production.o
+_ANSEL 188 0 ABS 0 - dist/default/production\LCD.X.production.o
+__end_of_dpowers 26 0 STRING 0 strings dist/default/production\LCD.X.production.o
+?_sprintf 20 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+_PORTB 6 0 ABS 0 - dist/default/production\LCD.X.production.o
+_PORTC 7 0 ABS 0 - dist/default/production\LCD.X.production.o
+_PORTD 8 0 ABS 0 - dist/default/production\LCD.X.production.o
+_PORTE 9 0 ABS 0 - dist/default/production\LCD.X.production.o
+_TRISB 86 0 ABS 0 - dist/default/production\LCD.X.production.o
+_TRISC 87 0 ABS 0 - dist/default/production\LCD.X.production.o
+_TRISD 88 0 ABS 0 - dist/default/production\LCD.X.production.o
+_TRISE 89 0 ABS 0 - dist/default/production\LCD.X.production.o
+__end_of_setup 93C 0 CODE 0 text6 dist/default/production\LCD.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_setup 91A 0 CODE 0 text6 dist/default/production\LCD.X.production.o
+_Lcd_Cmd 93C 0 CODE 0 text12 dist/default/production\LCD.X.production.o
+__initialization FF8 0 CODE 0 cinit dist/default/production\LCD.X.production.o
+__pstrings 6 0 STRING 0 strings dist/default/production\LCD.X.production.o
+Lcd_Write_Char@a 74 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+Lcd_Write_Char@y 73 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7FC FF8 4 2
+text1 0 722 E44 DA 2
+text2 0 54C A98 3A 2
+text3 0 586 B0C 44 2
+text4 0 6C0 D80 62 2
+text5 0 4B8 970 1C 2
+text6 0 48D 91A 11 2
+text7 0 4D4 9A8 21 2
+text8 0 517 A2E 35 2
+text9 0 5CA B94 46 2
+text10 0 663 CC6 5D 2
+text11 0 480 900 D 2
+text12 0 49E 93C 1A 2
+text13 0 4F5 9EA 22 2
+maintext 0 610 C20 53 2
+cstackCOMMON 1 70 70 E 1
+cstackBANK0 1 20 20 12 1
+reset_vec 0 0 0 3 2
+strings 0 3 6 13 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
