@@ -60,24 +60,34 @@ void setup(void);
 void main(void) {
     
   int OsciladorInterno;
-  char string[3];
+  char ADC1[3];
+  char ADC2[3];
   
   setup();
   setupINTOSC(8);
-  setupADC();
+  setupADC(0);
+  setupADC(1);
   Lcd_Init();
   
   while(1)
   {
-      ADCON0bits.GO = 1;      //Iniciamos la conversión en el ADC
-      while (ADCON0bits.GO == 1){};
-      ADIF = 0;               //Bajamos la bandera del ADC
-      __delay_ms(10);
-      
-      sprintf(string, "%d", ADRESH);
       Lcd_Clear();
-      Lcd_Set_Cursor(1,1);
-      Lcd_Write_String(string);
+      Lcd_Set_Cursor(1,3);
+      Lcd_Write_String("S1:");
+      Lcd_Set_Cursor(1,7);
+      Lcd_Write_String("S2:");
+      
+      readADC(0);
+      
+      sprintf(ADC1, "%d", ADRESH);
+      Lcd_Set_Cursor(2,3);
+      Lcd_Write_String(ADC1);
+      
+      readADC(1);
+      
+      sprintf(ADC2, "%d", ADRESH);
+      Lcd_Set_Cursor(2,7);
+      Lcd_Write_String(ADC2);
   }
     return;
 }

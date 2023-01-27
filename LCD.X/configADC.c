@@ -10,12 +10,21 @@
 
 #define _XTAL_FREQ 8000000
 
-void setupADC (void){
+void setupADC (uint8_t canal){
     
     //Paso 1: Selección del puerto de entrada
     
+    if(canal == 0)
+    {
     TRISAbits.TRISA0 = 1;       //Configuración del RBA0 como input
     ANSELbits.ANS0 = 1;         //Configuración del pin RBA0 como análogo (AN0)
+    }
+    
+    if(canal == 1)
+    {
+    TRISAbits.TRISA1 = 1;       //Configuración del RBA1 como input
+    ANSELbits.ANS1 = 1;         //Configuración del pin RBA1 como análogo (AN1)
+    }
     
     //Paso 2: Configuración del módulo ADC
     
@@ -35,4 +44,32 @@ void setupADC (void){
     ADCON0bits.ADON = 1;        //Habilitamos el ADC
     
     __delay_us(100);            //Delay para adquirir la lectura
+}
+
+void readADC (uint8_t canal){
+    
+    if(canal == 0)
+    {
+    ADCON0bits.CHS = 0b0000;    // Usamos el AN0
+
+    __delay_us(100);
+      
+    ADCON0bits.GO = 1;      //Iniciamos la conversión en el ADC
+    while (ADCON0bits.GO == 1){};
+    ADIF = 0;               //Bajamos la bandera del ADC
+    __delay_ms(10);
+    }
+    
+    if(canal == 1)
+    {
+    ADCON0bits.CHS = 0b0001;    // Usamos el AN1
+
+    __delay_us(100);
+      
+    ADCON0bits.GO = 1;      //Iniciamos la conversión en el ADC
+    while (ADCON0bits.GO == 1){};
+    ADIF = 0;               //Bajamos la bandera del ADC
+    __delay_ms(10);
+    }
+    
 }

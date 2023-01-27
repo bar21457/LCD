@@ -8,6 +8,7 @@
 #ifndef CONFIGADC_H
 #define	CONFIGADC_H
 
-void setupADC (void);
+void setupADC (uint8_t);
+void readADC (uint8_t);
 
 #endif	/* CONFIGADC_H */

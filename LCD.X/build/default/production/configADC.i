@@ -2635,18 +2635,28 @@ extern __bank0 __bit __timeout;
 
 # 1 "./configADC.h" 1
 # 11 "./configADC.h"
-void setupADC (void);
+void setupADC (uint8_t);
+void readADC (uint8_t);
 # 9 "configADC.c" 2
 
 
 
 
-void setupADC (void){
+void setupADC (uint8_t canal){
 
 
 
+    if(canal == 0)
+    {
     TRISAbits.TRISA0 = 1;
     ANSELbits.ANS0 = 1;
+    }
+
+    if(canal == 1)
+    {
+    TRISAbits.TRISA1 = 1;
+    ANSELbits.ANS1 = 1;
+    }
 
 
 
@@ -2666,4 +2676,32 @@ void setupADC (void){
     ADCON0bits.ADON = 1;
 
     _delay((unsigned long)((100)*(8000000/4000000.0)));
+}
+
+void readADC (uint8_t canal){
+
+    if(canal == 0)
+    {
+    ADCON0bits.CHS = 0b0000;
+
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
+
+    ADCON0bits.GO = 1;
+    while (ADCON0bits.GO == 1){};
+    ADIF = 0;
+    _delay((unsigned long)((10)*(8000000/4000.0)));
+    }
+
+    if(canal == 1)
+    {
+    ADCON0bits.CHS = 0b0001;
+
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
+
+    ADCON0bits.GO = 1;
+    while (ADCON0bits.GO == 1){};
+    ADIF = 0;
+    _delay((unsigned long)((10)*(8000000/4000.0)));
+    }
+
 }
