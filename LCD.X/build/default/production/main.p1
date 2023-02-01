@@ -24,12 +24,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12 ./configADC.h
 [; ;./configADC.h: 12: void readADC (uint8_t);
 [v _readADC `(v ~T0 @X0 0 ef1`uc ]
-"194 C:\Program Files\Microchip\xc8\v2.40\pic\include\c90\stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 "1239 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1239: extern volatile unsigned char ADRESH __attribute__((address(0x01E)));
 [v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
-"3388
+"194 C:\Program Files\Microchip\xc8\v2.40\pic\include\c90\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"3388 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 3388: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
 [v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
 "3450
@@ -327,127 +327,146 @@ Version 4.0 HI-TECH Software Intermediate Code
 "62
 [; ;main.c: 62:   int OsciladorInterno;
 [v _OsciladorInterno `i ~T0 @X0 1 a ]
-"63
-[; ;main.c: 63:   char ADC1[3];
-[v _ADC1 `uc ~T0 @X0 -> 3 `i a ]
 "64
-[; ;main.c: 64:   char ADC2[3];
-[v _ADC2 `uc ~T0 @X0 -> 3 `i a ]
-"66
-[; ;main.c: 66:   setup();
-[e ( _setup ..  ]
+[; ;main.c: 64:   float V1;
+[v _V1 `f ~T0 @X0 1 a ]
+"65
+[; ;main.c: 65:   float V2;
+[v _V2 `f ~T0 @X0 1 a ]
 "67
-[; ;main.c: 67:   setupINTOSC(8);
-[e ( _setupINTOSC (1 -> 8 `i ]
+[; ;main.c: 67:   char ADC1[3];
+[v _ADC1 `uc ~T0 @X0 -> 3 `i a ]
 "68
-[; ;main.c: 68:   setupADC(0);
-[e ( _setupADC (1 -> -> 0 `i `uc ]
-"69
-[; ;main.c: 69:   setupADC(1);
-[e ( _setupADC (1 -> -> 1 `i `uc ]
+[; ;main.c: 68:   char ADC2[3];
+[v _ADC2 `uc ~T0 @X0 -> 3 `i a ]
 "70
-[; ;main.c: 70:   Lcd_Init();
-[e ( _Lcd_Init ..  ]
+[; ;main.c: 70:   setup();
+[e ( _setup ..  ]
+"71
+[; ;main.c: 71:   setupINTOSC(8);
+[e ( _setupINTOSC (1 -> 8 `i ]
 "72
-[; ;main.c: 72:   while(1)
-[e :U 141 ]
+[; ;main.c: 72:   setupADC(0);
+[e ( _setupADC (1 -> -> 0 `i `uc ]
 "73
-[; ;main.c: 73:   {
-{
+[; ;main.c: 73:   setupADC(1);
+[e ( _setupADC (1 -> -> 1 `i `uc ]
 "74
-[; ;main.c: 74:       Lcd_Clear();
-[e ( _Lcd_Clear ..  ]
-"75
-[; ;main.c: 75:       Lcd_Set_Cursor(1,3);
-[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 3 `i `uc ]
+[; ;main.c: 74:   Lcd_Init();
+[e ( _Lcd_Init ..  ]
 "76
-[; ;main.c: 76:       Lcd_Write_String("S1:");
-[e ( _Lcd_Write_String (1 :s 1C ]
+[; ;main.c: 76:   Lcd_Clear();
+[e ( _Lcd_Clear ..  ]
 "77
-[; ;main.c: 77:       Lcd_Set_Cursor(1,7);
-[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 7 `i `uc ]
+[; ;main.c: 77:   Lcd_Set_Cursor(1,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "78
-[; ;main.c: 78:       Lcd_Write_String("S2:");
-[e ( _Lcd_Write_String (1 :s 2C ]
+[; ;main.c: 78:   Lcd_Write_String("S1:");
+[e ( _Lcd_Write_String (1 :s 1C ]
+"79
+[; ;main.c: 79:   Lcd_Set_Cursor(1,7);
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 7 `i `uc ]
 "80
-[; ;main.c: 80:       readADC(0);
-[e ( _readADC (1 -> -> 0 `i `uc ]
+[; ;main.c: 80:   Lcd_Write_String("S2:");
+[e ( _Lcd_Write_String (1 :s 2C ]
+"81
+[; ;main.c: 81:   Lcd_Set_Cursor(1,13);
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 13 `i `uc ]
 "82
-[; ;main.c: 82:       sprintf(ADC1, "%d", ADRESH);
-[e ( _sprintf (1 , (. , &U _ADC1 :s 3C -> _ADRESH `i ]
-"83
-[; ;main.c: 83:       Lcd_Set_Cursor(2,3);
-[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 3 `i `uc ]
+[; ;main.c: 82:   Lcd_Write_String("CONT.");
+[e ( _Lcd_Write_String (1 :s 3C ]
 "84
-[; ;main.c: 84:       Lcd_Write_String(ADC1);
-[e ( _Lcd_Write_String (1 &U _ADC1 ]
+[; ;main.c: 84:   while(1)
+[e :U 141 ]
+"85
+[; ;main.c: 85:   {
+{
 "86
-[; ;main.c: 86:       readADC(1);
-[e ( _readADC (1 -> -> 1 `i `uc ]
+[; ;main.c: 86:       readADC(0);
+[e ( _readADC (1 -> -> 0 `i `uc ]
 "88
-[; ;main.c: 88:       sprintf(ADC2, "%d", ADRESH);
-[e ( _sprintf (1 , (. , &U _ADC2 :s 4C -> _ADRESH `i ]
-"89
-[; ;main.c: 89:       Lcd_Set_Cursor(2,7);
-[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 7 `i `uc ]
+[; ;main.c: 88:       V1 = (ADRESH*5.0)/255;
+[e = _V1 -> / * -> -> _ADRESH `i `d .5.0 -> -> 255 `i `d `f ]
 "90
-[; ;main.c: 90:       Lcd_Write_String(ADC2);
-[e ( _Lcd_Write_String (1 &U _ADC2 ]
+[; ;main.c: 90:       sprintf(ADC1, "%.2f", V1);
+[e ( _sprintf (1 , (. , &U _ADC1 :s 4C -> _V1 `d ]
 "91
-[; ;main.c: 91:   }
+[; ;main.c: 91:       Lcd_Set_Cursor(2,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"92
+[; ;main.c: 92:       Lcd_Write_String(ADC1);
+[e ( _Lcd_Write_String (1 &U _ADC1 ]
+"94
+[; ;main.c: 94:       readADC(1);
+[e ( _readADC (1 -> -> 1 `i `uc ]
+"96
+[; ;main.c: 96:       V2 = (ADRESH*5.0)/255;
+[e = _V2 -> / * -> -> _ADRESH `i `d .5.0 -> -> 255 `i `d `f ]
+"98
+[; ;main.c: 98:       sprintf(ADC2, "%.2f", V2);
+[e ( _sprintf (1 , (. , &U _ADC2 :s 5C -> _V2 `d ]
+"99
+[; ;main.c: 99:       Lcd_Set_Cursor(2,7);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 7 `i `uc ]
+"100
+[; ;main.c: 100:       Lcd_Write_String(ADC2);
+[e ( _Lcd_Write_String (1 &U _ADC2 ]
+"101
+[; ;main.c: 101:   }
 }
 [e :U 140 ]
 [e $U 141  ]
 [e :U 142 ]
-"92
-[; ;main.c: 92:     return;
+"102
+[; ;main.c: 102:     return;
 [e $UE 139  ]
-"93
-[; ;main.c: 93: }
+"103
+[; ;main.c: 103: }
 [e :UE 139 ]
 }
-"98
-[; ;main.c: 98: void setup (void){
+"108
+[; ;main.c: 108: void setup (void){
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"100
-[; ;main.c: 100:     ANSEL = 0;
-[e = _ANSEL -> -> 0 `i `uc ]
-"101
-[; ;main.c: 101:     ANSELH = 0;
-[e = _ANSELH -> -> 0 `i `uc ]
-"103
-[; ;main.c: 103:     TRISB = 0;
-[e = _TRISB -> -> 0 `i `uc ]
-"104
-[; ;main.c: 104:     TRISC = 0;
-[e = _TRISC -> -> 0 `i `uc ]
-"105
-[; ;main.c: 105:     TRISD = 0;
-[e = _TRISD -> -> 0 `i `uc ]
-"106
-[; ;main.c: 106:     TRISE = 0;
-[e = _TRISE -> -> 0 `i `uc ]
-"108
-[; ;main.c: 108:     PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
-"109
-[; ;main.c: 109:     PORTC = 0;
-[e = _PORTC -> -> 0 `i `uc ]
 "110
-[; ;main.c: 110:     PORTD = 0;
-[e = _PORTD -> -> 0 `i `uc ]
+[; ;main.c: 110:     ANSEL = 0;
+[e = _ANSEL -> -> 0 `i `uc ]
 "111
-[; ;main.c: 111:     PORTE = 0;
+[; ;main.c: 111:     ANSELH = 0;
+[e = _ANSELH -> -> 0 `i `uc ]
+"113
+[; ;main.c: 113:     TRISB = 0;
+[e = _TRISB -> -> 0 `i `uc ]
+"114
+[; ;main.c: 114:     TRISC = 0;
+[e = _TRISC -> -> 0 `i `uc ]
+"115
+[; ;main.c: 115:     TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
+"116
+[; ;main.c: 116:     TRISE = 0;
+[e = _TRISE -> -> 0 `i `uc ]
+"118
+[; ;main.c: 118:     PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
+"119
+[; ;main.c: 119:     PORTC = 0;
+[e = _PORTC -> -> 0 `i `uc ]
+"120
+[; ;main.c: 120:     PORTD = 0;
+[e = _PORTD -> -> 0 `i `uc ]
+"121
+[; ;main.c: 121:     PORTE = 0;
 [e = _PORTE -> -> 0 `i `uc ]
-"112
-[; ;main.c: 112: }
+"122
+[; ;main.c: 122: }
 [e :UE 143 ]
 }
-[p f _sprintf 8388736 ]
-[a 3C 37 100 0 ]
-[a 4C 37 100 0 ]
+[p f _sprintf 8462336 ]
+[a 4C 37 46 50 102 0 ]
+[a 5C 37 46 50 102 0 ]
 [a 2C 83 50 58 0 ]
 [a 1C 83 49 58 0 ]
+[a 3C 67 79 78 84 46 0 ]

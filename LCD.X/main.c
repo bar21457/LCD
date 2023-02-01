@@ -60,6 +60,10 @@ void setup(void);
 void main(void) {
     
   int OsciladorInterno;
+  
+  float V1;
+  float V2;
+  
   char ADC1[3];
   char ADC2[3];
   
@@ -69,23 +73,29 @@ void main(void) {
   setupADC(1);
   Lcd_Init();
   
+  Lcd_Clear();
+  Lcd_Set_Cursor(1,1);
+  Lcd_Write_String("S1:");
+  Lcd_Set_Cursor(1,7);
+  Lcd_Write_String("S2:");
+  Lcd_Set_Cursor(1,13);
+  Lcd_Write_String("CONT.");
+  
   while(1)
   {
-      Lcd_Clear();
-      Lcd_Set_Cursor(1,3);
-      Lcd_Write_String("S1:");
-      Lcd_Set_Cursor(1,7);
-      Lcd_Write_String("S2:");
-      
       readADC(0);
       
-      sprintf(ADC1, "%d", ADRESH);
-      Lcd_Set_Cursor(2,3);
+      V1 = (ADRESH*5.0)/255;
+      
+      sprintf(ADC1, "%.2f", V1);
+      Lcd_Set_Cursor(2,1);
       Lcd_Write_String(ADC1);
       
       readADC(1);
       
-      sprintf(ADC2, "%d", ADRESH);
+      V2 = (ADRESH*5.0)/255;
+      
+      sprintf(ADC2, "%.2f", V2);
       Lcd_Set_Cursor(2,7);
       Lcd_Write_String(ADC2);
   }
