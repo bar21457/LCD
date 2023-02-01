@@ -1,5 +1,5 @@
 /* 
- * File:   configLCD.h
+ * File:   configLCD_4bits.h
  * Author: byron
  *
  * Created on January 26, 2023, 10:59 PM
@@ -43,24 +43,22 @@
 
 //LCD Functions Developed by electroSome
 
-void Lcd_Port(char a);
+void Lcd_Port_4bits(char a);
 
-void Lcd_Cmd(char a);
+void Lcd_Cmd_4bits(char a);
 
-void Lcd_Clear(void);
+void Lcd_Clear_4bits(void);
 
-void Lcd_Set_Cursor(char a, char b);
+void Lcd_Set_Cursor_4bits(char a, char b);
 
-void Lcd_Init(void);
+void Lcd_Init_4bits(void);
 
-void Lcd_Write_Char(char a);
+void Lcd_Write_Char_4bits(char a);
 
-void Lcd_Write_String(char *a);
+void Lcd_Write_String_4bits(char *a);
 
-void Lcd_Shift_Right(void);
+void Lcd_Shift_Right_4bits(void);
 
-void Lcd_Shift_Left(void);
+void Lcd_Shift_Left_4bits(void);
 
 #endif	/* CONFIGLCD_H */
-
-

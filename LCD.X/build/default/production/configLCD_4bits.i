@@ -2638,27 +2638,27 @@ extern __bank0 __bit __timeout;
 
 # 1 "./configLCD_4bits.h" 1
 # 46 "./configLCD_4bits.h"
-void Lcd_Port(char a);
+void Lcd_Port_4bits(char a);
 
-void Lcd_Cmd(char a);
+void Lcd_Cmd_4bits(char a);
 
-void Lcd_Clear(void);
+void Lcd_Clear_4bits(void);
 
-void Lcd_Set_Cursor(char a, char b);
+void Lcd_Set_Cursor_4bits(char a, char b);
 
-void Lcd_Init(void);
+void Lcd_Init_4bits(void);
 
-void Lcd_Write_Char(char a);
+void Lcd_Write_Char_4bits(char a);
 
-void Lcd_Write_String(char *a);
+void Lcd_Write_String_4bits(char *a);
 
-void Lcd_Shift_Right(void);
+void Lcd_Shift_Right_4bits(void);
 
-void Lcd_Shift_Left(void);
+void Lcd_Shift_Left_4bits(void);
 # 12 "configLCD_4bits.c" 2
 
 
-void Lcd_Port(char a) {
+void Lcd_Port_4bits(char a) {
     if (a & 1)
         PORTDbits.RD4 = 1;
     else
@@ -2680,81 +2680,81 @@ void Lcd_Port(char a) {
         PORTDbits.RD7 = 0;
 }
 
-void Lcd_Cmd(char a) {
+void Lcd_Cmd_4bits(char a) {
     PORTDbits.RD2 = 0;
-    Lcd_Port(a);
+    Lcd_Port_4bits(a);
     PORTDbits.RD3 = 1;
     _delay((unsigned long)((4)*(8000000/4000.0)));
     PORTDbits.RD3 = 0;
 }
 
-void Lcd_Clear(void) {
-    Lcd_Cmd(0);
-    Lcd_Cmd(1);
+void Lcd_Clear_4bits(void) {
+    Lcd_Cmd_4bits(0);
+    Lcd_Cmd_4bits(1);
 }
 
-void Lcd_Set_Cursor(char a, char b) {
+void Lcd_Set_Cursor_4bits(char a, char b) {
     char temp, z, y;
     if (a == 1) {
         temp = 0x80 + b - 1;
         z = temp >> 4;
         y = temp & 0x0F;
-        Lcd_Cmd(z);
-        Lcd_Cmd(y);
+        Lcd_Cmd_4bits(z);
+        Lcd_Cmd_4bits(y);
     } else if (a == 2) {
         temp = 0xC0 + b - 1;
         z = temp >> 4;
         y = temp & 0x0F;
-        Lcd_Cmd(z);
-        Lcd_Cmd(y);
+        Lcd_Cmd_4bits(z);
+        Lcd_Cmd_4bits(y);
     }
 }
 
-void Lcd_Init(void) {
-    Lcd_Port(0x00);
+void Lcd_Init_4bits(void) {
+    Lcd_Port_4bits(0x00);
     _delay((unsigned long)((20)*(8000000/4000.0)));
-    Lcd_Cmd(0x03);
+    Lcd_Cmd_4bits(0x03);
     _delay((unsigned long)((5)*(8000000/4000.0)));
-    Lcd_Cmd(0x03);
+    Lcd_Cmd_4bits(0x03);
     _delay((unsigned long)((11)*(8000000/4000.0)));
-    Lcd_Cmd(0x03);
+    Lcd_Cmd_4bits(0x03);
 
-    Lcd_Cmd(0x02);
-    Lcd_Cmd(0x02);
-    Lcd_Cmd(0x08);
-    Lcd_Cmd(0x00);
-    Lcd_Cmd(0x0C);
-    Lcd_Cmd(0x00);
-    Lcd_Cmd(0x06);
+    Lcd_Cmd_4bits(0x02);
+    Lcd_Cmd_4bits(0x02);
+    Lcd_Cmd_4bits(0x08);
+    Lcd_Cmd_4bits(0x00);
+    Lcd_Cmd_4bits(0x0C);
+    Lcd_Cmd_4bits(0x00);
+    Lcd_Cmd_4bits(0x06);
 }
 
-void Lcd_Write_Char(char a) {
+void Lcd_Write_Char_4bits(char a) {
     char temp, y;
     temp = a & 0x0F;
     y = a & 0xF0;
     PORTDbits.RD2 = 1;
-    Lcd_Port(y >> 4);
+    Lcd_Port_4bits(y >> 4);
     PORTDbits.RD3 = 1;
     _delay((unsigned long)((40)*(8000000/4000000.0)));
     PORTDbits.RD3 = 0;
-    Lcd_Port(temp);
+    Lcd_Port_4bits(temp);
     PORTDbits.RD3 = 1;
     _delay((unsigned long)((40)*(8000000/4000000.0)));
     PORTDbits.RD3 = 0;
 }
 
-void Lcd_Write_String(char *a) {
+void Lcd_Write_String_4bits(char *a) {
     int i;
     for (i = 0; a[i] != '\0'; i++)
-        Lcd_Write_Char(a[i]);
+        Lcd_Write_Char_4bits(a[i]);
 }
 
-void Lcd_Shift_Right(void) {
-    Lcd_Cmd(0x01);
-    Lcd_Cmd(0x0C);
+void Lcd_Shift_Right_4bits(void) {
+    Lcd_Cmd_4bits(0x01);
+    Lcd_Cmd_4bits(0x0C);
 }
 
-void Lcd_Shift_Left(void) {
-    Lcd_Cmd(0x01);
-    Lcd_Cmd(0x08);
+void Lcd_Shift_Left_4bits(void) {
+    Lcd_Cmd_4bits(0x01);
+    Lcd_Cmd_4bits(0x08);
 }

@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.40 build 20220703182018 
-                                                                                               Wed Feb 01 17:20:06 2023
+                                                                                               Wed Feb 01 17:32:36 2023
 
 Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1 
      1                           	processor	16F887
@@ -813,10 +813,10 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    799     0070                     ??_setupADC:	
    800                           ; 1 bytes @ 0x0
    801                           
-   802     0070                     ?_Lcd_Init:	
+   802     0070                     ?_Lcd_Init_4bits:	
    803                           ; 1 bytes @ 0x0
    804                           
-   805     0070                     ?_Lcd_Clear:	
+   805     0070                     ?_Lcd_Clear_4bits:	
    806                           ; 1 bytes @ 0x0
    807                           
    808     0070                     ?_readADC:	
@@ -831,16 +831,16 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    817     0070                     ?_main:	
    818                           ; 1 bytes @ 0x0
    819                           
-   820     0070                     ?_Lcd_Port:	
+   820     0070                     ?_Lcd_Port_4bits:	
    821                           ; 1 bytes @ 0x0
    822                           
-   823     0070                     ??_Lcd_Port:	
+   823     0070                     ??_Lcd_Port_4bits:	
    824                           ; 1 bytes @ 0x0
    825                           
-   826     0070                     ?_Lcd_Cmd:	
+   826     0070                     ?_Lcd_Cmd_4bits:	
    827                           ; 1 bytes @ 0x0
    828                           
-   829     0070                     ?_Lcd_Write_Char:	
+   829     0070                     ?_Lcd_Write_Char_4bits:	
    830                           ; 1 bytes @ 0x0
    831                           
    832     0070                     ?__Umul8_16:	
@@ -873,7 +873,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    859     0070                     ?___xxtofl:	
    860                           ; 4 bytes @ 0x0
    861                           
-   862     0070                     Lcd_Port@a:	
+   862     0070                     Lcd_Port_4bits@a:	
    863                           ; 4 bytes @ 0x0
    864                           
    865     0070                     __Umul8_16@multiplicand:	
@@ -921,8 +921,8 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    907                           
    908                           ; 4 bytes @ 0x0
    909     0070                     	ds	1
-   910     0071                     ??_Lcd_Cmd:
-   911     0071                     ??_Lcd_Write_Char:	
+   910     0071                     ??_Lcd_Cmd_4bits:
+   911     0071                     ??_Lcd_Write_Char_4bits:	
    912                           ; 1 bytes @ 0x1
    913                           
    914     0071                     setupADC@canal:	
@@ -938,7 +938,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    924     0072                     ??__Umul8_16:	
    925                           ; 1 bytes @ 0x2
    926                           
-   927     0072                     Lcd_Write_Char@temp:	
+   927     0072                     Lcd_Write_Char_4bits@temp:	
    928                           ; 1 bytes @ 0x2
    929                           
    930     0072                     readADC@canal:	
@@ -956,18 +956,18 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    942                           
    943                           ; 2 bytes @ 0x2
    944     0072                     	ds	1
-   945     0073                     Lcd_Cmd@a:
-   946     0073                     Lcd_Write_Char@y:	
+   945     0073                     Lcd_Cmd_4bits@a:
+   946     0073                     Lcd_Write_Char_4bits@y:	
    947                           ; 1 bytes @ 0x3
    948                           
    949                           
    950                           ; 1 bytes @ 0x3
    951     0073                     	ds	1
-   952     0074                     ??_Lcd_Init:
-   953     0074                     ??_Lcd_Clear:	
+   952     0074                     ??_Lcd_Init_4bits:
+   953     0074                     ??_Lcd_Clear_4bits:	
    954                           ; 1 bytes @ 0x4
    955                           
-   956     0074                     ?_Lcd_Set_Cursor:	
+   956     0074                     ?_Lcd_Set_Cursor_4bits:	
    957                           ; 1 bytes @ 0x4
    958                           
    959     0074                     ??___wmul:	
@@ -985,10 +985,10 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    971     0074                     ??___xxtofl:	
    972                           ; 1 bytes @ 0x4
    973                           
-   974     0074                     Lcd_Set_Cursor@b:	
+   974     0074                     Lcd_Set_Cursor_4bits@b:	
    975                           ; 1 bytes @ 0x4
    976                           
-   977     0074                     Lcd_Write_Char@a:	
+   977     0074                     Lcd_Write_Char_4bits@a:	
    978                           ; 1 bytes @ 0x4
    979                           
    980     0074                     ___wmul@product:	
@@ -1018,8 +1018,8 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1004                           
   1005                           ; 4 bytes @ 0x4
   1006     0074                     	ds	1
-  1007     0075                     ??_Lcd_Set_Cursor:
-  1008     0075                     ?_Lcd_Write_String:	
+  1007     0075                     ??_Lcd_Set_Cursor_4bits:
+  1008     0075                     ?_Lcd_Write_String_4bits:	
   1009                           ; 1 bytes @ 0x5
   1010                           
   1011     0075                     ___awmod@counter:	
@@ -1028,14 +1028,14 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1014     0075                     ___lwmod@counter:	
   1015                           ; 1 bytes @ 0x5
   1016                           
-  1017     0075                     Lcd_Write_String@a:	
+  1017     0075                     Lcd_Write_String_4bits@a:	
   1018                           ; 1 bytes @ 0x5
   1019                           
   1020                           
   1021                           ; 2 bytes @ 0x5
   1022     0075                     	ds	1
   1023     0076                     ?___lwdiv:
-  1024     0076                     Lcd_Set_Cursor@a:	
+  1024     0076                     Lcd_Set_Cursor_4bits@a:	
   1025                           ; 2 bytes @ 0x6
   1026                           
   1027     0076                     ___awmod@sign:	
@@ -1050,11 +1050,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1036                           
   1037                           ; 2 bytes @ 0x6
   1038     0076                     	ds	1
-  1039     0077                     ??_Lcd_Write_String:
+  1039     0077                     ??_Lcd_Write_String_4bits:
   1040     0077                     ?___awdiv:	
   1041                           ; 1 bytes @ 0x7
   1042                           
-  1043     0077                     Lcd_Set_Cursor@z:	
+  1043     0077                     Lcd_Set_Cursor_4bits@z:	
   1044                           ; 2 bytes @ 0x7
   1045                           
   1046     0077                     ___awdiv@divisor:	
@@ -1079,7 +1079,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1065     0078                     ??___llmod:	
   1066                           ; 1 bytes @ 0x8
   1067                           
-  1068     0078                     Lcd_Set_Cursor@y:	
+  1068     0078                     Lcd_Set_Cursor_4bits@y:	
   1069                           ; 1 bytes @ 0x8
   1070                           
   1071     0078                     __Umul8_16@multiplier:	
@@ -1094,7 +1094,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1080                           
   1081                           ; 2 bytes @ 0x8
   1082     0078                     	ds	1
-  1083     0079                     Lcd_Set_Cursor@temp:
+  1083     0079                     Lcd_Set_Cursor_4bits@temp:
   1084     0079                     ___llmod@counter:	
   1085                           ; 1 bytes @ 0x9
   1086                           
@@ -1111,7 +1111,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1097                           ; 4 bytes @ 0x9
   1098     0079                     	ds	1
   1099     007A                     ??___lwdiv:
-  1100     007A                     Lcd_Write_String@i:	
+  1100     007A                     Lcd_Write_String_4bits@i:	
   1101                           ; 1 bytes @ 0xA
   1102                           
   1103     007A                     ___xxtofl@arg:	
@@ -1370,10 +1370,10 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1356 ;;Total ram usage:       18 bytes
   1357 ;; Hardware stack levels required when called: 4
   1358 ;; This function calls:
-  1359 ;;		_Lcd_Clear
-  1360 ;;		_Lcd_Init
-  1361 ;;		_Lcd_Set_Cursor
-  1362 ;;		_Lcd_Write_String
+  1359 ;;		_Lcd_Clear_4bits
+  1360 ;;		_Lcd_Init_4bits
+  1361 ;;		_Lcd_Set_Cursor_4bits
+  1362 ;;		_Lcd_Write_String_4bits
   1363 ;;		___fldiv
   1364 ;;		___flmul
   1365 ;;		___xxtofl
@@ -1418,57 +1418,57 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1403     006E  160A  158A  2402  120A  118A  	fcall	_setupADC
   1404     0073                     l3634:
   1405                           
-  1406                           ;main.c: 74:   Lcd_Init();
-  1407     0073  160A  158A  25FA  120A  118A  	fcall	_Lcd_Init
+  1406                           ;main.c: 74:   Lcd_Init_4bits();
+  1407     0073  160A  158A  25FA  120A  118A  	fcall	_Lcd_Init_4bits
   1408     0078                     l3636:
   1409                           
-  1410                           ;main.c: 76:   Lcd_Clear();
-  1411     0078  160A  158A  2326  120A  118A  	fcall	_Lcd_Clear
+  1410                           ;main.c: 76:   Lcd_Clear_4bits();
+  1411     0078  160A  158A  2326  120A  118A  	fcall	_Lcd_Clear_4bits
   1412     007D                     l3638:
   1413                           
-  1414                           ;main.c: 77:   Lcd_Set_Cursor(1,1);
-  1415     007D  01F4               	clrf	Lcd_Set_Cursor@b
-  1416     007E  0AF4               	incf	Lcd_Set_Cursor@b,f
+  1414                           ;main.c: 77:   Lcd_Set_Cursor_4bits(1,1);
+  1415     007D  01F4               	clrf	Lcd_Set_Cursor_4bits@b
+  1416     007E  0AF4               	incf	Lcd_Set_Cursor_4bits@b,f
   1417     007F  3001               	movlw	1
-  1418     0080  160A  158A  2566  120A  118A  	fcall	_Lcd_Set_Cursor
+  1418     0080  160A  158A  2566  120A  118A  	fcall	_Lcd_Set_Cursor_4bits
   1419     0085                     l3640:
   1420                           
-  1421                           ;main.c: 78:   Lcd_Write_String("S1:");
+  1421                           ;main.c: 78:   Lcd_Write_String_4bits("S1:");
   1422     0085  309C               	movlw	(low ((STR_1-__stringbase)| (0+32768)))& (0+255)
-  1423     0086  00F5               	movwf	Lcd_Write_String@a
+  1423     0086  00F5               	movwf	Lcd_Write_String_4bits@a
   1424     0087  3080               	movlw	128
-  1425     0088  00F6               	movwf	Lcd_Write_String@a+1
-  1426     0089  160A  158A  249E  120A  118A  	fcall	_Lcd_Write_String
+  1425     0088  00F6               	movwf	Lcd_Write_String_4bits@a+1
+  1426     0089  160A  158A  249E  120A  118A  	fcall	_Lcd_Write_String_4bits
   1427     008E                     l3642:
   1428                           
-  1429                           ;main.c: 79:   Lcd_Set_Cursor(1,7);
+  1429                           ;main.c: 79:   Lcd_Set_Cursor_4bits(1,7);
   1430     008E  3007               	movlw	7
-  1431     008F  00F4               	movwf	Lcd_Set_Cursor@b
+  1431     008F  00F4               	movwf	Lcd_Set_Cursor_4bits@b
   1432     0090  3001               	movlw	1
-  1433     0091  160A  158A  2566  120A  118A  	fcall	_Lcd_Set_Cursor
+  1433     0091  160A  158A  2566  120A  118A  	fcall	_Lcd_Set_Cursor_4bits
   1434     0096                     l3644:
   1435                           
-  1436                           ;main.c: 80:   Lcd_Write_String("S2:");
+  1436                           ;main.c: 80:   Lcd_Write_String_4bits("S2:");
   1437     0096  30A0               	movlw	(low ((STR_2-__stringbase)| (0+32768)))& (0+255)
-  1438     0097  00F5               	movwf	Lcd_Write_String@a
+  1438     0097  00F5               	movwf	Lcd_Write_String_4bits@a
   1439     0098  3080               	movlw	128
-  1440     0099  00F6               	movwf	Lcd_Write_String@a+1
-  1441     009A  160A  158A  249E  120A  118A  	fcall	_Lcd_Write_String
+  1440     0099  00F6               	movwf	Lcd_Write_String_4bits@a+1
+  1441     009A  160A  158A  249E  120A  118A  	fcall	_Lcd_Write_String_4bits
   1442     009F                     l3646:
   1443                           
-  1444                           ;main.c: 81:   Lcd_Set_Cursor(1,13);
+  1444                           ;main.c: 81:   Lcd_Set_Cursor_4bits(1,13);
   1445     009F  300D               	movlw	13
-  1446     00A0  00F4               	movwf	Lcd_Set_Cursor@b
+  1446     00A0  00F4               	movwf	Lcd_Set_Cursor_4bits@b
   1447     00A1  3001               	movlw	1
-  1448     00A2  160A  158A  2566  120A  118A  	fcall	_Lcd_Set_Cursor
+  1448     00A2  160A  158A  2566  120A  118A  	fcall	_Lcd_Set_Cursor_4bits
   1449     00A7                     l3648:
   1450                           
-  1451                           ;main.c: 82:   Lcd_Write_String("CONT.");
+  1451                           ;main.c: 82:   Lcd_Write_String_4bits("CONT.");
   1452     00A7  3091               	movlw	(low ((STR_3-__stringbase)| (0+32768)))& (0+255)
-  1453     00A8  00F5               	movwf	Lcd_Write_String@a
+  1453     00A8  00F5               	movwf	Lcd_Write_String_4bits@a
   1454     00A9  3080               	movlw	128
-  1455     00AA  00F6               	movwf	Lcd_Write_String@a+1
-  1456     00AB  160A  158A  249E  120A  118A  	fcall	_Lcd_Write_String
+  1455     00AA  00F6               	movwf	Lcd_Write_String_4bits@a+1
+  1456     00AB  160A  158A  249E  120A  118A  	fcall	_Lcd_Write_String_4bits
   1457     00B0                     l3650:
   1458                           
   1459                           ;main.c: 85:   {;main.c: 86:       readADC(0);
@@ -1575,19 +1575,19 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1560     011E  120A  118A  21BC  120A  118A  	fcall	_sprintf
   1561     0123                     l3656:
   1562                           
-  1563                           ;main.c: 91:       Lcd_Set_Cursor(2,1);
-  1564     0123  01F4               	clrf	Lcd_Set_Cursor@b
-  1565     0124  0AF4               	incf	Lcd_Set_Cursor@b,f
+  1563                           ;main.c: 91:       Lcd_Set_Cursor_4bits(2,1);
+  1564     0123  01F4               	clrf	Lcd_Set_Cursor_4bits@b
+  1565     0124  0AF4               	incf	Lcd_Set_Cursor_4bits@b,f
   1566     0125  3002               	movlw	2
-  1567     0126  160A  158A  2566  120A  118A  	fcall	_Lcd_Set_Cursor
+  1567     0126  160A  158A  2566  120A  118A  	fcall	_Lcd_Set_Cursor_4bits
   1568     012B                     l3658:
   1569                           
-  1570                           ;main.c: 92:       Lcd_Write_String(ADC1);
+  1570                           ;main.c: 92:       Lcd_Write_String_4bits(ADC1);
   1571     012B  30CF               	movlw	(low (main@ADC1| 0))& (0+255)
-  1572     012C  00F5               	movwf	Lcd_Write_String@a
+  1572     012C  00F5               	movwf	Lcd_Write_String_4bits@a
   1573     012D  3000               	movlw	0
-  1574     012E  00F6               	movwf	Lcd_Write_String@a+1
-  1575     012F  160A  158A  249E  120A  118A  	fcall	_Lcd_Write_String
+  1574     012E  00F6               	movwf	Lcd_Write_String_4bits@a+1
+  1575     012F  160A  158A  249E  120A  118A  	fcall	_Lcd_Write_String_4bits
   1576     0134                     l3660:
   1577                           
   1578                           ;main.c: 94:       readADC(1);
@@ -1694,19 +1694,19 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1679     01A2  120A  118A  21BC  120A  118A  	fcall	_sprintf
   1680     01A7                     l3666:
   1681                           
-  1682                           ;main.c: 99:       Lcd_Set_Cursor(2,7);
+  1682                           ;main.c: 99:       Lcd_Set_Cursor_4bits(2,7);
   1683     01A7  3007               	movlw	7
-  1684     01A8  00F4               	movwf	Lcd_Set_Cursor@b
+  1684     01A8  00F4               	movwf	Lcd_Set_Cursor_4bits@b
   1685     01A9  3002               	movlw	2
-  1686     01AA  160A  158A  2566  120A  118A  	fcall	_Lcd_Set_Cursor
+  1686     01AA  160A  158A  2566  120A  118A  	fcall	_Lcd_Set_Cursor_4bits
   1687     01AF                     l3668:
   1688                           
-  1689                           ;main.c: 100:       Lcd_Write_String(ADC2);
+  1689                           ;main.c: 100:       Lcd_Write_String_4bits(ADC2);
   1690     01AF  30D2               	movlw	(low (main@ADC2| 0))& (0+255)
-  1691     01B0  00F5               	movwf	Lcd_Write_String@a
+  1691     01B0  00F5               	movwf	Lcd_Write_String_4bits@a
   1692     01B1  3000               	movlw	0
-  1693     01B2  00F6               	movwf	Lcd_Write_String@a+1
-  1694     01B3  160A  158A  249E  120A  118A  	fcall	_Lcd_Write_String
+  1693     01B2  00F6               	movwf	Lcd_Write_String_4bits@a+1
+  1694     01B3  160A  158A  249E  120A  118A  	fcall	_Lcd_Write_String_4bits
   1695     01B8  28B0               	goto	l3650
   1696     01B9  120A  118A  2800   	ljmp	start
   1697     01BC                     __end_of_main:
@@ -10587,7 +10587,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  10466                           
  10467                           	psect	text28
  10468     1C9E                     __ptext28:	
- 10469 ;; *************** function _Lcd_Write_String *****************
+ 10469 ;; *************** function _Lcd_Write_String_4bits *****************
  10470 ;; Defined at:
  10471 ;;		line 99 in file "configLCD_4bits.c"
  10472 ;; Parameters:    Size  Location     Type
@@ -10613,75 +10613,76 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  10492 ;; Hardware stack levels used: 1
  10493 ;; Hardware stack levels required when called: 2
  10494 ;; This function calls:
- 10495 ;;		_Lcd_Write_Char
+ 10495 ;;		_Lcd_Write_Char_4bits
  10496 ;; This function is called by:
  10497 ;;		_main
  10498 ;; This function uses a non-reentrant model
  10499 ;;
  10500                           
- 10501     1C9E                     _Lcd_Write_String:	
- 10502                           ;psect for function _Lcd_Write_String
+ 10501     1C9E                     _Lcd_Write_String_4bits:	
+ 10502                           ;psect for function _Lcd_Write_String_4bits
  10503                           
  10504     1C9E                     l3250:	
  10505                           ;incstack = 0
- 10506                           ; Regs used in _Lcd_Write_String: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+ 10506                           ; Regs used in _Lcd_Write_String_4bits: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cst
+      +                          ack]
  10507                           
  10508                           
  10509                           ;configLCD_4bits.c: 100:     int i;;configLCD_4bits.c: 101:     for (i = 0; a[i] != '\0'
       +                          ; i++)
- 10510     1C9E  01FA               	clrf	Lcd_Write_String@i
- 10511     1C9F  01FB               	clrf	Lcd_Write_String@i+1
+ 10510     1C9E  01FA               	clrf	Lcd_Write_String_4bits@i
+ 10511     1C9F  01FB               	clrf	Lcd_Write_String_4bits@i+1
  10512     1CA0  2CC3               	goto	l3256
  10513     1CA1                     l3252:
  10514                           
- 10515                           ;configLCD_4bits.c: 102:         Lcd_Write_Char(a[i]);
- 10516     1CA1  087A               	movf	Lcd_Write_String@i,w
- 10517     1CA2  0775               	addwf	Lcd_Write_String@a,w
- 10518     1CA3  00F8               	movwf	??_Lcd_Write_String+1
- 10519     1CA4  0876               	movf	Lcd_Write_String@a+1,w
- 10520     1CA5  00F7               	movwf	??_Lcd_Write_String
+ 10515                           ;configLCD_4bits.c: 102:         Lcd_Write_Char_4bits(a[i]);
+ 10516     1CA1  087A               	movf	Lcd_Write_String_4bits@i,w
+ 10517     1CA2  0775               	addwf	Lcd_Write_String_4bits@a,w
+ 10518     1CA3  00F8               	movwf	??_Lcd_Write_String_4bits+1
+ 10519     1CA4  0876               	movf	Lcd_Write_String_4bits@a+1,w
+ 10520     1CA5  00F7               	movwf	??_Lcd_Write_String_4bits
  10521     1CA6  1803               	skipnc
- 10522     1CA7  0AF7               	incf	??_Lcd_Write_String,f
- 10523     1CA8  1FFA               	btfss	Lcd_Write_String@i,7
+ 10522     1CA7  0AF7               	incf	??_Lcd_Write_String_4bits,f
+ 10523     1CA8  1FFA               	btfss	Lcd_Write_String_4bits@i,7
  10524     1CA9  2CAB               	goto	u5540
- 10525     1CAA  03F7               	decf	??_Lcd_Write_String,f
+ 10525     1CAA  03F7               	decf	??_Lcd_Write_String_4bits,f
  10526     1CAB                     u5540:
- 10527     1CAB  0877               	movf	??_Lcd_Write_String,w
- 10528     1CAC  00F9               	movwf	??_Lcd_Write_String+2
- 10529     1CAD  0879               	movf	??_Lcd_Write_String+2,w
+ 10527     1CAB  0877               	movf	??_Lcd_Write_String_4bits,w
+ 10528     1CAC  00F9               	movwf	??_Lcd_Write_String_4bits+2
+ 10529     1CAD  0879               	movf	??_Lcd_Write_String_4bits+2,w
  10530     1CAE  1283               	bcf	3,5	;RP0=0, select bank0
  10531     1CAF  1303               	bcf	3,6	;RP1=0, select bank0
  10532     1CB0  00FF               	movwf	btemp+1
- 10533     1CB1  0878               	movf	??_Lcd_Write_String+1,w
+ 10533     1CB1  0878               	movf	??_Lcd_Write_String_4bits+1,w
  10534     1CB2  0084               	movwf	4
  10535     1CB3  160A  158A  2000  160A  158A  	fcall	stringtab
- 10536     1CB8  160A  158A  242F  160A  158A  	fcall	_Lcd_Write_Char
+ 10536     1CB8  160A  158A  242F  160A  158A  	fcall	_Lcd_Write_Char_4bits
  10537     1CBD                     l3254:
  10538     1CBD  3001               	movlw	1
- 10539     1CBE  07FA               	addwf	Lcd_Write_String@i,f
+ 10539     1CBE  07FA               	addwf	Lcd_Write_String_4bits@i,f
  10540     1CBF  1803               	skipnc
- 10541     1CC0  0AFB               	incf	Lcd_Write_String@i+1,f
+ 10541     1CC0  0AFB               	incf	Lcd_Write_String_4bits@i+1,f
  10542     1CC1  3000               	movlw	0
- 10543     1CC2  07FB               	addwf	Lcd_Write_String@i+1,f
+ 10543     1CC2  07FB               	addwf	Lcd_Write_String_4bits@i+1,f
  10544     1CC3                     l3256:
- 10545     1CC3  087A               	movf	Lcd_Write_String@i,w
- 10546     1CC4  0775               	addwf	Lcd_Write_String@a,w
- 10547     1CC5  00F8               	movwf	??_Lcd_Write_String+1
- 10548     1CC6  0876               	movf	Lcd_Write_String@a+1,w
- 10549     1CC7  00F7               	movwf	??_Lcd_Write_String
+ 10545     1CC3  087A               	movf	Lcd_Write_String_4bits@i,w
+ 10546     1CC4  0775               	addwf	Lcd_Write_String_4bits@a,w
+ 10547     1CC5  00F8               	movwf	??_Lcd_Write_String_4bits+1
+ 10548     1CC6  0876               	movf	Lcd_Write_String_4bits@a+1,w
+ 10549     1CC7  00F7               	movwf	??_Lcd_Write_String_4bits
  10550     1CC8  1803               	skipnc
- 10551     1CC9  0AF7               	incf	??_Lcd_Write_String,f
- 10552     1CCA  1FFA               	btfss	Lcd_Write_String@i,7
+ 10551     1CC9  0AF7               	incf	??_Lcd_Write_String_4bits,f
+ 10552     1CCA  1FFA               	btfss	Lcd_Write_String_4bits@i,7
  10553     1CCB  2CCD               	goto	u5550
- 10554     1CCC  03F7               	decf	??_Lcd_Write_String,f
+ 10554     1CCC  03F7               	decf	??_Lcd_Write_String_4bits,f
  10555     1CCD                     u5550:
- 10556     1CCD  0877               	movf	??_Lcd_Write_String,w
- 10557     1CCE  00F9               	movwf	??_Lcd_Write_String+2
- 10558     1CCF  0879               	movf	??_Lcd_Write_String+2,w
+ 10556     1CCD  0877               	movf	??_Lcd_Write_String_4bits,w
+ 10557     1CCE  00F9               	movwf	??_Lcd_Write_String_4bits+2
+ 10558     1CCF  0879               	movf	??_Lcd_Write_String_4bits+2,w
  10559     1CD0  1283               	bcf	3,5	;RP0=0, select bank0
  10560     1CD1  1303               	bcf	3,6	;RP1=0, select bank0
  10561     1CD2  00FF               	movwf	btemp+1
- 10562     1CD3  0878               	movf	??_Lcd_Write_String+1,w
+ 10562     1CD3  0878               	movf	??_Lcd_Write_String_4bits+1,w
  10563     1CD4  0084               	movwf	4
  10564     1CD5  160A  158A  2000  160A  158A  	fcall	stringtab
  10565     1CDA  3A00               	xorlw	0
@@ -10693,11 +10694,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  10571     1CDF                     u5560:
  10572     1CDF                     l90:
  10573     1CDF  0008               	return
- 10574     1CE0                     __end_of_Lcd_Write_String:
+ 10574     1CE0                     __end_of_Lcd_Write_String_4bits:
  10575                           
  10576                           	psect	text29
  10577     1C2F                     __ptext29:	
- 10578 ;; *************** function _Lcd_Write_Char *****************
+ 10578 ;; *************** function _Lcd_Write_Char_4bits *****************
  10579 ;; Defined at:
  10580 ;;		line 84 in file "configLCD_4bits.c"
  10581 ;; Parameters:    Size  Location     Type
@@ -10723,31 +10724,31 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  10601 ;; Hardware stack levels used: 1
  10602 ;; Hardware stack levels required when called: 1
  10603 ;; This function calls:
- 10604 ;;		_Lcd_Port
+ 10604 ;;		_Lcd_Port_4bits
  10605 ;; This function is called by:
- 10606 ;;		_Lcd_Write_String
+ 10606 ;;		_Lcd_Write_String_4bits
  10607 ;; This function uses a non-reentrant model
  10608 ;;
  10609                           
- 10610     1C2F                     _Lcd_Write_Char:	
- 10611                           ;psect for function _Lcd_Write_Char
+ 10610     1C2F                     _Lcd_Write_Char_4bits:	
+ 10611                           ;psect for function _Lcd_Write_Char_4bits
  10612                           
  10613                           
  10614                           ;incstack = 0
- 10615                           ; Regs used in _Lcd_Write_Char: [wreg+status,2+status,0+pclath+cstack]
- 10616                           ;Lcd_Write_Char@a stored from wreg
- 10617     1C2F  00F4               	movwf	Lcd_Write_Char@a
+ 10615                           ; Regs used in _Lcd_Write_Char_4bits: [wreg+status,2+status,0+pclath+cstack]
+ 10616                           ;Lcd_Write_Char_4bits@a stored from wreg
+ 10617     1C2F  00F4               	movwf	Lcd_Write_Char_4bits@a
  10618     1C30                     l2798:
  10619                           
  10620                           ;configLCD_4bits.c: 85:     char temp, y;;configLCD_4bits.c: 86:     temp = a & 0x0F;
- 10621     1C30  0874               	movf	Lcd_Write_Char@a,w
+ 10621     1C30  0874               	movf	Lcd_Write_Char_4bits@a,w
  10622     1C31  390F               	andlw	15
- 10623     1C32  00F2               	movwf	Lcd_Write_Char@temp
+ 10623     1C32  00F2               	movwf	Lcd_Write_Char_4bits@temp
  10624                           
  10625                           ;configLCD_4bits.c: 87:     y = a & 0xF0;
- 10626     1C33  0874               	movf	Lcd_Write_Char@a,w
+ 10626     1C33  0874               	movf	Lcd_Write_Char_4bits@a,w
  10627     1C34  39F0               	andlw	240
- 10628     1C35  00F3               	movwf	Lcd_Write_Char@y
+ 10628     1C35  00F3               	movwf	Lcd_Write_Char_4bits@y
  10629     1C36                     l2800:
  10630                           
  10631                           ;configLCD_4bits.c: 88:     PORTDbits.RD2 = 1;
@@ -10756,18 +10757,18 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  10634     1C38  1508               	bsf	8,2	;volatile
  10635     1C39                     l2802:
  10636                           
- 10637                           ;configLCD_4bits.c: 89:     Lcd_Port(y >> 4);
- 10638     1C39  0873               	movf	Lcd_Write_Char@y,w
- 10639     1C3A  00F1               	movwf	??_Lcd_Write_Char
+ 10637                           ;configLCD_4bits.c: 89:     Lcd_Port_4bits(y >> 4);
+ 10638     1C39  0873               	movf	Lcd_Write_Char_4bits@y,w
+ 10639     1C3A  00F1               	movwf	??_Lcd_Write_Char_4bits
  10640     1C3B  3004               	movlw	4
  10641     1C3C                     u4355:
  10642     1C3C  1003               	clrc
- 10643     1C3D  0CF1               	rrf	??_Lcd_Write_Char,f
+ 10643     1C3D  0CF1               	rrf	??_Lcd_Write_Char_4bits,f
  10644     1C3E  3EFF               	addlw	-1
  10645     1C3F  1D03               	skipz
  10646     1C40  2C3C               	goto	u4355
- 10647     1C41  0871               	movf	??_Lcd_Write_Char,w
- 10648     1C42  160A  158A  2370  160A  158A  	fcall	_Lcd_Port
+ 10647     1C41  0871               	movf	??_Lcd_Write_Char_4bits,w
+ 10648     1C42  160A  158A  2370  160A  158A  	fcall	_Lcd_Port_4bits
  10649     1C47                     l2804:
  10650                           
  10651                           ;configLCD_4bits.c: 90:     PORTDbits.RD3 = 1;
@@ -10778,9 +10779,9 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  10656                           
  10657                           ;configLCD_4bits.c: 91:     _delay((unsigned long)((40)*(8000000/4000000.0)));
  10658     1C4A  301A               	movlw	26
- 10659     1C4B  00F1               	movwf	??_Lcd_Write_Char
+ 10659     1C4B  00F1               	movwf	??_Lcd_Write_Char_4bits
  10660     1C4C                     u6307:
- 10661     1C4C  0BF1               	decfsz	??_Lcd_Write_Char,f
+ 10661     1C4C  0BF1               	decfsz	??_Lcd_Write_Char_4bits,f
  10662     1C4D  2C4C               	goto	u6307
  10663     1C4E  0000               	nop
  10664     1C4F                     l2808:
@@ -10791,9 +10792,9 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  10669     1C51  1188               	bcf	8,3	;volatile
  10670     1C52                     l2810:
  10671                           
- 10672                           ;configLCD_4bits.c: 93:     Lcd_Port(temp);
- 10673     1C52  0872               	movf	Lcd_Write_Char@temp,w
- 10674     1C53  160A  158A  2370  160A  158A  	fcall	_Lcd_Port
+ 10672                           ;configLCD_4bits.c: 93:     Lcd_Port_4bits(temp);
+ 10673     1C52  0872               	movf	Lcd_Write_Char_4bits@temp,w
+ 10674     1C53  160A  158A  2370  160A  158A  	fcall	_Lcd_Port_4bits
  10675     1C58                     l2812:
  10676                           
  10677                           ;configLCD_4bits.c: 94:     PORTDbits.RD3 = 1;
@@ -10804,9 +10805,9 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  10682                           
  10683                           ;configLCD_4bits.c: 95:     _delay((unsigned long)((40)*(8000000/4000000.0)));
  10684     1C5B  301A               	movlw	26
- 10685     1C5C  00F1               	movwf	??_Lcd_Write_Char
+ 10685     1C5C  00F1               	movwf	??_Lcd_Write_Char_4bits
  10686     1C5D                     u6317:
- 10687     1C5D  0BF1               	decfsz	??_Lcd_Write_Char,f
+ 10687     1C5D  0BF1               	decfsz	??_Lcd_Write_Char_4bits,f
  10688     1C5E  2C5D               	goto	u6317
  10689     1C5F  0000               	nop
  10690     1C60                     l2816:
@@ -10817,11 +10818,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  10695     1C62  1188               	bcf	8,3	;volatile
  10696     1C63                     l84:
  10697     1C63  0008               	return
- 10698     1C64                     __end_of_Lcd_Write_Char:
+ 10698     1C64                     __end_of_Lcd_Write_Char_4bits:
  10699                           
  10700                           	psect	text30
  10701     1D66                     __ptext30:	
- 10702 ;; *************** function _Lcd_Set_Cursor *****************
+ 10702 ;; *************** function _Lcd_Set_Cursor_4bits *****************
  10703 ;; Defined at:
  10704 ;;		line 49 in file "configLCD_4bits.c"
  10705 ;; Parameters:    Size  Location     Type
@@ -10849,24 +10850,24 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  10727 ;; Hardware stack levels used: 1
  10728 ;; Hardware stack levels required when called: 2
  10729 ;; This function calls:
- 10730 ;;		_Lcd_Cmd
+ 10730 ;;		_Lcd_Cmd_4bits
  10731 ;; This function is called by:
  10732 ;;		_main
  10733 ;; This function uses a non-reentrant model
  10734 ;;
  10735                           
- 10736     1D66                     _Lcd_Set_Cursor:	
- 10737                           ;psect for function _Lcd_Set_Cursor
+ 10736     1D66                     _Lcd_Set_Cursor_4bits:	
+ 10737                           ;psect for function _Lcd_Set_Cursor_4bits
  10738                           
  10739                           
  10740                           ;incstack = 0
- 10741                           ; Regs used in _Lcd_Set_Cursor: [wreg+status,2+status,0+pclath+cstack]
- 10742                           ;Lcd_Set_Cursor@a stored from wreg
- 10743     1D66  00F6               	movwf	Lcd_Set_Cursor@a
+ 10741                           ; Regs used in _Lcd_Set_Cursor_4bits: [wreg+status,2+status,0+pclath+cstack]
+ 10742                           ;Lcd_Set_Cursor_4bits@a stored from wreg
+ 10743     1D66  00F6               	movwf	Lcd_Set_Cursor_4bits@a
  10744     1D67                     l3230:
  10745                           
  10746                           ;configLCD_4bits.c: 50:     char temp, z, y;;configLCD_4bits.c: 51:     if (a == 1) {
- 10747     1D67  0376               	decf	Lcd_Set_Cursor@a,w
+ 10747     1D67  0376               	decf	Lcd_Set_Cursor_4bits@a,w
  10748     1D68  1D03               	btfss	3,2
  10749     1D69  2D6B               	goto	u5501
  10750     1D6A  2D6C               	goto	u5500
@@ -10876,44 +10877,44 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  10754     1D6C                     l3232:
  10755                           
  10756                           ;configLCD_4bits.c: 52:         temp = 0x80 + b - 1;
- 10757     1D6C  0874               	movf	Lcd_Set_Cursor@b,w
+ 10757     1D6C  0874               	movf	Lcd_Set_Cursor_4bits@b,w
  10758     1D6D  3E7F               	addlw	127
- 10759     1D6E  00F9               	movwf	Lcd_Set_Cursor@temp
+ 10759     1D6E  00F9               	movwf	Lcd_Set_Cursor_4bits@temp
  10760                           
  10761                           ;configLCD_4bits.c: 53:         z = temp >> 4;
- 10762     1D6F  0879               	movf	Lcd_Set_Cursor@temp,w
- 10763     1D70  00F5               	movwf	??_Lcd_Set_Cursor
+ 10762     1D6F  0879               	movf	Lcd_Set_Cursor_4bits@temp,w
+ 10763     1D70  00F5               	movwf	??_Lcd_Set_Cursor_4bits
  10764     1D71  3004               	movlw	4
  10765     1D72                     u5515:
  10766     1D72  1003               	clrc
- 10767     1D73  0CF5               	rrf	??_Lcd_Set_Cursor,f
+ 10767     1D73  0CF5               	rrf	??_Lcd_Set_Cursor_4bits,f
  10768     1D74  3EFF               	addlw	-1
  10769     1D75  1D03               	skipz
  10770     1D76  2D72               	goto	u5515
- 10771     1D77  0875               	movf	??_Lcd_Set_Cursor,w
- 10772     1D78  00F7               	movwf	Lcd_Set_Cursor@z
+ 10771     1D77  0875               	movf	??_Lcd_Set_Cursor_4bits,w
+ 10772     1D78  00F7               	movwf	Lcd_Set_Cursor_4bits@z
  10773     1D79                     l3234:
  10774                           
  10775                           ;configLCD_4bits.c: 54:         y = temp & 0x0F;
- 10776     1D79  0879               	movf	Lcd_Set_Cursor@temp,w
+ 10776     1D79  0879               	movf	Lcd_Set_Cursor_4bits@temp,w
  10777     1D7A  390F               	andlw	15
- 10778     1D7B  00F8               	movwf	Lcd_Set_Cursor@y
+ 10778     1D7B  00F8               	movwf	Lcd_Set_Cursor_4bits@y
  10779     1D7C                     l3236:
  10780                           
- 10781                           ;configLCD_4bits.c: 55:         Lcd_Cmd(z);
- 10782     1D7C  0877               	movf	Lcd_Set_Cursor@z,w
- 10783     1D7D  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 10781                           ;configLCD_4bits.c: 55:         Lcd_Cmd_4bits(z);
+ 10782     1D7C  0877               	movf	Lcd_Set_Cursor_4bits@z,w
+ 10783     1D7D  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  10784     1D82                     l3238:
  10785                           
- 10786                           ;configLCD_4bits.c: 56:         Lcd_Cmd(y);
- 10787     1D82  0878               	movf	Lcd_Set_Cursor@y,w
- 10788     1D83  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 10786                           ;configLCD_4bits.c: 56:         Lcd_Cmd_4bits(y);
+ 10787     1D82  0878               	movf	Lcd_Set_Cursor_4bits@y,w
+ 10788     1D83  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  10789                           
  10790                           ;configLCD_4bits.c: 57:     } else if (a == 2) {
  10791     1D88  2DAB               	goto	l78
  10792     1D89                     l3240:
  10793     1D89  3002               	movlw	2
- 10794     1D8A  0676               	xorwf	Lcd_Set_Cursor@a,w
+ 10794     1D8A  0676               	xorwf	Lcd_Set_Cursor_4bits@a,w
  10795     1D8B  1D03               	btfss	3,2
  10796     1D8C  2D8E               	goto	u5521
  10797     1D8D  2D8F               	goto	u5520
@@ -10923,45 +10924,45 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  10801     1D8F                     l3242:
  10802                           
  10803                           ;configLCD_4bits.c: 58:         temp = 0xC0 + b - 1;
- 10804     1D8F  0874               	movf	Lcd_Set_Cursor@b,w
+ 10804     1D8F  0874               	movf	Lcd_Set_Cursor_4bits@b,w
  10805     1D90  3EBF               	addlw	191
- 10806     1D91  00F9               	movwf	Lcd_Set_Cursor@temp
+ 10806     1D91  00F9               	movwf	Lcd_Set_Cursor_4bits@temp
  10807                           
  10808                           ;configLCD_4bits.c: 59:         z = temp >> 4;
- 10809     1D92  0879               	movf	Lcd_Set_Cursor@temp,w
- 10810     1D93  00F5               	movwf	??_Lcd_Set_Cursor
+ 10809     1D92  0879               	movf	Lcd_Set_Cursor_4bits@temp,w
+ 10810     1D93  00F5               	movwf	??_Lcd_Set_Cursor_4bits
  10811     1D94  3004               	movlw	4
  10812     1D95                     u5535:
  10813     1D95  1003               	clrc
- 10814     1D96  0CF5               	rrf	??_Lcd_Set_Cursor,f
+ 10814     1D96  0CF5               	rrf	??_Lcd_Set_Cursor_4bits,f
  10815     1D97  3EFF               	addlw	-1
  10816     1D98  1D03               	skipz
  10817     1D99  2D95               	goto	u5535
- 10818     1D9A  0875               	movf	??_Lcd_Set_Cursor,w
- 10819     1D9B  00F7               	movwf	Lcd_Set_Cursor@z
+ 10818     1D9A  0875               	movf	??_Lcd_Set_Cursor_4bits,w
+ 10819     1D9B  00F7               	movwf	Lcd_Set_Cursor_4bits@z
  10820     1D9C                     l3244:
  10821                           
  10822                           ;configLCD_4bits.c: 60:         y = temp & 0x0F;
- 10823     1D9C  0879               	movf	Lcd_Set_Cursor@temp,w
+ 10823     1D9C  0879               	movf	Lcd_Set_Cursor_4bits@temp,w
  10824     1D9D  390F               	andlw	15
- 10825     1D9E  00F8               	movwf	Lcd_Set_Cursor@y
+ 10825     1D9E  00F8               	movwf	Lcd_Set_Cursor_4bits@y
  10826     1D9F                     l3246:
  10827                           
- 10828                           ;configLCD_4bits.c: 61:         Lcd_Cmd(z);
- 10829     1D9F  0877               	movf	Lcd_Set_Cursor@z,w
- 10830     1DA0  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 10828                           ;configLCD_4bits.c: 61:         Lcd_Cmd_4bits(z);
+ 10829     1D9F  0877               	movf	Lcd_Set_Cursor_4bits@z,w
+ 10830     1DA0  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  10831     1DA5                     l3248:
  10832                           
- 10833                           ;configLCD_4bits.c: 62:         Lcd_Cmd(y);
- 10834     1DA5  0878               	movf	Lcd_Set_Cursor@y,w
- 10835     1DA6  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 10833                           ;configLCD_4bits.c: 62:         Lcd_Cmd_4bits(y);
+ 10834     1DA5  0878               	movf	Lcd_Set_Cursor_4bits@y,w
+ 10835     1DA6  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  10836     1DAB                     l78:
  10837     1DAB  0008               	return
- 10838     1DAC                     __end_of_Lcd_Set_Cursor:
+ 10838     1DAC                     __end_of_Lcd_Set_Cursor_4bits:
  10839                           
  10840                           	psect	text31
  10841     1DFA                     __ptext31:	
- 10842 ;; *************** function _Lcd_Init *****************
+ 10842 ;; *************** function _Lcd_Init_4bits *****************
  10843 ;; Defined at:
  10844 ;;		line 66 in file "configLCD_4bits.c"
  10845 ;; Parameters:    Size  Location     Type
@@ -10985,110 +10986,110 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  10863 ;; Hardware stack levels used: 1
  10864 ;; Hardware stack levels required when called: 2
  10865 ;; This function calls:
- 10866 ;;		_Lcd_Cmd
- 10867 ;;		_Lcd_Port
+ 10866 ;;		_Lcd_Cmd_4bits
+ 10867 ;;		_Lcd_Port_4bits
  10868 ;; This function is called by:
  10869 ;;		_main
  10870 ;; This function uses a non-reentrant model
  10871 ;;
  10872                           
- 10873     1DFA                     _Lcd_Init:	
- 10874                           ;psect for function _Lcd_Init
+ 10873     1DFA                     _Lcd_Init_4bits:	
+ 10874                           ;psect for function _Lcd_Init_4bits
  10875                           
  10876     1DFA                     l3218:	
  10877                           ;incstack = 0
- 10878                           ; Regs used in _Lcd_Init: [wreg+status,2+status,0+pclath+cstack]
+ 10878                           ; Regs used in _Lcd_Init_4bits: [wreg+status,2+status,0+pclath+cstack]
  10879                           
  10880                           
- 10881                           ;configLCD_4bits.c: 67:     Lcd_Port(0x00);
+ 10881                           ;configLCD_4bits.c: 67:     Lcd_Port_4bits(0x00);
  10882     1DFA  3000               	movlw	0
- 10883     1DFB  160A  158A  2370  160A  158A  	fcall	_Lcd_Port
+ 10883     1DFB  160A  158A  2370  160A  158A  	fcall	_Lcd_Port_4bits
  10884     1E00                     l3220:
  10885                           
  10886                           ;configLCD_4bits.c: 68:     _delay((unsigned long)((20)*(8000000/4000.0)));
  10887     1E00  3034               	movlw	52
- 10888     1E01  00F5               	movwf	??_Lcd_Init+1
+ 10888     1E01  00F5               	movwf	??_Lcd_Init_4bits+1
  10889     1E02  30F1               	movlw	241
- 10890     1E03  00F4               	movwf	??_Lcd_Init
+ 10890     1E03  00F4               	movwf	??_Lcd_Init_4bits
  10891     1E04                     u6327:
- 10892     1E04  0BF4               	decfsz	??_Lcd_Init,f
+ 10892     1E04  0BF4               	decfsz	??_Lcd_Init_4bits,f
  10893     1E05  2E04               	goto	u6327
- 10894     1E06  0BF5               	decfsz	??_Lcd_Init+1,f
+ 10894     1E06  0BF5               	decfsz	??_Lcd_Init_4bits+1,f
  10895     1E07  2E04               	goto	u6327
  10896     1E08  2E09               	nop2
  10897     1E09                     l3222:
  10898                           
- 10899                           ;configLCD_4bits.c: 69:     Lcd_Cmd(0x03);
+ 10899                           ;configLCD_4bits.c: 69:     Lcd_Cmd_4bits(0x03);
  10900     1E09  3003               	movlw	3
- 10901     1E0A  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 10901     1E0A  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  10902                           
  10903                           ;configLCD_4bits.c: 70:     _delay((unsigned long)((5)*(8000000/4000.0)));
  10904     1E0F  300D               	movlw	13
- 10905     1E10  00F5               	movwf	??_Lcd_Init+1
+ 10905     1E10  00F5               	movwf	??_Lcd_Init_4bits+1
  10906     1E11  30FB               	movlw	251
- 10907     1E12  00F4               	movwf	??_Lcd_Init
+ 10907     1E12  00F4               	movwf	??_Lcd_Init_4bits
  10908     1E13                     u6337:
- 10909     1E13  0BF4               	decfsz	??_Lcd_Init,f
+ 10909     1E13  0BF4               	decfsz	??_Lcd_Init_4bits,f
  10910     1E14  2E13               	goto	u6337
- 10911     1E15  0BF5               	decfsz	??_Lcd_Init+1,f
+ 10911     1E15  0BF5               	decfsz	??_Lcd_Init_4bits+1,f
  10912     1E16  2E13               	goto	u6337
  10913     1E17  2E18               	nop2
  10914     1E18                     l3224:
  10915                           
- 10916                           ;configLCD_4bits.c: 71:     Lcd_Cmd(0x03);
+ 10916                           ;configLCD_4bits.c: 71:     Lcd_Cmd_4bits(0x03);
  10917     1E18  3003               	movlw	3
- 10918     1E19  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 10918     1E19  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  10919     1E1E                     l3226:
  10920                           
  10921                           ;configLCD_4bits.c: 72:     _delay((unsigned long)((11)*(8000000/4000.0)));
  10922     1E1E  301D               	movlw	29
- 10923     1E1F  00F5               	movwf	??_Lcd_Init+1
+ 10923     1E1F  00F5               	movwf	??_Lcd_Init_4bits+1
  10924     1E20  3091               	movlw	145
- 10925     1E21  00F4               	movwf	??_Lcd_Init
+ 10925     1E21  00F4               	movwf	??_Lcd_Init_4bits
  10926     1E22                     u6347:
- 10927     1E22  0BF4               	decfsz	??_Lcd_Init,f
+ 10927     1E22  0BF4               	decfsz	??_Lcd_Init_4bits,f
  10928     1E23  2E22               	goto	u6347
- 10929     1E24  0BF5               	decfsz	??_Lcd_Init+1,f
+ 10929     1E24  0BF5               	decfsz	??_Lcd_Init_4bits+1,f
  10930     1E25  2E22               	goto	u6347
  10931                           
- 10932                           ;configLCD_4bits.c: 73:     Lcd_Cmd(0x03);
+ 10932                           ;configLCD_4bits.c: 73:     Lcd_Cmd_4bits(0x03);
  10933     1E26  3003               	movlw	3
- 10934     1E27  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 10934     1E27  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  10935                           
- 10936                           ;configLCD_4bits.c: 75:     Lcd_Cmd(0x02);
+ 10936                           ;configLCD_4bits.c: 75:     Lcd_Cmd_4bits(0x02);
  10937     1E2C  3002               	movlw	2
- 10938     1E2D  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 10938     1E2D  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  10939                           
- 10940                           ;configLCD_4bits.c: 76:     Lcd_Cmd(0x02);
+ 10940                           ;configLCD_4bits.c: 76:     Lcd_Cmd_4bits(0x02);
  10941     1E32  3002               	movlw	2
- 10942     1E33  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 10942     1E33  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  10943                           
- 10944                           ;configLCD_4bits.c: 77:     Lcd_Cmd(0x08);
+ 10944                           ;configLCD_4bits.c: 77:     Lcd_Cmd_4bits(0x08);
  10945     1E38  3008               	movlw	8
- 10946     1E39  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 10946     1E39  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  10947                           
- 10948                           ;configLCD_4bits.c: 78:     Lcd_Cmd(0x00);
+ 10948                           ;configLCD_4bits.c: 78:     Lcd_Cmd_4bits(0x00);
  10949     1E3E  3000               	movlw	0
- 10950     1E3F  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 10950     1E3F  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  10951                           
- 10952                           ;configLCD_4bits.c: 79:     Lcd_Cmd(0x0C);
+ 10952                           ;configLCD_4bits.c: 79:     Lcd_Cmd_4bits(0x0C);
  10953     1E44  300C               	movlw	12
- 10954     1E45  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 10954     1E45  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  10955                           
- 10956                           ;configLCD_4bits.c: 80:     Lcd_Cmd(0x00);
+ 10956                           ;configLCD_4bits.c: 80:     Lcd_Cmd_4bits(0x00);
  10957     1E4A  3000               	movlw	0
- 10958     1E4B  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 10958     1E4B  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  10959                           
- 10960                           ;configLCD_4bits.c: 81:     Lcd_Cmd(0x06);
+ 10960                           ;configLCD_4bits.c: 81:     Lcd_Cmd_4bits(0x06);
  10961     1E50  3006               	movlw	6
- 10962     1E51  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 10962     1E51  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  10963     1E56                     l81:
  10964     1E56  0008               	return
- 10965     1E57                     __end_of_Lcd_Init:
+ 10965     1E57                     __end_of_Lcd_Init_4bits:
  10966                           
  10967                           	psect	text32
  10968     1B26                     __ptext32:	
- 10969 ;; *************** function _Lcd_Clear *****************
+ 10969 ;; *************** function _Lcd_Clear_4bits *****************
  10970 ;; Defined at:
  10971 ;;		line 44 in file "configLCD_4bits.c"
  10972 ;; Parameters:    Size  Location     Type
@@ -11112,34 +11113,34 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  10990 ;; Hardware stack levels used: 1
  10991 ;; Hardware stack levels required when called: 2
  10992 ;; This function calls:
- 10993 ;;		_Lcd_Cmd
+ 10993 ;;		_Lcd_Cmd_4bits
  10994 ;; This function is called by:
  10995 ;;		_main
  10996 ;; This function uses a non-reentrant model
  10997 ;;
  10998                           
- 10999     1B26                     _Lcd_Clear:	
- 11000                           ;psect for function _Lcd_Clear
+ 10999     1B26                     _Lcd_Clear_4bits:	
+ 11000                           ;psect for function _Lcd_Clear_4bits
  11001                           
  11002     1B26                     l3228:	
  11003                           ;incstack = 0
- 11004                           ; Regs used in _Lcd_Clear: [wreg+status,2+status,0+pclath+cstack]
+ 11004                           ; Regs used in _Lcd_Clear_4bits: [wreg+status,2+status,0+pclath+cstack]
  11005                           
  11006                           
- 11007                           ;configLCD_4bits.c: 45:     Lcd_Cmd(0);
+ 11007                           ;configLCD_4bits.c: 45:     Lcd_Cmd_4bits(0);
  11008     1B26  3000               	movlw	0
- 11009     1B27  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 11009     1B27  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  11010                           
- 11011                           ;configLCD_4bits.c: 46:     Lcd_Cmd(1);
+ 11011                           ;configLCD_4bits.c: 46:     Lcd_Cmd_4bits(1);
  11012     1B2C  3001               	movlw	1
- 11013     1B2D  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd
+ 11013     1B2D  160A  158A  2356  160A  158A  	fcall	_Lcd_Cmd_4bits
  11014     1B32                     l72:
  11015     1B32  0008               	return
- 11016     1B33                     __end_of_Lcd_Clear:
+ 11016     1B33                     __end_of_Lcd_Clear_4bits:
  11017                           
  11018                           	psect	text33
  11019     1B56                     __ptext33:	
- 11020 ;; *************** function _Lcd_Cmd *****************
+ 11020 ;; *************** function _Lcd_Cmd_4bits *****************
  11021 ;; Defined at:
  11022 ;;		line 36 in file "configLCD_4bits.c"
  11023 ;; Parameters:    Size  Location     Type
@@ -11163,24 +11164,24 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  11041 ;; Hardware stack levels used: 1
  11042 ;; Hardware stack levels required when called: 1
  11043 ;; This function calls:
- 11044 ;;		_Lcd_Port
+ 11044 ;;		_Lcd_Port_4bits
  11045 ;; This function is called by:
- 11046 ;;		_Lcd_Clear
- 11047 ;;		_Lcd_Set_Cursor
- 11048 ;;		_Lcd_Init
- 11049 ;;		_Lcd_Shift_Right
- 11050 ;;		_Lcd_Shift_Left
+ 11046 ;;		_Lcd_Clear_4bits
+ 11047 ;;		_Lcd_Set_Cursor_4bits
+ 11048 ;;		_Lcd_Init_4bits
+ 11049 ;;		_Lcd_Shift_Right_4bits
+ 11050 ;;		_Lcd_Shift_Left_4bits
  11051 ;; This function uses a non-reentrant model
  11052 ;;
  11053                           
- 11054     1B56                     _Lcd_Cmd:	
- 11055                           ;psect for function _Lcd_Cmd
+ 11054     1B56                     _Lcd_Cmd_4bits:	
+ 11055                           ;psect for function _Lcd_Cmd_4bits
  11056                           
  11057                           
  11058                           ;incstack = 0
- 11059                           ; Regs used in _Lcd_Cmd: [wreg+status,2+status,0+pclath+cstack]
- 11060                           ;Lcd_Cmd@a stored from wreg
- 11061     1B56  00F3               	movwf	Lcd_Cmd@a
+ 11059                           ; Regs used in _Lcd_Cmd_4bits: [wreg+status,2+status,0+pclath+cstack]
+ 11060                           ;Lcd_Cmd_4bits@a stored from wreg
+ 11061     1B56  00F3               	movwf	Lcd_Cmd_4bits@a
  11062     1B57                     l2788:
  11063                           
  11064                           ;configLCD_4bits.c: 37:     PORTDbits.RD2 = 0;
@@ -11189,9 +11190,9 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  11067     1B59  1108               	bcf	8,2	;volatile
  11068     1B5A                     l2790:
  11069                           
- 11070                           ;configLCD_4bits.c: 38:     Lcd_Port(a);
- 11071     1B5A  0873               	movf	Lcd_Cmd@a,w
- 11072     1B5B  160A  158A  2370  160A  158A  	fcall	_Lcd_Port
+ 11070                           ;configLCD_4bits.c: 38:     Lcd_Port_4bits(a);
+ 11071     1B5A  0873               	movf	Lcd_Cmd_4bits@a,w
+ 11072     1B5B  160A  158A  2370  160A  158A  	fcall	_Lcd_Port_4bits
  11073     1B60                     l2792:
  11074                           
  11075                           ;configLCD_4bits.c: 39:     PORTDbits.RD3 = 1;
@@ -11202,13 +11203,13 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  11080                           
  11081                           ;configLCD_4bits.c: 40:     _delay((unsigned long)((4)*(8000000/4000.0)));
  11082     1B63  300B               	movlw	11
- 11083     1B64  00F2               	movwf	??_Lcd_Cmd+1
+ 11083     1B64  00F2               	movwf	??_Lcd_Cmd_4bits+1
  11084     1B65  3062               	movlw	98
- 11085     1B66  00F1               	movwf	??_Lcd_Cmd
+ 11085     1B66  00F1               	movwf	??_Lcd_Cmd_4bits
  11086     1B67                     u6357:
- 11087     1B67  0BF1               	decfsz	??_Lcd_Cmd,f
+ 11087     1B67  0BF1               	decfsz	??_Lcd_Cmd_4bits,f
  11088     1B68  2B67               	goto	u6357
- 11089     1B69  0BF2               	decfsz	??_Lcd_Cmd+1,f
+ 11089     1B69  0BF2               	decfsz	??_Lcd_Cmd_4bits+1,f
  11090     1B6A  2B67               	goto	u6357
  11091     1B6B  0000               	nop
  11092     1B6C                     l2796:
@@ -11219,11 +11220,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  11097     1B6E  1188               	bcf	8,3	;volatile
  11098     1B6F                     l69:
  11099     1B6F  0008               	return
- 11100     1B70                     __end_of_Lcd_Cmd:
+ 11100     1B70                     __end_of_Lcd_Cmd_4bits:
  11101                           
  11102                           	psect	text34
  11103     1B70                     __ptext34:	
- 11104 ;; *************** function _Lcd_Port *****************
+ 11104 ;; *************** function _Lcd_Port_4bits *****************
  11105 ;; Defined at:
  11106 ;;		line 14 in file "configLCD_4bits.c"
  11107 ;; Parameters:    Size  Location     Type
@@ -11248,24 +11249,24 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  11126 ;; This function calls:
  11127 ;;		Nothing
  11128 ;; This function is called by:
- 11129 ;;		_Lcd_Cmd
- 11130 ;;		_Lcd_Init
- 11131 ;;		_Lcd_Write_Char
+ 11129 ;;		_Lcd_Cmd_4bits
+ 11130 ;;		_Lcd_Init_4bits
+ 11131 ;;		_Lcd_Write_Char_4bits
  11132 ;; This function uses a non-reentrant model
  11133 ;;
  11134                           
- 11135     1B70                     _Lcd_Port:	
- 11136                           ;psect for function _Lcd_Port
+ 11135     1B70                     _Lcd_Port_4bits:	
+ 11136                           ;psect for function _Lcd_Port_4bits
  11137                           
  11138                           
  11139                           ;incstack = 0
- 11140                           ; Regs used in _Lcd_Port: [wreg]
- 11141                           ;Lcd_Port@a stored from wreg
- 11142     1B70  00F0               	movwf	Lcd_Port@a
+ 11140                           ; Regs used in _Lcd_Port_4bits: [wreg]
+ 11141                           ;Lcd_Port_4bits@a stored from wreg
+ 11142     1B70  00F0               	movwf	Lcd_Port_4bits@a
  11143     1B71                     l2314:
  11144                           
  11145                           ;configLCD_4bits.c: 15:     if (a & 1)
- 11146     1B71  1C70               	btfss	Lcd_Port@a,0
+ 11146     1B71  1C70               	btfss	Lcd_Port_4bits@a,0
  11147     1B72  2B74               	goto	u3161
  11148     1B73  2B75               	goto	u3160
  11149     1B74                     u3161:
@@ -11289,7 +11290,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  11167     1B7C                     l59:
  11168                           
  11169                           ;configLCD_4bits.c: 20:     if (a & 2)
- 11170     1B7C  1CF0               	btfss	Lcd_Port@a,1
+ 11170     1B7C  1CF0               	btfss	Lcd_Port_4bits@a,1
  11171     1B7D  2B7F               	goto	u3171
  11172     1B7E  2B80               	goto	u3170
  11173     1B7F                     u3171:
@@ -11309,7 +11310,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  11187     1B83                     l61:
  11188                           
  11189                           ;configLCD_4bits.c: 25:     if (a & 4)
- 11190     1B83  1D70               	btfss	Lcd_Port@a,2
+ 11190     1B83  1D70               	btfss	Lcd_Port_4bits@a,2
  11191     1B84  2B86               	goto	u3181
  11192     1B85  2B87               	goto	u3180
  11193     1B86                     u3181:
@@ -11329,7 +11330,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  11207     1B8A                     l63:
  11208                           
  11209                           ;configLCD_4bits.c: 30:     if (a & 8)
- 11210     1B8A  1DF0               	btfss	Lcd_Port@a,3
+ 11210     1B8A  1DF0               	btfss	Lcd_Port_4bits@a,3
  11211     1B8B  2B8D               	goto	u3191
  11212     1B8C  2B8E               	goto	u3190
  11213     1B8D                     u3191:
@@ -11348,7 +11349,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
  11226     1B90  1388               	bcf	8,7	;volatile
  11227     1B91                     l66:
  11228     1B91  0008               	return
- 11229     1B92                     __end_of_Lcd_Port:
+ 11229     1B92                     __end_of_Lcd_Port_4bits:
  11230     007E                     btemp	set	126	;btemp
  11231     007E                     wtemp0	set	126
  11232                           
@@ -11437,7 +11438,7 @@ Pointer List with Targets:
     sprintf@ap	PTR void [1] size(1) Largest target is 2
 		 -> ?_sprintf(BANK1[2]), 
 
-    Lcd_Write_String@a	PTR unsigned char  size(2) Largest target is 6
+    Lcd_Write_String_4bits@a	PTR unsigned char  size(2) Largest target is 6
 		 -> main@ADC2(BANK1[3]), main@ADC1(BANK1[3]), STR_3(CODE[6]), STR_2(CODE[4]), 
 		 -> STR_1(CODE[4]), 
 
@@ -11454,12 +11455,12 @@ Critical Paths under _main in COMMON
     ___flmul->___xxtofl
     ___flsub->___xxtofl
     ___fldiv->___xxtofl
-    _Lcd_Write_String->_Lcd_Write_Char
-    _Lcd_Write_Char->_Lcd_Port
-    _Lcd_Set_Cursor->_Lcd_Cmd
-    _Lcd_Init->_Lcd_Cmd
-    _Lcd_Clear->_Lcd_Cmd
-    _Lcd_Cmd->_Lcd_Port
+    _Lcd_Write_String_4bits->_Lcd_Write_Char_4bits
+    _Lcd_Write_Char_4bits->_Lcd_Port_4bits
+    _Lcd_Set_Cursor_4bits->_Lcd_Cmd_4bits
+    _Lcd_Init_4bits->_Lcd_Cmd_4bits
+    _Lcd_Clear_4bits->_Lcd_Cmd_4bits
+    _Lcd_Cmd_4bits->_Lcd_Port_4bits
 
 Critical Paths under _main in BANK0
 
@@ -11491,10 +11492,10 @@ Call Graph Tables:
  ---------------------------------------------------------------------------------
  (0) _main                                                20    20      0   40475
                                              35 BANK1     18    18      0
-                          _Lcd_Clear
-                           _Lcd_Init
-                     _Lcd_Set_Cursor
-                   _Lcd_Write_String
+                    _Lcd_Clear_4bits
+                     _Lcd_Init_4bits
+               _Lcd_Set_Cursor_4bits
+             _Lcd_Write_String_4bits
                             ___fldiv
                             ___flmul
                            ___xxtofl
@@ -11625,31 +11626,31 @@ Call Graph Tables:
                             ___flmul (ARG)
                            ___xxtofl (ARG)
  ---------------------------------------------------------------------------------
- (1) _Lcd_Write_String                                     7     5      2     648
+ (1) _Lcd_Write_String_4bits                               7     5      2     648
                                               5 COMMON     7     5      2
-                     _Lcd_Write_Char
+               _Lcd_Write_Char_4bits
  ---------------------------------------------------------------------------------
- (2) _Lcd_Write_Char                                       4     4      0     178
+ (2) _Lcd_Write_Char_4bits                                 4     4      0     178
                                               1 COMMON     4     4      0
-                           _Lcd_Port
+                     _Lcd_Port_4bits
  ---------------------------------------------------------------------------------
- (1) _Lcd_Set_Cursor                                       6     5      1     760
+ (1) _Lcd_Set_Cursor_4bits                                 6     5      1     760
                                               4 COMMON     6     5      1
-                            _Lcd_Cmd
+                      _Lcd_Cmd_4bits
  ---------------------------------------------------------------------------------
- (1) _Lcd_Init                                             2     2      0     198
+ (1) _Lcd_Init_4bits                                       2     2      0     198
                                               4 COMMON     2     2      0
-                            _Lcd_Cmd
-                           _Lcd_Port
+                      _Lcd_Cmd_4bits
+                     _Lcd_Port_4bits
  ---------------------------------------------------------------------------------
- (1) _Lcd_Clear                                            0     0      0     110
-                            _Lcd_Cmd
+ (1) _Lcd_Clear_4bits                                      0     0      0     110
+                      _Lcd_Cmd_4bits
  ---------------------------------------------------------------------------------
- (2) _Lcd_Cmd                                              3     3      0     110
+ (2) _Lcd_Cmd_4bits                                        3     3      0     110
                                               1 COMMON     3     3      0
-                           _Lcd_Port
+                     _Lcd_Port_4bits
  ---------------------------------------------------------------------------------
- (3) _Lcd_Port                                             1     1      0      88
+ (3) _Lcd_Port_4bits                                       1     1      0      88
                                               0 COMMON     1     1      0
  ---------------------------------------------------------------------------------
  Estimated maximum stack depth 4
@@ -11658,17 +11659,17 @@ Call Graph Tables:
  Call Graph Graphs:
 
  _main (ROOT)
-   _Lcd_Clear
-     _Lcd_Cmd
-       _Lcd_Port
-   _Lcd_Init
-     _Lcd_Cmd
-     _Lcd_Port
-   _Lcd_Set_Cursor
-     _Lcd_Cmd
-   _Lcd_Write_String
-     _Lcd_Write_Char
-       _Lcd_Port
+   _Lcd_Clear_4bits
+     _Lcd_Cmd_4bits
+       _Lcd_Port_4bits
+   _Lcd_Init_4bits
+     _Lcd_Cmd_4bits
+     _Lcd_Port_4bits
+   _Lcd_Set_Cursor_4bits
+     _Lcd_Cmd_4bits
+   _Lcd_Write_String_4bits
+     _Lcd_Write_Char_4bits
+       _Lcd_Port_4bits
    ___fldiv
      ___flmul (ARG)
        __Umul8_16
@@ -11745,559 +11746,559 @@ DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.40 build 20220703182018 
-Symbol Table                                                                                   Wed Feb 01 17:20:06 2023
+Symbol Table                                                                                   Wed Feb 01 17:32:36 2023
 
-               ___fldiv@aexp 0057                 ___fldiv@bexp 0056                            pc 0002  
-               ___fldiv@sign 004F                           l51 1B43                           l60 1B82  
-                         l61 1B83                           l62 1B89                           l63 1B8A  
-                         l64 1B90                           l72 1B32                           l81 1E56  
-                         l66 1B91                           l58 1B79                           l90 1CDF  
-                         l59 1B7C                           l84 1C63                           l69 1B6F  
-                         l78 1DAB                 ___awdiv@sign 0021                           fsr 0004  
-        ___wmul@multiplicand 0072          __Umul8_16@word_mpld 0076                          l112 1C19  
-                        l121 1D13                          l113 1C2E                          l130 1E73  
-                        l123 1D17                          l131 1E83                          l124 1D21  
-                        l132 1E90                          l117 1CF2                          l133 1E9E  
-                        l134 1EAC                          l119 1CF6                          l311 07FB  
-                        l136 1EB8                          l129 1E65                          l305 07B8  
-                        l315 1BC2                          l501 1DC8                          l317 1BDA  
-                        l245 0FFF                          l502 1DE4                          l510 08A3  
-                        l238 15A7                          l503 1DF9                          l351 1F1E  
-                        l264 0229                          l506 081E                          l514 1B25  
-                        l290 0619                          l700 139C                          l532 1111  
-                        l509 088A                          l525 1FEA                          l533 1085  
-                        l621 1D65                          l518 1FFF                          l543 1104  
-                        l631 1C9D                          l720 1384                          l528 1FFF  
-                        l536 10D4                          l481 105A                          l297 0657  
-                        l722 1392                          l714 1312                          l642 1603  
-                        l802 1B55                          l571 0058                          l468 1F87  
-                        l485 095B                          l646 1686                          l486 08C2  
-                        l750 0C94                          l663 174F                          l655 17FF  
-                        l648 165F                          l496 094E                          l744 0C10  
-                        l673 1795                          l489 091E                          l738 0CA0  
-                        l667 1773                          l684 17F5                          l676 17D3  
-                        l685 17FF                          l757 1BEF                          l782 1134  
-                        l759 1C01                          l688 1BB5                          l784 11C9  
-                        l698 1220                          l795 1193                          l796 119F  
-                        l788 1177                          fsr0 0004                          indf 0000  
-               ___awmod@sign 0076                 ___flmul@aexp 0036                 ___flmul@bexp 0037  
-               ___flmul@sign 0031                 ___flmul@temp 003C                 ___flmul@prod 0038  
-               ___fltol@exp1 005A                         l3000 1BD0                         l3010 1ECC  
-                       l3002 1BD6                         l3100 1FDF                         l3020 1F06  
-                       l3012 1ED9                         l2300 1BDC                         l3030 1DAC  
-                       l3102 1FEF                         l3022 1F07                         l3014 1EDD  
-                       l3006 1EB9                         l3110 0010                         l2310 1BFD  
-                       l2302 1BDE                         l2320 1B87                         l3200 1EA5  
-                       l3032 1DC0                         l3104 1FF4                         l3024 1F10  
-                       l3016 1EE6                         l3008 1EC9                         l3120 004A  
-                       l3112 001D                         l2304 1BE5                         l2400 1051  
-                       l2322 1B8E                         l2314 1B71                         l3210 1C08  
-                       l3202 1EAB                         l3034 1DDC                         l3050 083E  
-                       l3042 0802                         l3018 1EF8                         l3026 1F16  
-                       l3114 0021                         l3122 0050                         l3106 0005  
-                       l2306 1BE9                         l2410 1D2A                         l2330 1F2B  
-                       l2402 1056                         l2316 1B75                         l3220 1E00  
-                       l3212 1C0E                         l3204 1EB3                         l3036 1DF6  
-                       l3052 0862                         l3044 0816                         l2500 160D  
-                       l3116 0033                         l3108 000D                         l3140 113C  
-                       l3132 1113                         l2308 1BF8                         l2420 1D4D  
-                       l2412 1D2D                         l2340 1F3C                         l2332 1F2D  
-                       l2324 1F1F                         l3300 0210                         l2318 1B80  
-                       l3222 1E09                         l3230 1D67                         l3214 1C13  
-                       l3206 1EB7                         l3038 1DF8                         l3054 0866  
-                       l3046 0832                         l3062 1B1B                         l2510 1619  
-                       l2502 1611                         l3126 1B92                         l3070 1F88  
-                       l3118 0041                         l3150 115C                         l3134 1118  
-                       l2422 1D53                         l2414 1D34                         l2406 1D22  
-                       l2350 1F54                         l2342 1F42                         l2334 1F31  
-                       l2326 1F22                         l3310 022B                         l3302 0214  
-                       l3224 1E18                         l3232 1D6C                         l3240 1D89  
-                       l3216 1C29                         l3208 1C03                         l3056 08A0  
-                       l3048 083A                         l3064 1B23                         l2600 1777  
-                       l2520 1623                         l2512 161B                         l2504 1613  
-                       l3128 1B96                         l3080 1FB0                         l3072 1F93  
-                       l3160 118D                         l3152 1160                         l3144 1145  
-                       l3136 111C                         l2424 1D54                         l2416 1D38  
-                       l2408 1D24                         l2440 1C78                         l2432 1C64  
-                       l2352 1F65                         l2344 1F45                         l2360 1F79  
-                       l2336 1F36                         l2328 1F26                         l3400 059F  
-                       l3320 0269                         l3312 0247                         l3304 0225  
-                       l3226 1E1E                         l3218 1DFA                         l3242 1D8F  
-                       l3234 1D79                         l3250 1C9E                         l3058 08A2  
-                       l3066 1B25                         l2602 177A                         l2610 1787  
-                       l2530 162D                         l2522 1625                         l2514 161D  
-                       l2506 1615                         l3082 1FB8                         l3170 11C0  
-                       l3162 1197                         l3154 116E                         l3146 1148  
-                       l3138 112C                         l2426 1D5B                         l2418 1D3C  
-                       l2442 1C7C                         l2434 1C6A                         l2450 1C99  
-                       l2362 1F7E                         l2354 1F6B                         l2346 1F4C  
-                       l2338 1F3A                         l2370 1003                         l3410 060F  
-                       l3402 05AB                         l3330 02A7                         l3322 026D  
-                       l3314 0253                         l3306 0227                         l3228 1B26  
-                       l3244 1D9C                         l3236 1D7C                         l3252 1CA1  
-                       l3500 11EB                         l3260 1CE6                         l3180 1E5E  
-                       l2620 179A                         l2612 1788                         l2604 177C  
-                       l2540 166A                         l2524 1627                         l2516 161F  
-                       l2508 1617                         l2532 162F                         l2460 15B5  
-                       l3092 1FC6                         l3084 1FBA                         l3076 1F9C  
-                       l3172 11C1                         l3164 11A1                         l3156 117E  
-                       l3148 1155                         l2700 0A15                         l2428 1D61  
-                       l2444 1C86                         l2436 1C6D                         l2364 1F83  
-                       l2356 1F6C                         l2348 1F50                         l2380 1017  
-                       l2372 1007                         l3420 063F                         l3412 0621  
-                       l3404 05B0                         l3340 02F7                         l3332 02C0  
-                       l3324 0286                         l3316 0257                         l3246 1D9F  
-                       l3238 1D82                         l3254 1CBD                         l3510 1202  
-                       l3502 11ED                         l3270 1D05                         l3262 1CEA  
-                       l3190 1E82                         l3182 1E64                         l2630 17D8  
-                       l2622 179F                         l2614 178C                         l2606 1781  
-                       l2542 166C                         l2550 167E                         l2534 1630  
-                       l2526 1629                         l2518 1621                         l2470 15C9  
-                       l2462 15B6                         l2454 15A8                         l3086 1FBE  
-                       l3094 1FD8                         l3078 1FAF                         l3166 11B7  
-                       l3158 1189                         l2710 0A8E                         l2702 0A3F  
-                       l2446 1C8C                         l2438 1C74                         l2358 1F73  
-                       l2390 102F                         l2382 101D                         l2374 100C  
-                       l3430 066A                         l3422 064E                         l3414 0628  
-                       l3406 05B5                         l3350 0384                         l3342 02FB  
-                       l3334 02CB                         l3326 029F                         l3318 025B  
-                       l3248 1DA5                         l2800 1C36                         l3256 1CC3  
-                       l3600 132E                         l3520 1216                         l3512 1203  
-                       l3504 11F5                         l3272 1D0B                         l3264 1CEF  
-                       l3176 1B33                         l3192 1E89                         l3184 1E6C  
-                       l2640 17EF                         l2632 17DD                         l2624 17AD  
-                       l2616 1792                         l2608 1783                         l2560 16AF  
-                       l2552 168A                         l2544 1670                         l2536 1647  
-                       l2528 162B                         l2480 15DD                         l2464 15BB  
-                       l2472 15CB                         l2456 15AD                         l3168 11BC  
-                       l2720 0B0A                         l2712 0AAB                         l2704 0A5B  
-                       l2448 1C93                         l2392 1039                         l2384 1020  
-                       l2376 100E                         l2368 1002                         l3440 0741  
-                       l3432 066E                         l3424 0653                         l3416 062C  
-                       l3408 05F0                         l3360 0406                         l3352 038D  
-                       l3344 0301                         l3336 02D1                         l3328 02A3  
-                       l3280 01C2                         l2810 1C52                         l2802 1C39  
-                       l3610 1377                         l3602 1347                         l3514 1208  
-                       l3522 1218                         l3506 11FA                         l3274 1D10  
-                       l3266 1CF7                         l3258 1CE1                         l3194 1E8F  
-                       l3186 1E72                         l3178 1E57                         l2642 17F1  
-                       l2634 17E5                         l2626 17B1                         l2570 16C4  
-                       l2562 16B3                         l2554 168F                         l2546 1671  
-                       l2538 1663                         l2490 15F0                         l2482 15E1  
-                       l2474 15D3                         l2466 15C0                         l2458 15B1  
-                       l2730 0BBC                         l2722 0B35                         l2714 0AB9  
-                       l2706 0A77                         l2650 0961                         l2394 103F  
-                       l2386 1027                         l2378 1012                         l3450 0797  
-                       l3442 074B                         l3434 068C                         l3426 0660  
-                       l3418 0632                         l3370 0481                         l3362 0415  
-                       l3354 03A8                         l3346 0320                         l3338 02E4  
-                       l3290 01E0                         l3282 01C8                         l2812 1C58  
-                       l2804 1C47                         l3620 138E                         l3612 137B  
-                       l3604 134D                         l3540 1261                         l3524 1228  
-                       l3532 1241                         l3516 120D                         l3508 11FE  
-                       l3276 1D18                         l3268 1D00                         l3196 1E97  
-                       l3188 1E7C                         l2644 17FA                         l2636 17EA  
-                       l2628 17CF                         l2580 1727                         l2572 16C5  
-                       l2564 16B7                         l2548 167A                         l2492 15F8  
-                       l2484 15E5                         l2476 15D6                         l2468 15C8  
-                       l2900 1086                         l2740 0BE1                         l2732 0BC5  
-                       l2724 0B43                         l2716 0AD6                         l2708 0A80  
-                       l2660 0974                         l2652 0965                         l2820 13A6  
-                       l2396 1046                         l2388 102B                         l3460 07C3  
-                       l3452 079D                         l3436 06E7                         l3444 0786  
-                       l3428 0665                         l3380 04CF                         l3372 048A  
-                       l3364 0430                         l3348 036B                         l3356 03B0  
-                       l3292 01E1                         l3284 01CD                         l2814 1C5B  
-                       l2806 1C4A                         l3614 1383                         l3606 135A  
-                       l3550 1280                         l3542 1269                         l3534 1246  
-                       l3526 1234                         l3518 1215                         l3198 1E9D  
-                       l2646 17FE                         l2638 17EB                         l2590 175C  
-                       l2582 172D                         l2574 16CE                         l2566 16BE  
-                       l2558 1698                         l2494 15F9                         l2486 15E6  
-                       l2478 15DC                         l2910 10AD                         l2902 108C  
-                       l2750 0BF9                         l2742 0BEA                         l2734 0BD3  
-                       l2726 0B6E                         l2718 0AED                         l2670 098F  
-                       l2662 097C                         l2654 0969                         l2398 104C  
-                       l3462 07C4                         l3446 078E                         l3438 0722  
-                       l3374 0492                         l3366 0457                         l3382 04D8  
-                       l3358 03BF                         l3454 07A4                         l3294 01E5  
-                       l3286 01D2                         l3278 01BF                         l3630 0067  
-                       l2816 1C60                         l2808 1C4F                         l3616 1388  
-                       l3608 1368                         l3560 12B2                         l3552 1292  
-                       l3544 1271                         l3528 1238                         l2584 1732  
-                       l2568 16C0                         l2576 16D3                         l2488 15EB  
-                       l2496 15FB                         l2920 10D8                         l2912 10BB  
-                       l2904 109B                         l2760 0C28                         l2752 0C0D  
-                       l2736 0BDC                         l2744 0BF0                         l2728 0B94  
-                       l2680 09A6                         l2672 0993                         l2664 097E  
-                       l2656 096A                         l2648 095C                         l2832 1564  
-                       l2840 0CAA                         l3464 07D3                         l3456 07AA  
-                       l3448 0793                         l3384 050D                         l3376 04B0  
-                       l3368 0466                         l3704 023F                         l3296 01E8  
-                       l3288 01D4                         l3472 07E7                         l3640 0085  
-                       l3632 006D                         l3618 138C                         l3570 12D3  
-                       l3562 12B3                         l3554 1296                         l3546 1279  
-                       l3538 124F                         l3490 11D7                         l2594 1765  
-                       l2578 16E9                         l2586 1741                         l2498 1609  
-                       l2914 10C5                         l2906 109D                         l2770 0C63  
-                       l2762 0C2C                         l2746 0BF4                         l2738 0BE0  
-                       l2682 09A8                         l2674 0994                         l2666 0986  
-                       l2658 096F                         l2826 14B3                         l2818 13A0  
-                       l2850 0DA0                         l2842 0CB1                         l3466 07D3  
-                       l3458 07B2                         l3394 055E                         l3386 055A  
-                       l3474 07F7                         l3298 01FD                         l3650 00B0  
-                       l3642 008E                         l3634 0073                         l3626 0059  
-                       l3580 12EC                         l3572 12D5                         l3564 12C1  
-                       l3556 1297                         l3548 127B                         l3492 11D8  
-                       l3484 11CA                         l2596 176E                         l2588 1757  
-                       l2940 08A4                         l2916 10C6                         l2908 10A4  
-                       l2780 0C8E                         l2772 0C72                         l2764 0C45  
-                       l2756 0C15                         l2748 0BF5                         l2692 09C3  
-                       l2684 09B0                         l2676 0999                         l2668 098B  
-                       l2828 14B9                         l2860 0E5C                         l2836 0CA4  
-                       l3468 07E1                         l3388 055C                         l3660 0134  
-                       l3652 00B6                         l3644 0096                         l3636 0078  
-                       l3628 005E                         l2790 1B5A                         l3590 130F  
-                       l3574 12DE                         l3582 12F2                         l3558 12A0  
-                       l3566 12C5                         l3494 11DD                         l3486 11CF  
-                       l2598 1772                         l2942 08AF                         l2934 10F9  
-                       l2926 10E0                         l2918 10CE                         l2782 0C8F  
-                       l2774 0C7C                         l2758 0C1A                         l2766 0C4B  
-                       l2694 09D1                         l2686 09B5                         l2678 099E  
-                       l2854 0E28                         l2838 0CA8                         l3398 0595  
-                       l3662 013A                         l3654 0113                         l3646 009F  
-                       l3638 007D                         l2792 1B60                         l3584 12F6  
-                       l3576 12E2                         l3568 12CB                         l3496 11E2  
-                       l3488 11D3                         l2960 08E5                         l2952 08C3  
-                       l2936 1109                         l2928 10F2                         l2784 0C98  
-                       l2776 0C7E                         l2768 0C58                         l2696 09DE  
-                       l2688 09BA                         l2880 1B4C                         l2872 0FD3  
-                       l2848 0D99                         l3664 0197                         l3656 0123  
-                       l3648 00A7                         l2794 1B63                         l3594 1317  
-                       l3586 12F7                         l3578 12E3                         l3498 11EA  
-                       l2970 0918                         l2962 08EE                         l2954 08CB  
-                       l2946 08B8                         l2890 106C                         l2778 0C8A  
-                       l2698 09F9                         l2882 1B52                         l2866 0F44  
-                       l2858 0E55                         l3666 01A7                         l3658 012B  
-                       l2796 1B6C                         l2788 1B57                         l3596 131C  
-                       l3588 12FB                         l2972 0922                         l2980 093C  
-                       l2964 0900                         l2956 08DC                         l2884 1B54  
-                       l2876 1B45                         l2868 0F4B                         l3668 01AF  
-                       l2798 1C30                         l3598 132A                         l2966 090E  
-                       l2958 08DE                         l2894 1075                         l2878 1B46  
-                       l2992 1BB6                         l2968 090F                         l2888 105B  
-                       l2994 1BB8                         l2986 0943                         l2978 092A  
-                       l2996 1BBC                         l2988 0953                         l2998 1BC9  
-                       _ADIF 0066                         STR_1 18AB                         STR_2 18AF  
-                       STR_3 18A0                         STR_4 18A6                         STR_5 18A6  
-                       u4000 0974                         u3200 1F26                         u4001 0973  
-                       u3201 1F25                         u3130 1BE9                         u4010 0993  
-                       u3210 1F31                         u3131 1BE8                         u4011 0992  
-                       u3211 1F30                         u4020 0999                         u3220 1F42  
-                       u3300 1007                         u4021 0998                         u3221 1F41  
-                       u3301 1006                         u3150 1BFD                         u4030 099E  
-                       u3310 1012                         u3151 1BFC                         u4111 0A9D  
-                       u4031 099D                         u3311 1011                         u3160 1B75  
-                       u5000 1DC0                         u4112 0AA4                         u4040 09B5  
-                       u3240 1F54                         u3320 101D                         u3161 1B74  
-                       u5001 1DBF                         u3145 1BF0                         u4201 0BAE  
-                       u4121 0AC8                         u4113 0AAB                         u4105 0A79  
-                       u4041 09B4                         u3241 1F53                         u3321 101C  
-                       u3170 1B80                         u5010 1DDC                         u4202 0BB5  
-                       u4122 0ACF                         u4050 09BA                         u3410 1D3C  
-                       u3171 1B7F                         u5011 1DDB                         u4203 0BBC  
-                       u4123 0AD6                         u4051 09B9                         u3411 1D3B  
-                       u3235 1F46                         u3180 1B87                         u5020 1DF6  
-                       u5100 1B23                         u4300 0C2C                         u3260 1F65  
-                       u3340 102F                         u3181 1B86                         u5021 1DF5  
-                       u5101 1B22                         u4301 0C2B                         u4141 0AFC  
-                       u4061 0A07                         u3405 1D2E                         u3261 1F64  
-                       u3341 102E                         u3190 1B8E                         u5030 0816  
-                       u5110 1F93                         u4310 0C3B                         u4230 0BE0  
-                       u4142 0B03                         u4062 0A0E                         u3430 1D4D  
-                       u3510 1C99                         u3350 1039                         u3191 1B8D  
-                       u5031 0815                         u5111 1F92                         u4231 0BDF  
-                       u4215 0BBE                         u4151 0B27                         u4143 0B0A  
-                       u4135 0AD8                         u4071 0A23                         u4063 0A15  
-                       u3431 1D4C                         u3511 1C98                         u3255 1F55  
-                       u3351 1038                         u3335 1021                         u6000 1208  
-                       u5040 0832                         u3600 160D                         u3520 15B5  
-                       u5200 1FF4                         u5120 1FAA                         u4320 0C58  
-                       u4152 0B2E                         u4072 0A2A                         u4400 14B9  
-                       u3280 1F79                         u6001 1207                         u5025 1DF2  
-                       u5041 0831                         u3601 160C                         u3521 15B4  
-                       u5201 1FF3                         u4321 0C57                         u4225 0BD5  
-                       u4161 0B52                         u4153 0B35                         u4081 0A4D  
-                       u4073 0A31                         u3425 1D3D                         u3505 1C8D  
-                       u4401 14B8                         u3281 1F78                         u3265 1F61  
-                       u6010 120D                         u5050 083E                         u3610 1647  
-                       u3530 15BB                         u5130 1FBE                         u5210 000D  
-                       u4330 0C72                         u4250 0BF4                         u4170 0B7A  
-                       u4162 0B59                         u4082 0A54                         u3450 1D61  
-                       u3290 1F7E                         u3370 104C                         u6011 120C  
-                       u5051 083D                         u3611 1646                         u3531 15BA  
-                       u5131 1FBD                         u5211 000C                         u4331 0C71  
-                       u4315 0C36                         u4251 0BF3                         u4163 0B60  
-                       u4091 0A69                         u4083 0A5B                         u3451 1D60  
-                       u3435 1D49                         u3291 1F7D                         u3275 1F6D  
-                       u3371 104B                         u3355 1035                         u6100 12CB  
-                       u6020 1228                         u3620 1652                         u3540 15C0  
-                       u5140 1FC5                         u4340 0C8E                         u4260 0BF9  
-                       u4092 0A70                         u3460 1C6A                         u3380 1051  
-                       u6101 12CA                         u6021 1227                         u5061 084D  
-                       u3701 16A1                         u3621 1650                         u3541 15BF  
-                       u5141 1FC4                         u5125 1FA5                         u4341 0C8D  
-                       u4325 0C54                         u4261 0BF8                         u4245 0BE3  
-                       u4181 0B86                         u4093 0A77                         u3445 1D55  
-                       u3461 1C69                         u3381 1050                         u3365 1040  
-                       u6110 12D3                         u6030 1246                         u5070 0866  
-                       u5062 084E                         u3710 16B3                         u3702 16A8  
-                       u3630 1653                         u3550 15DC                         u5230 0021  
-                       u5310 115B                         u4270 0C0D                         u4190 0BA2  
-                       u4182 0B8D                         u3390 1D2A                         u6111 12D2  
-                       u6031 1245                         u5071 0865                         u5063 0853  
-                       u3711 16B2                         u3703 16AF                         u3615 1643  
-                       u3551 15DB                         u5231 0020                         u5311 115A  
-                       u4335 0C6E                         u4271 0C0C                         u4183 0B94  
-                       u4175 0B75                         u3391 1D29                         u4415 14D6  
-                       u6200 132E                         u6040 1280                         u5064 0854  
-                       u3800 175C                         u3720 16B7                         u3640 1663  
-                       u3560 15E5                         u5160 1FD7                         u5240 0033  
-                       u5400 11C0                         u4280 0C14                         u3480 1C7C  
-                       u4360 13A6                         u4440 0CA8                         u6201 132D  
-                       u6041 127F                         u5081 0875                         u5065 0859  
-                       u3801 175B                         u3721 16B6                         u3641 1662  
-                       u3561 15E4                         u5161 1FD6                         u5241 0032  
-                       u5225 0012                         u5401 11BF                         u5305 114D  
-                       u4281 0C13                         u3481 1C7B                         u4425 1523  
-                       u4361 13A5                         u4505 0DB3                         u4441 0CA7  
-                       u6210 133D                         u6130 12E2                         u5410 1E5E  
-                       u5090 08A0                         u5082 0876                         u5066 085A  
-                       u3730 16C4                         u3650 1670                         u3570 15EB  
-                       u5170 1FDE                         u5330 117D                         u4290 0C1A  
-                       u3490 1C86                         u4610 1B4C                         u4530 0E5C  
-                       u4450 0CB1                         u4355 1C3C                         u6131 12E1  
-                       u5411 1E5D                         u5091 089F                         u5083 087B  
-                       u3731 16C3                         u3651 166F                         u3571 15EA  
-                       u5171 1FDD                         u5155 1FC7                         u5331 117C  
-                       u4291 0C19                         u4195 0B9D                         u3491 1C85  
-                       u3475 1C6E                         u4435 156F                         u4611 1B4B  
-                       u4531 0E5B                         u4515 0DEF                         u4451 0CB0  
-                       u5500 1D6C                         u6220 135A                         u5420 1E6C  
-                       u5084 087C                         u3900 17B1                         u3820 1772  
-                       u3580 15F0                         u5260 0050                         u4700 10DF  
-                       u4620 1B52                         u5501 1D6B                         u6221 1359  
-                       u6125 12D7                         u5421 1E6B                         u5085 0881  
-                       u3901 17B0                         u3821 1771                         u3581 15EF  
-                       u5261 004F                         u5245 002F                         u5325 116F  
-                       u4701 10DE                         u4621 1B51                         u4605 0FD6  
-                       u4525 0E2B                         u6230 1377                         u6150 12F6  
-                       u6070 1296                         u5430 1E7C                         u5086 0882  
-                       u3910 17C0                         u3830 1777                         u3750 16E9  
-                       u3670 1686                         u3590 1609                         u5190 1FEF  
-                       u5350 118D                         u5270 1118                         u4630 106C  
-                       u6231 1376                         u6215 1338                         u6151 12F5  
-                       u6071 1295                         u6055 1282                         u5431 1E7B  
-                       u5095 089C                         u3831 1776                         u3815 1767  
-                       u3751 16E8                         u3671 1685                         u3591 1608  
-                       u5191 1FEE                         u5255 0042                         u5351 118C  
-                       u5271 1117                         u4631 106B                         u3495 1C82  
-                       u4375 13C3                         u5520 1D8F                         u6240 138C  
-                       u6160 12FB                         u5600 1D17                         u5440 1E89  
-                       u3920 17CF                         u3840 1781                         u3680 168A  
-                       u5360 1193                         u5280 111C                         u4720 10F1  
-                       u4640 1084                         u5521 1D8E                         u6241 138B  
-                       u6225 1356                         u6161 12FA                         u6145 12E5  
-                       u6065 128B                         u5601 1D16                         u5441 1E88  
-                       u3921 17CE                         u3841 1780                         u3761 1700  
-                       u3753 16E5                         u3745 16C7                         u3681 1689  
-                       u3665 1673                         u5185 1FE1                         u5361 1192  
-                       u5345 1182                         u5281 111B                         u4721 10F0  
-                       u4641 1083                         u4385 141D                         u4545 0E7C  
-                       u4465 0CD1                         u6170 130F                         u6090 12B2  
-                       u5450 1E97                         u3930 17D8                         u3850 1787  
-                       u3770 1714                         u3762 1701                         u3690 168F  
-                       u5370 1197                         u5290 113C                         u4810 091E  
-                       u4730 10F8                         u4570 0F4B                         u4490 0DA0  
-                       u5610 01C8                         u5515 1D72                         u6307 1C4C  
-                       u6235 1373                         u6171 130E                         u6091 12B1  
-                       u5451 1E96                         u3931 17D7                         u3915 17BB  
-                       u3851 1786                         u3771 1715                         u3763 1706  
-                       u3691 168E                         u5371 1196                         u5291 113B  
-                       u4811 091D                         u4731 10F7                         u4715 10E1  
-                       u4395 1472                         u4571 0F4A                         u4555 0EB8  
-                       u4491 0D9F                         u4475 0D0D                         u5611 01C7  
-                       u5540 1CAB                         u6180 1316                         u5460 1EA5  
-                       u3940 17DD                         u3860 178C                         u3780 1732  
-                       u3772 171A                         u3764 1707                         u5380 11AC  
-                       u4820 0922                         u4660 10BB                         u5700 03A8  
-                       u5620 01E0                         u6317 1C5D                         u6181 1315  
-                       u6085 1299                         u5461 1EA4                         u3941 17DC  
-                       u3861 178B                         u3781 1731                         u3773 171B  
-                       u3765 170C                         u4821 0921                         u4805 0911  
-                       u4661 10BA                         u4565 0F03                         u4485 0D58  
-                       u5701 03A7                         u5621 01DF                         u5550 1CCD  
-                       u6190 131C                         u5470 1EB3                         u3950 17EA  
-                       u3870 1792                         u3790 1757                         u3766 170D  
-                       u5390 11BC                         u4830 0929                         u4750 1109  
-                       u5710 03BF                         u5630 0224                         u6327 1E04  
-                       u5535 1D95                         u6191 131B                         u6095 12AE  
-                       u5471 1EB2                         u3951 17E9                         u3871 1791  
-                       u3791 1756                         u5391 11BB                         u4831 0928  
-                       u4751 1108                         u4655 10A6                         u5711 03BE  
-                       u5631 0223                         u5560 1CDF                         u5480 1C08  
-                       u3960 17EF                         u3880 1799                         u4920 1BD6  
-                       u4760 08AF                         u4680 10D4                         u5800 05AB  
-                       u5720 0415                         u5640 0253                         u6337 1E13  
-                       u5561 1CDE                         u6257 1C2B                         u5481 1C07  
-                       u3961 17EE                         u3881 1798                         u4921 1BD5  
-                       u4905 1BC3                         u5385 11A7                         u4761 08AE  
-                       u4745 10FB                         u4681 10D3                         u4665 10B7  
-                       u4585 0F5E                         u5801 05AA                         u5721 0414  
-                       u5641 0252                         u5570 1CE6                         u5490 1C13  
-                       u3970 17FE                         u3890 179F                         u4930 1EC9  
-                       u4850 093B                         u4770 08C1                         u4690 10D8  
-                       u5730 0430                         u5650 0257                         u6347 1E22  
-                       u6267 1CEC                         u5571 1CE5                         u5491 1C12  
-                       u3971 17FD                         u3891 179E                         u4931 1EC8  
-                       u4915 1BCA                         u4851 093A                         u4771 08C0  
-                       u4691 10D7                         u4675 10C7                         u4595 0F9A  
-                       u5731 042F                         u5715 03BB                         u5651 0256  
-                       u5580 1CF6                         u4860 0942                         u3980 0969  
-                       u5900 07AA                         u5820 0620                         u5740 0457  
-                       u5660 0286                         u6357 1B67                         u6277 1CFB  
-                       u5581 1CF5                         u4861 0941                         u4845 092B  
-                       u3981 0968                         u5901 07A9                         u5821 061F  
-                       u5741 0456                         u5725 0411                         u5661 0285  
-                       u5590 1D05                         u4950 1EDD                         u4790 0900  
-                       u3990 096F                         u5910 07B2                         u5830 063F  
-                       u5750 0466                         u5670 02C0                         u6287 1D0D  
-                       u5591 1D04                         u4951 1EDC                         u4791 08FF  
-                       u3991 096E                         u5911 07B1                         u5831 063E  
-                       u5815 05B8                         u5751 0465                         u5671 02BF  
-                       u4880 0953                         u5920 07C3                         u5840 064E  
-                       u5760 0481                         u5680 02FB                         u6297 1D1C  
-                       u4945 1ECE                         u4881 0952                         u4785 08E7  
-                       u5921 07C2                         u5841 064D                         u5761 0480  
-                       u5681 02FA                         u4970 1EF8                         u4890 1BBC  
-                       u5930 07D3                         u5850 0665                         u5690 0384  
-                       u4971 1EF7                         u4891 1BBB                         u4875 0945  
-                       u4795 08FC                         u5931 07D2                         u5851 0664  
-                       u5835 063B                         u5755 0462                         u5691 0383  
-                       u5940 07E1                         u5780 0594                         u4965 1EDF  
-                       u5941 07E0                         u5925 07BF                         u5845 064A  
-                       u5781 0593                         u4990 1F16                         u5950 07F7  
-                       u5790 059F                         u4991 1F15                         u4975 1EF4  
-                       u5951 07F6                         u5935 07CF                         u5791 059E  
-                       u5775 0561                         u5960 11D7                         u5880 078D  
-                       u5961 11D6                         u4985 1F08                         u5881 078C  
-                       u5865 06EA                         u5785 0590                         u5970 11DD  
-                       u5890 07A3                         u5971 11DC                         u5891 07A2  
-                       u5875 074E                         u5980 11E2                         u5981 11E1  
-                       u5990 1202                         u5991 1201            ?_Lcd_Write_String 0075  
-                       _main 0059                         btemp 007E                         start 0000  
-         ??_Lcd_Write_String 0077              ___fldiv@new_exp 0050                 _sprintf$1019 00AA  
-            __end_of_Lcd_Cmd 1B70                ___fltol@sign1 0059              __end_of___fladd 1800  
-                      ?_main 0070              __end_of___fldiv 139D              __end_of___awdiv 1F88  
-            __end_of___flneg 1B26              __end_of___awmod 105B              __end_of___flmul 0CA1  
-            __end_of___flsub 1BB6              __end_of___fltol 2000                        _ANSEL 0188  
-            __end_of___lldiv 1F1F              ___awdiv@divisor 0077              __end_of___llmod 0059  
-            __end_of___lwdiv 1D66              __end_of___lwmod 1C9E              ___awdiv@counter 0020  
-                      _PORTB 0006                        _PORTC 0007                        _PORTD 0008  
-                      _PORTE 0009                        _TRISB 0086                        _TRISC 0087  
-                      _TRISD 0088                        _TRISE 0089              __end_of_readADC 1D22  
-            __end_of_dpowers 18A0                        _scale 0CA1              __end_of_isdigit 1B56  
-                      _setup 1B33                        pclath 000A                        status 0003  
-                      wtemp0 007E              __end_of_sprintf 07FC             __end_of_Lcd_Init 1E57  
-           __end_of_Lcd_Port 1B92              __initialization 07FC                 __end_of_main 01BC  
-                     ??_main 00C3             ___llmod@dividend 0074                       ?_scale 003E  
-                     _ADRESH 001E             ___awdiv@dividend 0079                       ?_setup 0070  
-                     _ANSELH 0189                    ??_Lcd_Cmd 0071             __end_of___xxtofl 11CA  
-           __end_of__powers_ 1844                       ___flge 0802                 readADC@canal 0072  
-                     ___fleq 1DAC                    ??___fladd 005A                       ___wmul 1BB6  
-                  ??___fldiv 0046                    ??___awdiv 007B                    ??___flneg 0074  
-                  ??___awmod 0074                    ??___flmul 002C                    ??___flsub 007E  
-                  ??___fltol 0055                    ??___lldiv 0078                    ??___llmod 0078  
-                  ??___lwdiv 007A                    ??___lwmod 0074                       _fround 139D  
-           ___awdiv@quotient 0022              ___awmod@divisor 0070              ___awmod@counter 0075  
-                     main@V1 00C7                       main@V2 00CB                 ?_setupINTOSC 0070  
-                  ??_readADC 0070                    ??_isdigit 0070             __end_of_setupADC 1C2F  
-                  ??_sprintf 00A5              Lcd_Set_Cursor@a 0076              Lcd_Set_Cursor@b 0074  
-            Lcd_Set_Cursor@y 0078              Lcd_Set_Cursor@z 0077                   ___flge@ff1 0070  
-                 ___flge@ff2 0074                 ___xxtofl@arg 007A                 ___xxtofl@exp 0079  
-               ___xxtofl@val 0070                   ___fleq@ff1 0070                   ___fleq@ff2 0074  
-    __end_of__initialization 07FC                   ___flneg@f1 0070            __end_of_Lcd_Clear 1B33  
-                 ___fltol@f1 0051               __pcstackCOMMON 0070                __end_of_scale 1000  
-              __end_of_setup 1B44               _Lcd_Set_Cursor 1D66                   __div_to_l_ 08A4  
-                  ?_Lcd_Init 0070                    ?_Lcd_Port 0070              __div_to_l_@exp1 0025  
-            __div_to_l_@cntr 0024                      ??_scale 0042              __div_to_l_@quot 0020  
-                    ??_setup 0070                __div_to_l_@f1 0070                __div_to_l_@f2 0074  
-          __end_of__Umul8_16 1C02                   __pmaintext 0059                      ?___flge 0070  
-                    ?___fleq 0070                      ?___wmul 0070                      ?_fround 003E  
-     __end_of_Lcd_Set_Cursor 1DAC                    ?___xxtofl 0070                   ??_Lcd_Init 0074  
-                 ??_Lcd_Port 0070                   __stringtab 1800               _Lcd_Write_Char 1C2F  
-                    _Lcd_Cmd 1B56            __end_of__npowers_ 1878                   _scale$1018 004C  
-                  ?_setupADC 0070                      ___fladd 15A8                      ___fldiv 11CA  
-                    ___awdiv 1F1F                      ___flneg 1B1B                      ___awmod 1002  
-                    ___flmul 095C                      ___flsub 1B92                      ___fltol 1F88  
-                    ___lldiv 1EB9                      ___llmod 0005                      ___lwdiv 1D22  
-                    ___lwmod 1C64                    _ANSELbits 0188              ?_Lcd_Set_Cursor 0074  
-                    __ptext1 01BC                      __ptext2 0CA1                      __ptext3 1002  
-                    __ptext4 1F1F                      __ptext5 1B44                      __ptext6 139D  
-                    __ptext7 1C64                      __ptext8 1D22                      __ptext9 095C  
-                    _readADC 1CE0                  ?__div_to_l_ 0070                      _dpowers 1878  
-                    _isdigit 1B44                   ??___xxtofl 0074             ___awmod@dividend 0072  
-                    _sprintf 01BC       __end_of_Lcd_Write_Char 1C64         end_of_initialization 07FC  
-            ___lldiv@divisor 0070              ___lldiv@counter 007D                   ??_setupADC 0070  
-                  Lcd_Port@a 0070               __tdiv_to_l_@f1 0070               __tdiv_to_l_@f2 0074  
-              ??__tdiv_to_l_ 0078                    _PORTDbits 0008                  ___fladd@grs 0065  
-              ___xxtofl@sign 0078                    _TRISAbits 0085                  ___fldiv@grs 0052  
-                ___fldiv@rem 004B              ?_Lcd_Write_Char 0070            Lcd_Write_String@a 0075  
-          Lcd_Write_String@i 007A                  ___flmul@grs 0032                    _Lcd_Clear 1B26  
-             __end_of___flge 08A4               __end_of___fleq 1DFA               __end_of___wmul 1BDB  
-           _Lcd_Write_String 1C9E               __end_of_fround 15A8          start_initialization 07FC  
-        __end_of__tdiv_to_l_ 1112              ___llmod@divisor 0070              ___llmod@counter 0079  
-                 ?_Lcd_Clear 0070                     ??___flge 0078                     ??___fleq 0078  
-                   ??___wmul 0074                    __Umul8_16 1BDB              Lcd_Write_Char@a 0074  
-            Lcd_Write_Char@y 0073                     ??_fround 0042                sprintf@tmpval 00B7  
-                  ___fladd@a 0056                    ___fladd@b 0052                   fround@prec 0051  
-                  ___fldiv@a 003E                    ___fldiv@b 0042                    ___flmul@a 0028  
-                  ___flmul@b 0024                    ___flsub@a 0066                    ___flsub@b 006A  
-                  ___latbits 0002                __pcstackBANK0 0020                __pcstackBANK1 00A0  
-                   ?_Lcd_Cmd 0070                  sprintf@flag 00AF                  sprintf@eexp 00B5  
-                sprintf@fval 00BE                  sprintf@prec 00BC             ___lwdiv@dividend 0078  
-           ??_Lcd_Set_Cursor 0075                     ?___fladd 0052                     ?___fldiv 003E  
-                   ?___awdiv 0077                     ?___flneg 0070                     ?___awmod 0070  
-                   ?___flmul 0024                     ?___flsub 0066                     ?___fltol 0051  
-                   ?___lldiv 0070                     ?___llmod 0070                    __npowers_ 1844  
-                 ?__Umul8_16 0070                     ?___lwdiv 0076                     ?___lwmod 0070  
-                  __pstrings 1800                  __tdiv_to_l_ 105B                 ??__div_to_l_ 0078  
-                   ?_readADC 0070                     ?_isdigit 0070             ___lwdiv@quotient 007B  
-                   ?_sprintf 00A0               ___wmul@product 0074                     Lcd_Cmd@a 0073  
-         __end_of__div_to_l_ 095C                  ??_Lcd_Clear 0074                   _ADCON0bits 001F  
-                __stringbase 180F                   _ADCON1bits 009F                ??_setupINTOSC 0072  
-          ___wmul@multiplier 0070             ??_Lcd_Write_Char 0071                     _Lcd_Init 1DFA  
-                   _Lcd_Port 1B70     __end_of_Lcd_Write_String 1CE0                  ??__Umul8_16 0072  
-                _fround$1016 004D                  _fround$1017 0049           __end_of__stringtab 1810  
-                _isdigit$838 0070                   sprintf@val 00B1                     ___xxtofl 1112  
-            ___lwdiv@divisor 0076              ___lwdiv@counter 007D                     __ptext10 1BDB  
-                   __ptext11 105B                     __ptext20 1B1B                     __ptext12 08A4  
-                   __ptext21 0802                     __ptext13 1112                     __ptext30 1D66  
-                   __ptext22 1DAC                     __ptext14 1BB6                     __ptext31 1DFA  
-                   __ptext23 1E57                     __ptext15 0005                     __ptext32 1B26  
-                   __ptext24 1C02                     __ptext16 1EB9                     __ptext33 1B56  
-                   __ptext25 1B33                     __ptext17 1F88                     __ptext34 1B70  
-                   __ptext26 1CE0                     __ptext18 1B92                     __ptext27 11CA  
-                   __ptext19 15A8                     __ptext28 1C9E                     __ptext29 1C2F  
-        __end_of_setupINTOSC 1EB9                     __powers_ 1810                setupADC@canal 0071  
-                   _setupADC 1C02                     main@ADC1 00CF                     main@ADC2 00D2  
-setupINTOSC@OsciladorInterno 0070                     isdigit@c 0071                     scale@scl 0050  
-         Lcd_Write_Char@temp 0072                    sprintf@ap 00AE             __tdiv_to_l_@exp1 0025  
-           __tdiv_to_l_@cntr 0024                    sprintf@sp 00BB             __tdiv_to_l_@quot 0020  
-           ___lwmod@dividend 0072             ___lldiv@dividend 0074                    stringcode 180A  
-                 _OSCCONbits 008F           Lcd_Set_Cursor@temp 0079                 ?__tdiv_to_l_ 0070  
-     __Umul8_16@multiplicand 0070                  _setupINTOSC 1E57                     sprintf@c 00C2  
-                   sprintf@f 00A0             ___lldiv@quotient 0079              ___lwmod@divisor 0070  
-            ___lwmod@counter 0075                     stringdir 180A                     stringtab 1800  
-              ___fladd@signs 0062                 ___fladd@aexp 0063                 ___fladd@bexp 0064  
-       __Umul8_16@multiplier 0078            __Umul8_16@product 0074  
+                  ___fldiv@aexp 0057                    ___fldiv@bexp 0056                               pc 0002  
+                  ___fldiv@sign 004F                              l51 1B43                              l60 1B82  
+                            l61 1B83                              l62 1B89                              l63 1B8A  
+                            l64 1B90                              l72 1B32                              l81 1E56  
+                            l66 1B91                              l58 1B79                              l90 1CDF  
+                            l59 1B7C                              l84 1C63                              l69 1B6F  
+                            l78 1DAB                    ___awdiv@sign 0021                              fsr 0004  
+           ___wmul@multiplicand 0072             __Umul8_16@word_mpld 0076                             l112 1C19  
+                           l121 1D13                             l113 1C2E                             l130 1E73  
+                           l123 1D17                             l131 1E83                             l124 1D21  
+                           l132 1E90                             l117 1CF2                             l133 1E9E  
+                           l134 1EAC                             l119 1CF6                             l311 07FB  
+                           l136 1EB8                             l129 1E65                             l305 07B8  
+                           l315 1BC2                             l501 1DC8                             l317 1BDA  
+                           l245 0FFF                             l502 1DE4                             l510 08A3  
+                           l238 15A7                             l503 1DF9                             l351 1F1E  
+                           l264 0229                             l506 081E                             l514 1B25  
+                           l290 0619                             l700 139C                             l532 1111  
+                           l509 088A                             l525 1FEA                             l533 1085  
+                           l621 1D65                             l518 1FFF                             l543 1104  
+                           l631 1C9D                             l720 1384                             l528 1FFF  
+                           l536 10D4                             l481 105A                             l297 0657  
+                           l722 1392                             l714 1312                             l642 1603  
+                           l802 1B55                             l571 0058                             l468 1F87  
+                           l485 095B                             l646 1686                             l486 08C2  
+                           l750 0C94                             l663 174F                             l655 17FF  
+                           l648 165F                             l496 094E                             l744 0C10  
+                           l673 1795                             l489 091E                             l738 0CA0  
+                           l667 1773                             l684 17F5                             l676 17D3  
+                           l685 17FF                             l757 1BEF                             l782 1134  
+                           l759 1C01                             l688 1BB5                             l784 11C9  
+                           l698 1220                             l795 1193                             l796 119F  
+                           l788 1177                             fsr0 0004                             indf 0000  
+                  ___awmod@sign 0076                    ___flmul@aexp 0036                    ___flmul@bexp 0037  
+                  ___flmul@sign 0031                    ___flmul@temp 003C                    ___flmul@prod 0038  
+                  ___fltol@exp1 005A                            l3000 1BD0                            l3010 1ECC  
+                          l3002 1BD6                            l3100 1FDF                            l3020 1F06  
+                          l3012 1ED9                            l2300 1BDC                            l3030 1DAC  
+                          l3102 1FEF                            l3022 1F07                            l3014 1EDD  
+                          l3006 1EB9                            l3110 0010                            l2310 1BFD  
+                          l2302 1BDE                            l2320 1B87                            l3200 1EA5  
+                          l3032 1DC0                            l3104 1FF4                            l3024 1F10  
+                          l3016 1EE6                            l3008 1EC9                            l3120 004A  
+                          l3112 001D                            l2304 1BE5                            l2400 1051  
+                          l2322 1B8E                            l2314 1B71                            l3210 1C08  
+                          l3202 1EAB                            l3034 1DDC                            l3050 083E  
+                          l3042 0802                            l3018 1EF8                            l3026 1F16  
+                          l3114 0021                            l3122 0050                            l3106 0005  
+                          l2306 1BE9                            l2410 1D2A                            l2330 1F2B  
+                          l2402 1056                            l2316 1B75                            l3220 1E00  
+                          l3212 1C0E                            l3204 1EB3                            l3036 1DF6  
+                          l3052 0862                            l3044 0816                            l2500 160D  
+                          l3116 0033                            l3108 000D                            l3140 113C  
+                          l3132 1113                            l2308 1BF8                            l2420 1D4D  
+                          l2412 1D2D                            l2340 1F3C                            l2332 1F2D  
+                          l2324 1F1F                            l3300 0210                            l2318 1B80  
+                          l3222 1E09                            l3230 1D67                            l3214 1C13  
+                          l3206 1EB7                            l3038 1DF8                            l3054 0866  
+                          l3046 0832                            l3062 1B1B                            l2510 1619  
+                          l2502 1611                            l3126 1B92                            l3070 1F88  
+                          l3118 0041                            l3150 115C                            l3134 1118  
+                          l2422 1D53                            l2414 1D34                            l2406 1D22  
+                          l2350 1F54                            l2342 1F42                            l2334 1F31  
+                          l2326 1F22                            l3310 022B                            l3302 0214  
+                          l3224 1E18                            l3232 1D6C                            l3240 1D89  
+                          l3216 1C29                            l3208 1C03                            l3056 08A0  
+                          l3048 083A                            l3064 1B23                            l2600 1777  
+                          l2520 1623                            l2512 161B                            l2504 1613  
+                          l3128 1B96                            l3080 1FB0                            l3072 1F93  
+                          l3160 118D                            l3152 1160                            l3144 1145  
+                          l3136 111C                            l2424 1D54                            l2416 1D38  
+                          l2408 1D24                            l2440 1C78                            l2432 1C64  
+                          l2352 1F65                            l2344 1F45                            l2360 1F79  
+                          l2336 1F36                            l2328 1F26                            l3400 059F  
+                          l3320 0269                            l3312 0247                            l3304 0225  
+                          l3226 1E1E                            l3218 1DFA                            l3242 1D8F  
+                          l3234 1D79                            l3250 1C9E                            l3058 08A2  
+                          l3066 1B25                            l2602 177A                            l2610 1787  
+                          l2530 162D                            l2522 1625                            l2514 161D  
+                          l2506 1615                            l3082 1FB8                            l3170 11C0  
+                          l3162 1197                            l3154 116E                            l3146 1148  
+                          l3138 112C                            l2426 1D5B                            l2418 1D3C  
+                          l2442 1C7C                            l2434 1C6A                            l2450 1C99  
+                          l2362 1F7E                            l2354 1F6B                            l2346 1F4C  
+                          l2338 1F3A                            l2370 1003                            l3410 060F  
+                          l3402 05AB                            l3330 02A7                            l3322 026D  
+                          l3314 0253                            l3306 0227                            l3228 1B26  
+                          l3244 1D9C                            l3236 1D7C                            l3252 1CA1  
+                          l3500 11EB                            l3260 1CE6                            l3180 1E5E  
+                          l2620 179A                            l2612 1788                            l2604 177C  
+                          l2540 166A                            l2524 1627                            l2516 161F  
+                          l2508 1617                            l2532 162F                            l2460 15B5  
+                          l3092 1FC6                            l3084 1FBA                            l3076 1F9C  
+                          l3172 11C1                            l3164 11A1                            l3156 117E  
+                          l3148 1155                            l2700 0A15                            l2428 1D61  
+                          l2444 1C86                            l2436 1C6D                            l2364 1F83  
+                          l2356 1F6C                            l2348 1F50                            l2380 1017  
+                          l2372 1007                            l3420 063F                            l3412 0621  
+                          l3404 05B0                            l3340 02F7                            l3332 02C0  
+                          l3324 0286                            l3316 0257                            l3246 1D9F  
+                          l3238 1D82                            l3254 1CBD                            l3510 1202  
+                          l3502 11ED                            l3270 1D05                            l3262 1CEA  
+                          l3190 1E82                            l3182 1E64                            l2630 17D8  
+                          l2622 179F                            l2614 178C                            l2606 1781  
+                          l2542 166C                            l2550 167E                            l2534 1630  
+                          l2526 1629                            l2518 1621                            l2470 15C9  
+                          l2462 15B6                            l2454 15A8                            l3086 1FBE  
+                          l3094 1FD8                            l3078 1FAF                            l3166 11B7  
+                          l3158 1189                            l2710 0A8E                            l2702 0A3F  
+                          l2446 1C8C                            l2438 1C74                            l2358 1F73  
+                          l2390 102F                            l2382 101D                            l2374 100C  
+                          l3430 066A                            l3422 064E                            l3414 0628  
+                          l3406 05B5                            l3350 0384                            l3342 02FB  
+                          l3334 02CB                            l3326 029F                            l3318 025B  
+                          l3248 1DA5                            l2800 1C36                            l3256 1CC3  
+                          l3600 132E                            l3520 1216                            l3512 1203  
+                          l3504 11F5                            l3272 1D0B                            l3264 1CEF  
+                          l3176 1B33                            l3192 1E89                            l3184 1E6C  
+                          l2640 17EF                            l2632 17DD                            l2624 17AD  
+                          l2616 1792                            l2608 1783                            l2560 16AF  
+                          l2552 168A                            l2544 1670                            l2536 1647  
+                          l2528 162B                            l2480 15DD                            l2464 15BB  
+                          l2472 15CB                            l2456 15AD                            l3168 11BC  
+                          l2720 0B0A                            l2712 0AAB                            l2704 0A5B  
+                          l2448 1C93                            l2392 1039                            l2384 1020  
+                          l2376 100E                            l2368 1002                            l3440 0741  
+                          l3432 066E                            l3424 0653                            l3416 062C  
+                          l3408 05F0                            l3360 0406                            l3352 038D  
+                          l3344 0301                            l3336 02D1                            l3328 02A3  
+                          l3280 01C2                            l2810 1C52                            l2802 1C39  
+                          l3610 1377                            l3602 1347                            l3514 1208  
+                          l3522 1218                            l3506 11FA                            l3274 1D10  
+                          l3266 1CF7                            l3258 1CE1                            l3194 1E8F  
+                          l3186 1E72                            l3178 1E57                            l2642 17F1  
+                          l2634 17E5                            l2626 17B1                            l2570 16C4  
+                          l2562 16B3                            l2554 168F                            l2546 1671  
+                          l2538 1663                            l2490 15F0                            l2482 15E1  
+                          l2474 15D3                            l2466 15C0                            l2458 15B1  
+                          l2730 0BBC                            l2722 0B35                            l2714 0AB9  
+                          l2706 0A77                            l2650 0961                            l2394 103F  
+                          l2386 1027                            l2378 1012                            l3450 0797  
+                          l3442 074B                            l3434 068C                            l3426 0660  
+                          l3418 0632                            l3370 0481                            l3362 0415  
+                          l3354 03A8                            l3346 0320                            l3338 02E4  
+                          l3290 01E0                            l3282 01C8                            l2812 1C58  
+                          l2804 1C47                            l3620 138E                            l3612 137B  
+                          l3604 134D                            l3540 1261                            l3524 1228  
+                          l3532 1241                            l3516 120D                            l3508 11FE  
+                          l3276 1D18                            l3268 1D00                            l3196 1E97  
+                          l3188 1E7C                            l2644 17FA                            l2636 17EA  
+                          l2628 17CF                            l2580 1727                            l2572 16C5  
+                          l2564 16B7                            l2548 167A                            l2492 15F8  
+                          l2484 15E5                            l2476 15D6                            l2468 15C8  
+                          l2900 1086                            l2740 0BE1                            l2732 0BC5  
+                          l2724 0B43                            l2716 0AD6                            l2708 0A80  
+                          l2660 0974                            l2652 0965                            l2820 13A6  
+                          l2396 1046                            l2388 102B                            l3460 07C3  
+                          l3452 079D                            l3436 06E7                            l3444 0786  
+                          l3428 0665                            l3380 04CF                            l3372 048A  
+                          l3364 0430                            l3348 036B                            l3356 03B0  
+                          l3292 01E1                            l3284 01CD                            l2814 1C5B  
+                          l2806 1C4A                            l3614 1383                            l3606 135A  
+                          l3550 1280                            l3542 1269                            l3534 1246  
+                          l3526 1234                            l3518 1215                            l3198 1E9D  
+                          l2646 17FE                            l2638 17EB                            l2590 175C  
+                          l2582 172D                            l2574 16CE                            l2566 16BE  
+                          l2558 1698                            l2494 15F9                            l2486 15E6  
+                          l2478 15DC                            l2910 10AD                            l2902 108C  
+                          l2750 0BF9                            l2742 0BEA                            l2734 0BD3  
+                          l2726 0B6E                            l2718 0AED                            l2670 098F  
+                          l2662 097C                            l2654 0969                            l2398 104C  
+                          l3462 07C4                            l3446 078E                            l3438 0722  
+                          l3374 0492                            l3366 0457                            l3382 04D8  
+                          l3358 03BF                            l3454 07A4                            l3294 01E5  
+                          l3286 01D2                            l3278 01BF                            l3630 0067  
+                          l2816 1C60                            l2808 1C4F                            l3616 1388  
+                          l3608 1368                            l3560 12B2                            l3552 1292  
+                          l3544 1271                            l3528 1238                            l2584 1732  
+                          l2568 16C0                            l2576 16D3                            l2488 15EB  
+                          l2496 15FB                            l2920 10D8                            l2912 10BB  
+                          l2904 109B                            l2760 0C28                            l2752 0C0D  
+                          l2736 0BDC                            l2744 0BF0                            l2728 0B94  
+                          l2680 09A6                            l2672 0993                            l2664 097E  
+                          l2656 096A                            l2648 095C                            l2832 1564  
+                          l2840 0CAA                            l3464 07D3                            l3456 07AA  
+                          l3448 0793                            l3384 050D                            l3376 04B0  
+                          l3368 0466                            l3704 023F                            l3296 01E8  
+                          l3288 01D4                            l3472 07E7                            l3640 0085  
+                          l3632 006D                            l3618 138C                            l3570 12D3  
+                          l3562 12B3                            l3554 1296                            l3546 1279  
+                          l3538 124F                            l3490 11D7                            l2594 1765  
+                          l2578 16E9                            l2586 1741                            l2498 1609  
+                          l2914 10C5                            l2906 109D                            l2770 0C63  
+                          l2762 0C2C                            l2746 0BF4                            l2738 0BE0  
+                          l2682 09A8                            l2674 0994                            l2666 0986  
+                          l2658 096F                            l2826 14B3                            l2818 13A0  
+                          l2850 0DA0                            l2842 0CB1                            l3466 07D3  
+                          l3458 07B2                            l3394 055E                            l3386 055A  
+                          l3474 07F7                            l3298 01FD                            l3650 00B0  
+                          l3642 008E                            l3634 0073                            l3626 0059  
+                          l3580 12EC                            l3572 12D5                            l3564 12C1  
+                          l3556 1297                            l3548 127B                            l3492 11D8  
+                          l3484 11CA                            l2596 176E                            l2588 1757  
+                          l2940 08A4                            l2916 10C6                            l2908 10A4  
+                          l2780 0C8E                            l2772 0C72                            l2764 0C45  
+                          l2756 0C15                            l2748 0BF5                            l2692 09C3  
+                          l2684 09B0                            l2676 0999                            l2668 098B  
+                          l2828 14B9                            l2860 0E5C                            l2836 0CA4  
+                          l3468 07E1                            l3388 055C                            l3660 0134  
+                          l3652 00B6                            l3644 0096                            l3636 0078  
+                          l3628 005E                            l2790 1B5A                            l3590 130F  
+                          l3574 12DE                            l3582 12F2                            l3558 12A0  
+                          l3566 12C5                            l3494 11DD                            l3486 11CF  
+                          l2598 1772                            l2942 08AF                            l2934 10F9  
+                          l2926 10E0                            l2918 10CE                            l2782 0C8F  
+                          l2774 0C7C                            l2758 0C1A                            l2766 0C4B  
+                          l2694 09D1                            l2686 09B5                            l2678 099E  
+                          l2854 0E28                            l2838 0CA8                            l3398 0595  
+                          l3662 013A                            l3654 0113                            l3646 009F  
+                          l3638 007D                            l2792 1B60                            l3584 12F6  
+                          l3576 12E2                            l3568 12CB                            l3496 11E2  
+                          l3488 11D3                            l2960 08E5                            l2952 08C3  
+                          l2936 1109                            l2928 10F2                            l2784 0C98  
+                          l2776 0C7E                            l2768 0C58                            l2696 09DE  
+                          l2688 09BA                            l2880 1B4C                            l2872 0FD3  
+                          l2848 0D99                            l3664 0197                            l3656 0123  
+                          l3648 00A7                            l2794 1B63                            l3594 1317  
+                          l3586 12F7                            l3578 12E3                            l3498 11EA  
+                          l2970 0918                            l2962 08EE                            l2954 08CB  
+                          l2946 08B8                            l2890 106C                            l2778 0C8A  
+                          l2698 09F9                            l2882 1B52                            l2866 0F44  
+                          l2858 0E55                            l3666 01A7                            l3658 012B  
+                          l2796 1B6C                            l2788 1B57                            l3596 131C  
+                          l3588 12FB                            l2972 0922                            l2980 093C  
+                          l2964 0900                            l2956 08DC                            l2884 1B54  
+                          l2876 1B45                            l2868 0F4B                            l3668 01AF  
+                          l2798 1C30                            l3598 132A                            l2966 090E  
+                          l2958 08DE                            l2894 1075                            l2878 1B46  
+                          l2992 1BB6                            l2968 090F                            l2888 105B  
+                          l2994 1BB8                            l2986 0943                            l2978 092A  
+                          l2996 1BBC                            l2988 0953                            l2998 1BC9  
+                          _ADIF 0066                            STR_1 18AB                            STR_2 18AF  
+                          STR_3 18A0                            STR_4 18A6                            STR_5 18A6  
+                          u4000 0974                            u3200 1F26                            u4001 0973  
+                          u3201 1F25                            u3130 1BE9                            u4010 0993  
+                          u3210 1F31                            u3131 1BE8                            u4011 0992  
+                          u3211 1F30                            u4020 0999                            u3220 1F42  
+                          u3300 1007                            u4021 0998                            u3221 1F41  
+                          u3301 1006                            u3150 1BFD                            u4030 099E  
+                          u3310 1012                            u3151 1BFC                            u4111 0A9D  
+                          u4031 099D                            u3311 1011                            u3160 1B75  
+                          u5000 1DC0                            u4112 0AA4                            u4040 09B5  
+                          u3240 1F54                            u3320 101D                            u3161 1B74  
+                          u5001 1DBF                            u3145 1BF0                            u4201 0BAE  
+                          u4121 0AC8                            u4113 0AAB                            u4105 0A79  
+                          u4041 09B4                            u3241 1F53                            u3321 101C  
+                          u3170 1B80                            u5010 1DDC                            u4202 0BB5  
+                          u4122 0ACF                            u4050 09BA                            u3410 1D3C  
+                          u3171 1B7F                            u5011 1DDB                            u4203 0BBC  
+                          u4123 0AD6                            u4051 09B9                            u3411 1D3B  
+                          u3235 1F46                            u3180 1B87                            u5020 1DF6  
+                          u5100 1B23                            u4300 0C2C                            u3260 1F65  
+                          u3340 102F                            u3181 1B86                            u5021 1DF5  
+                          u5101 1B22                            u4301 0C2B                            u4141 0AFC  
+                          u4061 0A07                            u3405 1D2E                            u3261 1F64  
+                          u3341 102E                            u3190 1B8E                            u5030 0816  
+                          u5110 1F93                            u4310 0C3B                            u4230 0BE0  
+                          u4142 0B03                            u4062 0A0E                            u3430 1D4D  
+                          u3510 1C99                            u3350 1039                            u3191 1B8D  
+                          u5031 0815                            u5111 1F92                            u4231 0BDF  
+                          u4215 0BBE                            u4151 0B27                            u4143 0B0A  
+                          u4135 0AD8                            u4071 0A23                            u4063 0A15  
+                          u3431 1D4C                            u3511 1C98                            u3255 1F55  
+                          u3351 1038                            u3335 1021                            u6000 1208  
+                          u5040 0832                            u3600 160D                            u3520 15B5  
+                          u5200 1FF4                            u5120 1FAA                            u4320 0C58  
+                          u4152 0B2E                            u4072 0A2A                            u4400 14B9  
+                          u3280 1F79                            u6001 1207                            u5025 1DF2  
+                          u5041 0831                            u3601 160C                            u3521 15B4  
+                          u5201 1FF3                            u4321 0C57                            u4225 0BD5  
+                          u4161 0B52                            u4153 0B35                            u4081 0A4D  
+                          u4073 0A31                            u3425 1D3D                            u3505 1C8D  
+                          u4401 14B8                            u3281 1F78                            u3265 1F61  
+                          u6010 120D                            u5050 083E                            u3610 1647  
+                          u3530 15BB                            u5130 1FBE                            u5210 000D  
+                          u4330 0C72                            u4250 0BF4                            u4170 0B7A  
+                          u4162 0B59                            u4082 0A54                            u3450 1D61  
+                          u3290 1F7E                            u3370 104C                            u6011 120C  
+                          u5051 083D                            u3611 1646                            u3531 15BA  
+                          u5131 1FBD                            u5211 000C                            u4331 0C71  
+                          u4315 0C36                            u4251 0BF3                            u4163 0B60  
+                          u4091 0A69                            u4083 0A5B                            u3451 1D60  
+                          u3435 1D49                            u3291 1F7D                            u3275 1F6D  
+                          u3371 104B                            u3355 1035                            u6100 12CB  
+                          u6020 1228                            u3620 1652                            u3540 15C0  
+                          u5140 1FC5                            u4340 0C8E                            u4260 0BF9  
+                          u4092 0A70                            u3460 1C6A                            u3380 1051  
+                          u6101 12CA                            u6021 1227                            u5061 084D  
+                          u3701 16A1                            u3621 1650                            u3541 15BF  
+                          u5141 1FC4                            u5125 1FA5                            u4341 0C8D  
+                          u4325 0C54                            u4261 0BF8                            u4245 0BE3  
+                          u4181 0B86                            u4093 0A77                            u3445 1D55  
+                          u3461 1C69                            u3381 1050                            u3365 1040  
+                          u6110 12D3                            u6030 1246                            u5070 0866  
+                          u5062 084E                            u3710 16B3                            u3702 16A8  
+                          u3630 1653                            u3550 15DC                            u5230 0021  
+                          u5310 115B                            u4270 0C0D                            u4190 0BA2  
+                          u4182 0B8D                            u3390 1D2A                            u6111 12D2  
+                          u6031 1245                            u5071 0865                            u5063 0853  
+                          u3711 16B2                            u3703 16AF                            u3615 1643  
+                          u3551 15DB                            u5231 0020                            u5311 115A  
+                          u4335 0C6E                            u4271 0C0C                            u4183 0B94  
+                          u4175 0B75                            u3391 1D29                            u4415 14D6  
+                          u6200 132E                            u6040 1280                            u5064 0854  
+                          u3800 175C                            u3720 16B7                            u3640 1663  
+                          u3560 15E5                            u5160 1FD7                            u5240 0033  
+                          u5400 11C0                            u4280 0C14                            u3480 1C7C  
+                          u4360 13A6                            u4440 0CA8                            u6201 132D  
+                          u6041 127F                            u5081 0875                            u5065 0859  
+                          u3801 175B                            u3721 16B6                            u3641 1662  
+                          u3561 15E4                            u5161 1FD6                            u5241 0032  
+                          u5225 0012                            u5401 11BF                            u5305 114D  
+                          u4281 0C13                            u3481 1C7B                            u4425 1523  
+                          u4361 13A5                            u4505 0DB3                            u4441 0CA7  
+                          u6210 133D                            u6130 12E2                            u5410 1E5E  
+                          u5090 08A0                            u5082 0876                            u5066 085A  
+                          u3730 16C4                            u3650 1670                            u3570 15EB  
+                          u5170 1FDE                            u5330 117D                            u4290 0C1A  
+                          u3490 1C86                            u4610 1B4C                            u4530 0E5C  
+                          u4450 0CB1                            u4355 1C3C                            u6131 12E1  
+                          u5411 1E5D                            u5091 089F                            u5083 087B  
+                          u3731 16C3                            u3651 166F                            u3571 15EA  
+                          u5171 1FDD                            u5155 1FC7                            u5331 117C  
+                          u4291 0C19                            u4195 0B9D                            u3491 1C85  
+                          u3475 1C6E                            u4435 156F                            u4611 1B4B  
+                          u4531 0E5B                            u4515 0DEF                            u4451 0CB0  
+                          u5500 1D6C                            u6220 135A                            u5420 1E6C  
+                          u5084 087C                            u3900 17B1                            u3820 1772  
+                          u3580 15F0                            u5260 0050                            u4700 10DF  
+                          u4620 1B52                            u5501 1D6B                            u6221 1359  
+                          u6125 12D7                            u5421 1E6B                            u5085 0881  
+                          u3901 17B0                            u3821 1771                            u3581 15EF  
+                          u5261 004F                            u5245 002F                            u5325 116F  
+                          u4701 10DE                            u4621 1B51                            u4605 0FD6  
+                          u4525 0E2B                            u6230 1377                            u6150 12F6  
+                          u6070 1296                            u5430 1E7C                            u5086 0882  
+                          u3910 17C0                            u3830 1777                            u3750 16E9  
+                          u3670 1686                            u3590 1609                            u5190 1FEF  
+                          u5350 118D                            u5270 1118                            u4630 106C  
+                          u6231 1376                            u6215 1338                            u6151 12F5  
+                          u6071 1295                            u6055 1282                            u5431 1E7B  
+                          u5095 089C                            u3831 1776                            u3815 1767  
+                          u3751 16E8                            u3671 1685                            u3591 1608  
+                          u5191 1FEE                            u5255 0042                            u5351 118C  
+                          u5271 1117                            u4631 106B                            u3495 1C82  
+                          u4375 13C3                            u5520 1D8F                            u6240 138C  
+                          u6160 12FB                            u5600 1D17                            u5440 1E89  
+                          u3920 17CF                            u3840 1781                            u3680 168A  
+                          u5360 1193                            u5280 111C                            u4720 10F1  
+                          u4640 1084                            u5521 1D8E                            u6241 138B  
+                          u6225 1356                            u6161 12FA                            u6145 12E5  
+                          u6065 128B                            u5601 1D16                            u5441 1E88  
+                          u3921 17CE                            u3841 1780                            u3761 1700  
+                          u3753 16E5                            u3745 16C7                            u3681 1689  
+                          u3665 1673                            u5185 1FE1                            u5361 1192  
+                          u5345 1182                            u5281 111B                            u4721 10F0  
+                          u4641 1083                            u4385 141D                            u4545 0E7C  
+                          u4465 0CD1                            u6170 130F                            u6090 12B2  
+                          u5450 1E97                            u3930 17D8                            u3850 1787  
+                          u3770 1714                            u3762 1701                            u3690 168F  
+                          u5370 1197                            u5290 113C                            u4810 091E  
+                          u4730 10F8                            u4570 0F4B                            u4490 0DA0  
+                          u5610 01C8                            u5515 1D72                            u6307 1C4C  
+                          u6235 1373                            u6171 130E                            u6091 12B1  
+                          u5451 1E96                            u3931 17D7                            u3915 17BB  
+                          u3851 1786                            u3771 1715                            u3763 1706  
+                          u3691 168E                            u5371 1196                            u5291 113B  
+                          u4811 091D                            u4731 10F7                            u4715 10E1  
+                          u4395 1472                            u4571 0F4A                            u4555 0EB8  
+                          u4491 0D9F                            u4475 0D0D                            u5611 01C7  
+                          u5540 1CAB                            u6180 1316                            u5460 1EA5  
+                          u3940 17DD                            u3860 178C                            u3780 1732  
+                          u3772 171A                            u3764 1707                            u5380 11AC  
+                          u4820 0922                            u4660 10BB                            u5700 03A8  
+                          u5620 01E0                            u6317 1C5D                            u6181 1315  
+                          u6085 1299                            u5461 1EA4                            u3941 17DC  
+                          u3861 178B                            u3781 1731                            u3773 171B  
+                          u3765 170C                            u4821 0921                            u4805 0911  
+                          u4661 10BA                            u4565 0F03                            u4485 0D58  
+                          u5701 03A7                            u5621 01DF                            u5550 1CCD  
+                          u6190 131C                            u5470 1EB3                            u3950 17EA  
+                          u3870 1792                            u3790 1757                            u3766 170D  
+                          u5390 11BC                            u4830 0929                            u4750 1109  
+                          u5710 03BF                            u5630 0224                            u6327 1E04  
+                          u5535 1D95                            u6191 131B                            u6095 12AE  
+                          u5471 1EB2                            u3951 17E9                            u3871 1791  
+                          u3791 1756                            u5391 11BB                            u4831 0928  
+                          u4751 1108                            u4655 10A6                            u5711 03BE  
+                          u5631 0223                            u5560 1CDF                            u5480 1C08  
+                          u3960 17EF                            u3880 1799                            u4920 1BD6  
+                          u4760 08AF                            u4680 10D4                            u5800 05AB  
+                          u5720 0415                            u5640 0253                            u6337 1E13  
+                          u5561 1CDE                            u6257 1C2B                            u5481 1C07  
+                          u3961 17EE                            u3881 1798                            u4921 1BD5  
+                          u4905 1BC3                            u5385 11A7                            u4761 08AE  
+                          u4745 10FB                            u4681 10D3                            u4665 10B7  
+                          u4585 0F5E                            u5801 05AA                            u5721 0414  
+                          u5641 0252                            u5570 1CE6                            u5490 1C13  
+                          u3970 17FE                            u3890 179F                            u4930 1EC9  
+                          u4850 093B                            u4770 08C1                            u4690 10D8  
+                          u5730 0430                            u5650 0257                            u6347 1E22  
+                          u6267 1CEC                            u5571 1CE5                            u5491 1C12  
+                          u3971 17FD                            u3891 179E                            u4931 1EC8  
+                          u4915 1BCA                            u4851 093A                            u4771 08C0  
+                          u4691 10D7                            u4675 10C7                            u4595 0F9A  
+                          u5731 042F                            u5715 03BB                            u5651 0256  
+                          u5580 1CF6                            u4860 0942                            u3980 0969  
+                          u5900 07AA                            u5820 0620                            u5740 0457  
+                          u5660 0286                            u6357 1B67                            u6277 1CFB  
+                          u5581 1CF5                            u4861 0941                            u4845 092B  
+                          u3981 0968                            u5901 07A9                            u5821 061F  
+                          u5741 0456                            u5725 0411                            u5661 0285  
+                          u5590 1D05                            u4950 1EDD                            u4790 0900  
+                          u3990 096F                            u5910 07B2                            u5830 063F  
+                          u5750 0466                            u5670 02C0                            u6287 1D0D  
+                          u5591 1D04                            u4951 1EDC                            u4791 08FF  
+                          u3991 096E                            u5911 07B1                            u5831 063E  
+                          u5815 05B8                            u5751 0465                            u5671 02BF  
+                          u4880 0953                            u5920 07C3                            u5840 064E  
+                          u5760 0481                            u5680 02FB                            u6297 1D1C  
+                          u4945 1ECE                            u4881 0952                            u4785 08E7  
+                          u5921 07C2                            u5841 064D                            u5761 0480  
+                          u5681 02FA                            u4970 1EF8                            u4890 1BBC  
+                          u5930 07D3                            u5850 0665                            u5690 0384  
+                          u4971 1EF7                            u4891 1BBB                            u4875 0945  
+                          u4795 08FC                            u5931 07D2                            u5851 0664  
+                          u5835 063B                            u5755 0462                            u5691 0383  
+                          u5940 07E1                            u5780 0594                            u4965 1EDF  
+                          u5941 07E0                            u5925 07BF                            u5845 064A  
+                          u5781 0593                            u4990 1F16                            u5950 07F7  
+                          u5790 059F                            u4991 1F15                            u4975 1EF4  
+                          u5951 07F6                            u5935 07CF                            u5791 059E  
+                          u5775 0561                            u5960 11D7                            u5880 078D  
+                          u5961 11D6                            u4985 1F08                            u5881 078C  
+                          u5865 06EA                            u5785 0590                            u5970 11DD  
+                          u5890 07A3                            u5971 11DC                            u5891 07A2  
+                          u5875 074E                            u5980 11E2                            u5981 11E1  
+                          u5990 1202                            u5991 1201                            _main 0059  
+        _Lcd_Write_String_4bits 1C9E                            btemp 007E                            start 0000  
+               ___fldiv@new_exp 0050                    _sprintf$1019 00AA                   ___fltol@sign1 0059  
+               __end_of___fladd 1800                           ?_main 0070               ??_Lcd_Clear_4bits 0074  
+               __end_of___fldiv 139D                 __end_of___awdiv 1F88                 __end_of___flneg 1B26  
+               __end_of___awmod 105B                 __end_of___flmul 0CA1                 __end_of___flsub 1BB6  
+               __end_of___fltol 2000                           _ANSEL 0188                 __end_of___lldiv 1F1F  
+               ___awdiv@divisor 0077                 __end_of___llmod 0059                 __end_of___lwdiv 1D66  
+               __end_of___lwmod 1C9E                 ___awdiv@counter 0020                           _PORTB 0006  
+                         _PORTC 0007                           _PORTD 0008                           _PORTE 0009  
+                         _TRISB 0086                           _TRISC 0087                           _TRISD 0088  
+                         _TRISE 0089           __end_of_Lcd_Cmd_4bits 1B70                 __end_of_readADC 1D22  
+               __end_of_dpowers 18A0                           _scale 0CA1                 __end_of_isdigit 1B56  
+                         _setup 1B33                           pclath 000A                           status 0003  
+                         wtemp0 007E                 __end_of_sprintf 07FC                 __initialization 07FC  
+                  __end_of_main 01BC                          ??_main 00C3                ___llmod@dividend 0074  
+                        ?_scale 003E                          _ADRESH 001E                ___awdiv@dividend 0079  
+                        ?_setup 0070                          _ANSELH 0189                __end_of___xxtofl 11CA  
+      Lcd_Write_Char_4bits@temp 0072                __end_of__powers_ 1844                          ___flge 0802  
+                  readADC@canal 0072                          ___fleq 1DAC                       ??___fladd 005A  
+                        ___wmul 1BB6                       ??___fldiv 0046                       ??___awdiv 007B  
+                     ??___flneg 0074                       ??___awmod 0074                       ??___flmul 002C  
+                     ??___flsub 007E                       ??___fltol 0055                       ??___lldiv 0078  
+                     ??___llmod 0078                       ??___lwdiv 007A                       ??___lwmod 0074  
+                        _fround 139D                ___awdiv@quotient 0022                 ___awmod@divisor 0070  
+               ___awmod@counter 0075                          main@V1 00C7                          main@V2 00CB  
+                  ?_setupINTOSC 0070                       ??_readADC 0070                       ??_isdigit 0070  
+              __end_of_setupADC 1C2F                  _Lcd_Init_4bits 1DFA                       ??_sprintf 00A5  
+                    ___flge@ff1 0070                      ___flge@ff2 0074                    ___xxtofl@arg 007A  
+                  ___xxtofl@exp 0079                    ___xxtofl@val 0070                      ___fleq@ff1 0070  
+                    ___fleq@ff2 0074         __end_of__initialization 07FC                      ___flneg@f1 0070  
+                    ___fltol@f1 0051                  __pcstackCOMMON 0070           Lcd_Write_Char_4bits@a 0074  
+         Lcd_Write_Char_4bits@y 0073                   __end_of_scale 1000                   __end_of_setup 1B44  
+                    __div_to_l_ 08A4          __end_of_Lcd_Init_4bits 1E57                 __div_to_l_@exp1 0025  
+               __div_to_l_@cntr 0024                         ??_scale 0042                 __div_to_l_@quot 0020  
+       ?_Lcd_Write_String_4bits 0075                         ??_setup 0070                  _Lcd_Port_4bits 1B70  
+                 __div_to_l_@f1 0070                   __div_to_l_@f2 0074               __end_of__Umul8_16 1C02  
+               _Lcd_Clear_4bits 1B26                      __pmaintext 0059                         ?___flge 0070  
+                       ?___fleq 0070                         ?___wmul 0070                         ?_fround 003E  
+                     ?___xxtofl 0070    __end_of_Lcd_Write_Char_4bits 1C64                 Lcd_Port_4bits@a 0070  
+               ?_Lcd_Init_4bits 0070  __end_of_Lcd_Write_String_4bits 1CE0                      __stringtab 1800  
+        __end_of_Lcd_Port_4bits 1B92               __end_of__npowers_ 1878                      _scale$1018 004C  
+                     ?_setupADC 0070                         ___fladd 15A8                         ___fldiv 11CA  
+                       ___awdiv 1F1F                         ___flneg 1B1B                         ___awmod 1002  
+                       ___flmul 095C                         ___flsub 1B92                         ___fltol 1F88  
+                       ___lldiv 1EB9                         ___llmod 0005                         ___lwdiv 1D22  
+                       ___lwmod 1C64                       _ANSELbits 0188                         __ptext1 01BC  
+                       __ptext2 0CA1                         __ptext3 1002                         __ptext4 1F1F  
+                       __ptext5 1B44                         __ptext6 139D                         __ptext7 1C64  
+                       __ptext8 1D22                         __ptext9 095C                         _readADC 1CE0  
+                   ?__div_to_l_ 0070                         _dpowers 1878                         _isdigit 1B44  
+                    ??___xxtofl 0074                ___awmod@dividend 0072    __end_of_Lcd_Set_Cursor_4bits 1DAC  
+                       _sprintf 01BC            end_of_initialization 07FC                 ?_Lcd_Port_4bits 0070  
+       __end_of_Lcd_Clear_4bits 1B33                 ___lldiv@divisor 0070                 ___lldiv@counter 007D  
+                    ??_setupADC 0070                  __tdiv_to_l_@f1 0070                  __tdiv_to_l_@f2 0074  
+                 ??__tdiv_to_l_ 0078                       _PORTDbits 0008                     ___fladd@grs 0065  
+                 ___xxtofl@sign 0078                       _TRISAbits 0085                     ___fldiv@grs 0052  
+                   ___fldiv@rem 004B                     ___flmul@grs 0032            _Lcd_Write_Char_4bits 1C2F  
+                __end_of___flge 08A4                  __end_of___fleq 1DFA                  __end_of___wmul 1BDB  
+                __end_of_fround 15A8             start_initialization 07FC             __end_of__tdiv_to_l_ 1112  
+                 _Lcd_Cmd_4bits 1B56           Lcd_Set_Cursor_4bits@a 0076           Lcd_Set_Cursor_4bits@b 0074  
+         Lcd_Set_Cursor_4bits@y 0078           Lcd_Set_Cursor_4bits@z 0077                ?_Lcd_Clear_4bits 0070  
+               ___llmod@divisor 0070                 ___llmod@counter 0079           ?_Lcd_Write_Char_4bits 0070  
+                      ??___flge 0078                        ??___fleq 0078                        ??___wmul 0074  
+      Lcd_Set_Cursor_4bits@temp 0079            _Lcd_Set_Cursor_4bits 1D66                       __Umul8_16 1BDB  
+                      ??_fround 0042                ??_Lcd_Init_4bits 0074                   sprintf@tmpval 00B7  
+                     ___fladd@a 0056                       ___fladd@b 0052                      fround@prec 0051  
+                     ___fldiv@a 003E                       ___fldiv@b 0042                       ___flmul@a 0028  
+                     ___flmul@b 0024                       ___flsub@a 0066                       ___flsub@b 006A  
+                     ___latbits 0002                   __pcstackBANK0 0020                   __pcstackBANK1 00A0  
+                ?_Lcd_Cmd_4bits 0070                     sprintf@flag 00AF                     sprintf@eexp 00B5  
+                   sprintf@fval 00BE                     sprintf@prec 00BC                ___lwdiv@dividend 0078  
+                      ?___fladd 0052           ?_Lcd_Set_Cursor_4bits 0074                        ?___fldiv 003E  
+                      ?___awdiv 0077                        ?___flneg 0070                        ?___awmod 0070  
+                      ?___flmul 0024                        ?___flsub 0066                        ?___fltol 0051  
+                      ?___lldiv 0070                        ?___llmod 0070                       __npowers_ 1844  
+                    ?__Umul8_16 0070                        ?___lwdiv 0076                        ?___lwmod 0070  
+                     __pstrings 1800                     __tdiv_to_l_ 105B                    ??__div_to_l_ 0078  
+                      ?_readADC 0070                        ?_isdigit 0070                ??_Lcd_Port_4bits 0070  
+              ___lwdiv@quotient 007B                        ?_sprintf 00A0                  ___wmul@product 0074  
+        ??_Lcd_Write_Char_4bits 0071              __end_of__div_to_l_ 095C                      _ADCON0bits 001F  
+                   __stringbase 180F                      _ADCON1bits 009F                   ??_setupINTOSC 0072  
+             ___wmul@multiplier 0070                 ??_Lcd_Cmd_4bits 0071         Lcd_Write_String_4bits@a 0075  
+       Lcd_Write_String_4bits@i 007A          ??_Lcd_Set_Cursor_4bits 0075                     ??__Umul8_16 0072  
+                   _fround$1016 004D                     _fround$1017 0049              __end_of__stringtab 1810  
+      ??_Lcd_Write_String_4bits 0077                     _isdigit$838 0070                  Lcd_Cmd_4bits@a 0073  
+                    sprintf@val 00B1                        ___xxtofl 1112                 ___lwdiv@divisor 0076  
+               ___lwdiv@counter 007D                        __ptext10 1BDB                        __ptext11 105B  
+                      __ptext20 1B1B                        __ptext12 08A4                        __ptext21 0802  
+                      __ptext13 1112                        __ptext30 1D66                        __ptext22 1DAC  
+                      __ptext14 1BB6                        __ptext31 1DFA                        __ptext23 1E57  
+                      __ptext15 0005                        __ptext32 1B26                        __ptext24 1C02  
+                      __ptext16 1EB9                        __ptext33 1B56                        __ptext25 1B33  
+                      __ptext17 1F88                        __ptext34 1B70                        __ptext26 1CE0  
+                      __ptext18 1B92                        __ptext27 11CA                        __ptext19 15A8  
+                      __ptext28 1C9E                        __ptext29 1C2F             __end_of_setupINTOSC 1EB9  
+                      __powers_ 1810                   setupADC@canal 0071                        _setupADC 1C02  
+                      main@ADC1 00CF                        main@ADC2 00D2     setupINTOSC@OsciladorInterno 0070  
+                      isdigit@c 0071                        scale@scl 0050                       sprintf@ap 00AE  
+              __tdiv_to_l_@exp1 0025                __tdiv_to_l_@cntr 0024                       sprintf@sp 00BB  
+              __tdiv_to_l_@quot 0020                ___lwmod@dividend 0072                ___lldiv@dividend 0074  
+                     stringcode 180A                      _OSCCONbits 008F                    ?__tdiv_to_l_ 0070  
+        __Umul8_16@multiplicand 0070                     _setupINTOSC 1E57                        sprintf@c 00C2  
+                      sprintf@f 00A0                ___lldiv@quotient 0079                 ___lwmod@divisor 0070  
+               ___lwmod@counter 0075                        stringdir 180A                        stringtab 1800  
+                 ___fladd@signs 0062                    ___fladd@aexp 0063                    ___fladd@bexp 0064  
+          __Umul8_16@multiplier 0078               __Umul8_16@product 0074  

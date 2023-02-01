@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\byron\AppData\Local\Temp\xcAs1h58.o
+$C:\Users\byron\AppData\Local\Temp\xcAs1css.o
 idloc IDLOC 5 2000 2000 4 2 1
 end_init CODE 0 0 0 3 2 1
 config CONFIG 4 2007 2007 2 2 1
@@ -111,11 +111,11 @@ STRING 18B3-1B1A 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\LCD.X.production.o
-7FC cinit CODE >1236:C:\Users\byron\AppData\Local\Temp\xcAs1h58.s
-7FC cinit CODE >1239:C:\Users\byron\AppData\Local\Temp\xcAs1h58.s
-7FC cinit CODE >1245:C:\Users\byron\AppData\Local\Temp\xcAs1h58.s
-7FC cinit CODE >1247:C:\Users\byron\AppData\Local\Temp\xcAs1h58.s
-7FD cinit CODE >1248:C:\Users\byron\AppData\Local\Temp\xcAs1h58.s
+7FC cinit CODE >1236:C:\Users\byron\AppData\Local\Temp\xcAs1css.s
+7FC cinit CODE >1239:C:\Users\byron\AppData\Local\Temp\xcAs1css.s
+7FC cinit CODE >1245:C:\Users\byron\AppData\Local\Temp\xcAs1css.s
+7FC cinit CODE >1247:C:\Users\byron\AppData\Local\Temp\xcAs1css.s
+7FD cinit CODE >1248:C:\Users\byron\AppData\Local\Temp\xcAs1css.s
 1B70 text34 CODE >14:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
 1B71 text34 CODE >15:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
 1B75 text34 CODE >16:C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_4bits.c
@@ -1443,48 +1443,45 @@ __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __end_of__tdiv_to_l_ 2224 0 CODE 0 text11 dist/default/production\LCD.X.production.o
-_Lcd_Init 3BF4 0 CODE 0 text31 dist/default/production\LCD.X.production.o
-_Lcd_Port 36E0 0 CODE 0 text34 dist/default/production\LCD.X.production.o
 __end_of_readADC 3A44 0 CODE 0 text26 dist/default/production\LCD.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_Lcd_Init 3CAE 0 CODE 0 text31 dist/default/production\LCD.X.production.o
-__end_of_Lcd_Port 3724 0 CODE 0 text34 dist/default/production\LCD.X.production.o
+Lcd_Port_4bits@a 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _ADIF 66 0 ABS 0 - dist/default/production\LCD.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\byron\AppData\Local\Temp\xcAs1h58.o
+___sp 0 0 STACK 2 stack C:\Users\byron\AppData\Local\Temp\xcAs1css.o
 _main B2 0 CODE 0 maintext dist/default/production\LCD.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\LCD.X.production.o
-_Lcd_Write_Char 385E 0 CODE 0 text29 dist/default/production\LCD.X.production.o
-start 0 0 CODE 0 init C:\Users\byron\AppData\Local\Temp\xcAs1h58.o
+start 0 0 CODE 0 init C:\Users\byron\AppData\Local\Temp\xcAs1css.o
 ___flmul@aexp 36 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 ___flmul@bexp 37 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 ___flmul@prod 38 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 ___flmul@sign 31 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 ___flmul@temp 3C 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
-Lcd_Port@a 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+__end_of_Lcd_Init_4bits 3CAE 0 CODE 0 text31 dist/default/production\LCD.X.production.o
+_Lcd_Clear_4bits 364C 0 CODE 0 text32 dist/default/production\LCD.X.production.o
 ?___wmul 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
-Lcd_Write_Char@temp 72 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 ___awmod@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+_Lcd_Set_Cursor_4bits 3ACC 0 CODE 0 text30 dist/default/production\LCD.X.production.o
 __end_of__npowers_ 30F0 0 STRING 0 strings dist/default/production\LCD.X.production.o
 _sprintf$1019 AA 0 BANK1 1 cstackBANK1 dist/default/production\LCD.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs1h58.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs1h58.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs1h58.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs1h58.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs1h58.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs1h58.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs1css.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs1css.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs1css.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs1css.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs1css.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\byron\AppData\Local\Temp\xcAs1css.o
 _setupINTOSC 3CAE 0 CODE 0 text23 dist/default/production\LCD.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\LCD.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\LCD.X.production.o
 ___llmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 ?_fround 3E 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+_Lcd_Cmd_4bits 36AC 0 CODE 0 text33 dist/default/production\LCD.X.production.o
 ?__div_to_l_ 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 ___awdiv@sign 21 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
 __npowers_ 3088 0 STRING 0 strings dist/default/production\LCD.X.production.o
-__end_of_Lcd_Write_Char 38C8 0 CODE 0 text29 dist/default/production\LCD.X.production.o
 ___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 _ADRESH 1E 0 ABS 0 - dist/default/production\LCD.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\LCD.X.production.o
@@ -1501,6 +1498,7 @@ ___fldiv@bexp 56 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.
 ___fldiv@sign 4F 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 ___awdiv@divisor 77 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 ___lwmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+Lcd_Set_Cursor_4bits@temp 79 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 __end_of___awdiv 3F10 0 CODE 0 text4 dist/default/production\LCD.X.production.o
 __end_of___awmod 20B6 0 CODE 0 text3 dist/default/production\LCD.X.production.o
 __Umul8_16 37B6 0 CODE 0 text10 dist/default/production\LCD.X.production.o
@@ -1515,8 +1513,8 @@ __end_of___llmod B2 0 CODE 0 text15 dist/default/production\LCD.X.production.o
 __end_of___lwdiv 3ACC 0 CODE 0 text8 dist/default/production\LCD.X.production.o
 __end_of___lwmod 393C 0 CODE 0 text7 dist/default/production\LCD.X.production.o
 __Umul8_16@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\byron\AppData\Local\Temp\xcAs1h58.o
-___stacklo 0 0 ABS 0 - C:\Users\byron\AppData\Local\Temp\xcAs1h58.o
+___stackhi 0 0 ABS 0 - C:\Users\byron\AppData\Local\Temp\xcAs1css.o
+___stacklo 0 0 ABS 0 - C:\Users\byron\AppData\Local\Temp\xcAs1css.o
 _dpowers 30F0 0 STRING 0 strings dist/default/production\LCD.X.production.o
 readADC@canal 72 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 __end_of_fround 2B50 0 CODE 0 text6 dist/default/production\LCD.X.production.o
@@ -1529,14 +1527,14 @@ ___flmul@a 28 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 ___flmul@b 24 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 ___flsub@a 66 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 ___flsub@b 6A 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
-Lcd_Set_Cursor@temp 79 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 ___lwmod@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 ___lldiv@counter 7D 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 start_initialization FF8 0 CODE 0 cinit dist/default/production\LCD.X.production.o
+Lcd_Write_String_4bits@a 75 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+Lcd_Write_String_4bits@i 7A 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 _TRISAbits 85 0 ABS 0 - dist/default/production\LCD.X.production.o
 ___lldiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 fround@prec 51 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
-_Lcd_Write_String 393C 0 CODE 0 text28 dist/default/production\LCD.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 __pcstackBANK1 A0 0 BANK1 1 cstackBANK1 dist/default/production\LCD.X.production.o
 __tdiv_to_l_@f1 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
@@ -1544,13 +1542,14 @@ __tdiv_to_l_@f2 74 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.product
 _readADC 39C0 0 CODE 0 text26 dist/default/production\LCD.X.production.o
 _isdigit$838 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 setupINTOSC@OsciladorInterno 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\byron\AppData\Local\Temp\xcAs1h58.o
+___int_sp 0 0 STACK 2 stack C:\Users\byron\AppData\Local\Temp\xcAs1css.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
 __Hcinit 1000 0 CODE 0 cinit -
 __Hidloc 4008 0 IDLOC 5 idloc -
+Lcd_Write_Char_4bits@temp 72 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 __Hstack 0 0 STACK 2 stack -
 __stringbase 301E 0 STRING 0 strings dist/default/production\LCD.X.production.o
 ___lwdiv@counter 7D 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
@@ -1561,6 +1560,7 @@ ___xxtofl@val 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.productio
 __end_of_sprintf FF8 0 CODE 0 text1 dist/default/production\LCD.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 4 config -
+__end_of_Lcd_Cmd_4bits 36E0 0 CODE 0 text33 dist/default/production\LCD.X.production.o
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -1596,21 +1596,18 @@ __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __S0 2000 0 ABS 0 - -
 __S1 D5 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
+__end_of_Lcd_Write_Char_4bits 38C8 0 CODE 0 text29 dist/default/production\LCD.X.production.o
+Lcd_Cmd_4bits@a 73 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 sprintf@val B1 0 BANK1 1 cstackBANK1 dist/default/production\LCD.X.production.o
-__end_of_Lcd_Write_String 39C0 0 CODE 0 text28 dist/default/production\LCD.X.production.o
 __end_of_setupINTOSC 3D72 0 CODE 0 text23 dist/default/production\LCD.X.production.o
 ___xxtofl 2224 0 CODE 0 text13 dist/default/production\LCD.X.production.o
 _fround 273A 0 CODE 0 text6 dist/default/production\LCD.X.production.o
-__end_of_Lcd_Clear 3666 0 CODE 0 text32 dist/default/production\LCD.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
 ___lldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 __stringtab 3000 0 STRING 0 strings dist/default/production\LCD.X.production.o
-Lcd_Write_String@a 75 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
-Lcd_Write_String@i 7A 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\byron\AppData\Local\Temp\xcAs1h58.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\byron\AppData\Local\Temp\xcAs1css.o
 __end_of___xxtofl 2394 0 CODE 0 text13 dist/default/production\LCD.X.production.o
 __powers_ 3020 0 STRING 0 strings dist/default/production\LCD.X.production.o
-__end_of_Lcd_Cmd 36E0 0 CODE 0 text33 dist/default/production\LCD.X.production.o
 ___awmod@counter 75 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 __end_of__powers_ 3088 0 STRING 0 strings dist/default/production\LCD.X.production.o
 __tdiv_to_l_@cntr 24 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
@@ -1646,10 +1643,8 @@ __ptext31 3BF4 0 CODE 0 text31 dist/default/production\LCD.X.production.o
 __ptext32 364C 0 CODE 0 text32 dist/default/production\LCD.X.production.o
 __ptext33 36AC 0 CODE 0 text33 dist/default/production\LCD.X.production.o
 __ptext34 36E0 0 CODE 0 text34 dist/default/production\LCD.X.production.o
-_Lcd_Clear 364C 0 CODE 0 text32 dist/default/production\LCD.X.production.o
 ___awdiv 3E3E 0 CODE 0 text4 dist/default/production\LCD.X.production.o
 ___awmod 2004 0 CODE 0 text3 dist/default/production\LCD.X.production.o
-_Lcd_Set_Cursor 3ACC 0 CODE 0 text30 dist/default/production\LCD.X.production.o
 ___fladd 2B50 0 CODE 0 text19 dist/default/production\LCD.X.production.o
 ___fldiv 2394 0 CODE 0 text27 dist/default/production\LCD.X.production.o
 ___flmul 12B8 0 CODE 0 text9 dist/default/production\LCD.X.production.o
@@ -1662,6 +1657,7 @@ ___llmod A 0 CODE 0 text15 dist/default/production\LCD.X.production.o
 ___lwdiv 3A44 0 CODE 0 text8 dist/default/production\LCD.X.production.o
 ___lwmod 38C8 0 CODE 0 text7 dist/default/production\LCD.X.production.o
 __pmaintext B2 0 CODE 0 maintext dist/default/production\LCD.X.production.o
+_Lcd_Write_String_4bits 393C 0 CODE 0 text28 dist/default/production\LCD.X.production.o
 __Umul8_16@multiplier 78 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
@@ -1672,8 +1668,13 @@ main@ADC1 CF 0 BANK1 1 cstackBANK1 dist/default/production\LCD.X.production.o
 main@ADC2 D2 0 BANK1 1 cstackBANK1 dist/default/production\LCD.X.production.o
 ___lwdiv@divisor 76 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 ___fldiv@new_exp 50 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+Lcd_Set_Cursor_4bits@a 76 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+Lcd_Set_Cursor_4bits@b 74 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+Lcd_Set_Cursor_4bits@y 78 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+Lcd_Set_Cursor_4bits@z 77 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 _ADCON0bits 1F 0 ABS 0 - dist/default/production\LCD.X.production.o
 _ADCON1bits 9F 0 ABS 0 - dist/default/production\LCD.X.production.o
+__end_of_Lcd_Set_Cursor_4bits 3B58 0 CODE 0 text30 dist/default/production\LCD.X.production.o
 ___fladd@grs 65 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 __end_of__stringtab 3020 0 STRING 0 strings dist/default/production\LCD.X.production.o
 __div_to_l_ 1148 0 CODE 0 text12 dist/default/production\LCD.X.production.o
@@ -1697,12 +1698,7 @@ ___fltol@exp1 5A 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.
 __div_to_l_@f1 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 __div_to_l_@f2 74 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 end_of_initialization FF8 0 CODE 0 cinit dist/default/production\LCD.X.production.o
-__end_of_Lcd_Set_Cursor 3B58 0 CODE 0 text30 dist/default/production\LCD.X.production.o
 __Hintentry 0 0 CODE 0 intentry -
-Lcd_Set_Cursor@a 76 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
-Lcd_Set_Cursor@b 74 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
-Lcd_Set_Cursor@y 78 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
-Lcd_Set_Cursor@z 77 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 __Lstrings 0 0 ABS 0 strings -
 ___awdiv@quotient 22 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 ?___awdiv 77 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
@@ -1746,12 +1742,14 @@ __Umul8_16@word_mpld 76 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.pr
 ___fltol@sign1 59 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
 scale@scl 50 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+_Lcd_Port_4bits 36E0 0 CODE 0 text34 dist/default/production\LCD.X.production.o
 __end_of__div_to_l_ 12B8 0 CODE 0 text12 dist/default/production\LCD.X.production.o
+Lcd_Write_Char_4bits@a 74 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+Lcd_Write_Char_4bits@y 73 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 ___fltol@f1 51 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 __end_of__initialization FF8 0 CODE 0 cinit dist/default/production\LCD.X.production.o
 ___awmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-Lcd_Cmd@a 73 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 ?_scale 3E 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 sprintf@tmpval B7 0 BANK1 1 cstackBANK1 dist/default/production\LCD.X.production.o
@@ -1784,8 +1782,12 @@ _scale 1942 0 CODE 0 text2 dist/default/production\LCD.X.production.o
 _setup 3666 0 CODE 0 text25 dist/default/production\LCD.X.production.o
 _fround$1016 4D 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 _fround$1017 49 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
-_Lcd_Cmd 36AC 0 CODE 0 text33 dist/default/production\LCD.X.production.o
+__end_of_Lcd_Write_String_4bits 39C0 0 CODE 0 text28 dist/default/production\LCD.X.production.o
+_Lcd_Write_Char_4bits 385E 0 CODE 0 text29 dist/default/production\LCD.X.production.o
+__end_of_Lcd_Port_4bits 3724 0 CODE 0 text34 dist/default/production\LCD.X.production.o
+_Lcd_Init_4bits 3BF4 0 CODE 0 text31 dist/default/production\LCD.X.production.o
 __initialization FF8 0 CODE 0 cinit dist/default/production\LCD.X.production.o
+__end_of_Lcd_Clear_4bits 3666 0 CODE 0 text32 dist/default/production\LCD.X.production.o
 ___xxtofl@sign 78 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 __pstrings 3000 0 STRING 0 strings dist/default/production\LCD.X.production.o
 setupADC@canal 71 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
@@ -1793,8 +1795,6 @@ ___wmul@product 74 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.product
 __div_to_l_@cntr 24 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 __div_to_l_@exp1 25 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
 __div_to_l_@quot 20 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
-Lcd_Write_Char@a 74 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
-Lcd_Write_Char@y 73 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.

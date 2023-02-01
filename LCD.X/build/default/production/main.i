@@ -2783,23 +2783,23 @@ void readADC (uint8_t);
 
 # 1 "./configLCD_4bits.h" 1
 # 46 "./configLCD_4bits.h"
-void Lcd_Port(char a);
+void Lcd_Port_4bits(char a);
 
-void Lcd_Cmd(char a);
+void Lcd_Cmd_4bits(char a);
 
-void Lcd_Clear(void);
+void Lcd_Clear_4bits(void);
 
-void Lcd_Set_Cursor(char a, char b);
+void Lcd_Set_Cursor_4bits(char a, char b);
 
-void Lcd_Init(void);
+void Lcd_Init_4bits(void);
 
-void Lcd_Write_Char(char a);
+void Lcd_Write_Char_4bits(char a);
 
-void Lcd_Write_String(char *a);
+void Lcd_Write_String_4bits(char *a);
 
-void Lcd_Shift_Right(void);
+void Lcd_Shift_Right_4bits(void);
 
-void Lcd_Shift_Left(void);
+void Lcd_Shift_Left_4bits(void);
 # 47 "main.c" 2
 # 58 "main.c"
 void setup(void);
@@ -2818,15 +2818,15 @@ void main(void) {
   setupINTOSC(8);
   setupADC(0);
   setupADC(1);
-  Lcd_Init();
+  Lcd_Init_4bits();
 
-  Lcd_Clear();
-  Lcd_Set_Cursor(1,1);
-  Lcd_Write_String("S1:");
-  Lcd_Set_Cursor(1,7);
-  Lcd_Write_String("S2:");
-  Lcd_Set_Cursor(1,13);
-  Lcd_Write_String("CONT.");
+  Lcd_Clear_4bits();
+  Lcd_Set_Cursor_4bits(1,1);
+  Lcd_Write_String_4bits("S1:");
+  Lcd_Set_Cursor_4bits(1,7);
+  Lcd_Write_String_4bits("S2:");
+  Lcd_Set_Cursor_4bits(1,13);
+  Lcd_Write_String_4bits("CONT.");
 
   while(1)
   {
@@ -2835,16 +2835,16 @@ void main(void) {
       V1 = (ADRESH*5.0)/255;
 
       sprintf(ADC1, "%.2f", V1);
-      Lcd_Set_Cursor(2,1);
-      Lcd_Write_String(ADC1);
+      Lcd_Set_Cursor_4bits(2,1);
+      Lcd_Write_String_4bits(ADC1);
 
       readADC(1);
 
       V2 = (ADRESH*5.0)/255;
 
       sprintf(ADC2, "%.2f", V2);
-      Lcd_Set_Cursor(2,7);
-      Lcd_Write_String(ADC2);
+      Lcd_Set_Cursor_4bits(2,7);
+      Lcd_Write_String_4bits(ADC2);
   }
     return;
 }
