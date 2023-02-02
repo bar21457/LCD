@@ -1,4 +1,4 @@
-# 1 "configINTOSC.c"
+# 1 "configUART.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "configINTOSC.c" 2
+# 1 "configUART.c" 2
+
 
 
 
@@ -2631,55 +2632,52 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 2 3
-# 8 "configINTOSC.c" 2
+# 9 "configUART.c" 2
 
-# 1 "./configINTOSC.h" 1
-# 11 "./configINTOSC.h"
-void setupINTOSC (int);
-# 9 "configINTOSC.c" 2
+# 1 "./configUART.h" 1
+# 11 "./configUART.h"
+void configUART_RX(uint16_t baudrate);
+void configUART_TX(uint16_t baudrate);
+void write_char_UART(char *character);
+char read_char_UART();
+# 10 "configUART.c" 2
 
 
-void setupINTOSC(int OsciladorInterno) {
 
-    if (OsciladorInterno == 125)
-    {
-    OSCCONbits.IRCF = 0b0001 ;
-    OSCCONbits.SCS = 1;
+
+void configUART_RX(uint16_t baudrate){
+
+    SPBRG = baudrate;
+
+    TXSTAbits.SYNC = 0;
+    RCSTAbits.SPEN = 1;
+}
+
+void configUART_TX(uint16_t baudrate){
+    SPBRG = baudrate;
+
+    TXSTAbits.TXEN = 1;
+
+    PIR1bits.TXIF = 0;
+
+    RCSTAbits.CREN = 1;
+}
+
+void write_char_UART (char *character){
+
+    int i;
+    for (i = 0; character[i] != '\0'; i++){
+        if(TXSTAbits.TRMT == 1){
+
+        TXREG=character[i];
+        _delay((unsigned long)((40)*(8000000/4000000.0)));
+        }
     }
+}
 
-    if (OsciladorInterno == 250)
-    {
-    OSCCONbits.IRCF = 0b0010 ;
-    OSCCONbits.SCS = 1;
-    }
-
-    if (OsciladorInterno == 500)
-    {
-    OSCCONbits.IRCF = 0b0011 ;
-    OSCCONbits.SCS = 1;
-    }
-
-    if (OsciladorInterno == 1)
-    {
-    OSCCONbits.IRCF = 0b0100 ;
-    OSCCONbits.SCS = 1;
-    }
-
-    if (OsciladorInterno == 2)
-    {
-    OSCCONbits.IRCF = 0b0101 ;
-    OSCCONbits.SCS = 1;
-    }
-
-    if (OsciladorInterno == 4)
-    {
-    OSCCONbits.IRCF = 0b0110 ;
-    OSCCONbits.SCS = 1;
-    }
-
-    if (OsciladorInterno == 8)
-    {
-    OSCCONbits.IRCF = 0b0111 ;
-    OSCCONbits.SCS = 1;
-    }
+char read_char_UART(){
+    if(PIR1bits.RCIF == 1){
+            PIR1bits.RCIF = 0;
+            return RCREG;
+            }
 }

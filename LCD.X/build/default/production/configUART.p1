@@ -1,120 +1,70 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"60 main.c
-[; ;main.c: 60: void setup(void);
-[v _setup `(v ~T0 @X0 0 ef ]
-"11 ./configINTOSC.h
-[; ;./configINTOSC.h: 11: void setupINTOSC (int);
-[v _setupINTOSC `(v ~T0 @X0 0 ef1`i ]
-"11 ./configADC.h
-[; ;./configADC.h: 11: void setupADC (uint8_t);
-[v _setupADC `(v ~T0 @X0 0 ef1`uc ]
-"11 ./configUART.h
-[; ;./configUART.h: 11: void configUART_RX(uint16_t baudrate);
-[v _configUART_RX `(v ~T0 @X0 0 ef1`ui ]
-"12
-[; ;./configUART.h: 12: void configUART_TX(uint16_t baudrate);
-[v _configUART_TX `(v ~T0 @X0 0 ef1`ui ]
-"70 ./configLCD_8bits.h
-[; ;./configLCD_8bits.h: 70: void Lcd_Init_8bits(void);
-[v _Lcd_Init_8bits `(v ~T0 @X0 0 ef ]
-"66
-[; ;./configLCD_8bits.h: 66: void Lcd_Clear_8bits(void);
-[v _Lcd_Clear_8bits `(v ~T0 @X0 0 ef ]
-"68
-[; ;./configLCD_8bits.h: 68: void Lcd_Set_Cursor_8bits(char a, char b);
-[v _Lcd_Set_Cursor_8bits `(v ~T0 @X0 0 ef2`uc`uc ]
-"74
-[; ;./configLCD_8bits.h: 74: void Lcd_Write_String_8bits(char *a);
-[v _Lcd_Write_String_8bits `(v ~T0 @X0 0 ef1`*uc ]
-"12 ./configADC.h
-[; ;./configADC.h: 12: void readADC (uint8_t);
-[v _readADC `(v ~T0 @X0 0 ef1`uc ]
-"1239 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1239: extern volatile unsigned char ADRESH __attribute__((address(0x01E)));
-[v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
-"194 C:\Program Files\Microchip\xc8\v2.40\pic\include\c90\stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"72 ./configLCD_8bits.h
-[; ;./configLCD_8bits.h: 72: void Lcd_Write_Char_8bits(char a);
-[v _Lcd_Write_Char_8bits `(v ~T0 @X0 0 ef1`uc ]
-"14 ./configUART.h
-[; ;./configUART.h: 14: char read_char_UART();
-[v _read_char_UART `(uc ~T0 @X0 0 e? ]
-"229 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 229: extern volatile unsigned char PORTB __attribute__((address(0x006)));
-[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
-"3388
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 3388: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
-[v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
-"3450
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 3450: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
-[v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
-"1479
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1479: extern volatile unsigned char TRISB __attribute__((address(0x086)));
-[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
-"1603
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1603: extern volatile unsigned char TRISD __attribute__((address(0x088)));
-[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
-"1665
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1665: extern volatile unsigned char TRISE __attribute__((address(0x089)));
-[v _TRISE `Vuc ~T0 @X0 0 e@137 ]
-"353
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 353: extern volatile unsigned char PORTD __attribute__((address(0x008)));
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
-"415
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 415: extern volatile unsigned char PORTE __attribute__((address(0x009)));
-[v _PORTE `Vuc ~T0 @X0 0 e@9 ]
-"466
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 466:     struct {
-[s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S16 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
-"476
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 476:     struct {
-[s S17 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S17 . . TMR0IF . TMR0IE ]
-"465
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 465: typedef union {
-[u S15 `S16 1 `S17 1 ]
-[n S15 . . . ]
-"483
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 483: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
-[v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
-"1709
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1709:     struct {
-[s S63 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S63 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ]
-"1708
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1708: typedef union {
-[u S62 `S63 1 ]
-[n S62 . . ]
-"1719
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1719: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x08C)));
-[v _PIE1bits `VS62 ~T0 @X0 0 e@140 ]
-"9 main.c
-[p x FOSC  =  INTRC_NOCLKOUT         ]
-"13
-[p x WDTE  =  OFF        ]
-"16
-[p x PWRTE  =  OFF       ]
-"17
-[p x MCLRE  =  OFF       ]
-"20
-[p x CP  =  OFF          ]
-"22
-[p x CPD  =  OFF         ]
-"24
-[p x BOREN  =  OFF       ]
-"25
-[p x IESO  =  OFF        ]
-"27
-[p x FCMEN  =  OFF       ]
-"29
-[p x LVP  =  OFF         ]
-"34
-[p x BOR4V  =  BOR40V    ]
-"36
-[p x WRT  =  OFF         ]
+"2643 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 2643: extern volatile unsigned char SPBRG __attribute__((address(0x099)));
+[v _SPBRG `Vuc ~T0 @X0 0 e@153 ]
+"2563
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 2563:     struct {
+[s S99 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S99 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"2573
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 2573:     struct {
+[s S100 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S100 . TXD8 . nTX8 ]
+"2578
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 2578:     struct {
+[s S101 :6 `uc 1 :1 `uc 1 ]
+[n S101 . . TX8_9 ]
+"2562
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 2562: typedef union {
+[u S98 `S99 1 `S100 1 `S101 1 ]
+[n S98 . . . . ]
+"2583
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 2583: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0x098)));
+[v _TXSTAbits `VS98 ~T0 @X0 0 e@152 ]
+"1045
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1045:     struct {
+[s S37 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S37 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"1055
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1055:     struct {
+[s S38 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S38 . RCD8 . RC9 ]
+"1060
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1060:     struct {
+[s S39 :6 `uc 1 :1 `uc 1 ]
+[n S39 . . nRC8 ]
+"1064
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1064:     struct {
+[s S40 :6 `uc 1 :1 `uc 1 ]
+[n S40 . . RC8_9 ]
+"1044
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1044: typedef union {
+[u S36 `S37 1 `S38 1 `S39 1 `S40 1 ]
+[n S36 . . . . . ]
+"1069
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1069: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0x018)));
+[v _RCSTAbits `VS36 ~T0 @X0 0 e@24 ]
+"544
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 544:     struct {
+[s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S19 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
+"543
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 543: typedef union {
+[u S18 `S19 1 ]
+[n S18 . . ]
+"554
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 554: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
+[v _PIR1bits `VS18 ~T0 @X0 0 e@12 ]
+"1134
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1134: extern volatile unsigned char TXREG __attribute__((address(0x019)));
+[v _TXREG `Vuc ~T0 @X0 0 e@25 ]
+[v F36 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\builtins.h
+[v __delay `JF36 ~T0 @X0 0 e ]
+[p i __delay ]
+"1141 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 1141: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
+[v _RCREG `Vuc ~T0 @X0 0 e@26 ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 55: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -349,289 +299,114 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3547
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h: 3547: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-[v $root$_main `(v ~T0 @X0 0 e ]
-"62 main.c
-[; ;main.c: 62: void main(void) {
-[v _main `(v ~T0 @X0 1 ef ]
+"14 configUART.c
+[; ;configUART.c: 14: void configUART_RX(uint16_t baudrate){
+[v _configUART_RX `(v ~T0 @X0 1 ef1`ui ]
 {
-[e :U _main ]
+[e :U _configUART_RX ]
+[v _baudrate `ui ~T0 @X0 1 r1 ]
 [f ]
-"64
-[; ;main.c: 64:   int OsciladorInterno;
-[v _OsciladorInterno `i ~T0 @X0 1 a ]
-"65
-[; ;main.c: 65:   uint16_t baudrate;
-[v _baudrate `ui ~T0 @X0 1 a ]
-"67
-[; ;main.c: 67:   int NUM = 1;
-[v _NUM `i ~T0 @X0 1 a ]
-[e = _NUM -> 1 `i ]
-"68
-[; ;main.c: 68:   int NUM_U;
-[v _NUM_U `i ~T0 @X0 1 a ]
-"69
-[; ;main.c: 69:   int NUM_D;
-[v _NUM_D `i ~T0 @X0 1 a ]
-"70
-[; ;main.c: 70:   int NUM_C;
-[v _NUM_C `i ~T0 @X0 1 a ]
-"72
-[; ;main.c: 72:   float V1;
-[v _V1 `f ~T0 @X0 1 a ]
-"73
-[; ;main.c: 73:   float V2;
-[v _V2 `f ~T0 @X0 1 a ]
-"75
-[; ;main.c: 75:   char ADC1[3];
-[v _ADC1 `uc ~T0 @X0 -> 3 `i a ]
-"76
-[; ;main.c: 76:   char ADC2[3];
-[v _ADC2 `uc ~T0 @X0 -> 3 `i a ]
-"77
-[; ;main.c: 77:   char CONT[3];
-[v _CONT `uc ~T0 @X0 -> 3 `i a ]
-"79
-[; ;main.c: 79:   setup();
-[e ( _setup ..  ]
-"80
-[; ;main.c: 80:   setupINTOSC(8);
-[e ( _setupINTOSC (1 -> 8 `i ]
-"81
-[; ;main.c: 81:   setupADC(0);
-[e ( _setupADC (1 -> -> 0 `i `uc ]
-"82
-[; ;main.c: 82:   setupADC(1);
-[e ( _setupADC (1 -> -> 1 `i `uc ]
-"83
-[; ;main.c: 83:   configUART_RX(12);
-[e ( _configUART_RX (1 -> -> 12 `i `ui ]
-"84
-[; ;main.c: 84:   configUART_TX(12);
-[e ( _configUART_TX (1 -> -> 12 `i `ui ]
-"85
-[; ;main.c: 85:   Lcd_Init_8bits();
-[e ( _Lcd_Init_8bits ..  ]
-"87
-[; ;main.c: 87:   Lcd_Clear_8bits();
-[e ( _Lcd_Clear_8bits ..  ]
-"88
-[; ;main.c: 88:   Lcd_Set_Cursor_8bits(1,1);
-[e ( _Lcd_Set_Cursor_8bits (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"89
-[; ;main.c: 89:   Lcd_Write_String_8bits("S1:");
-[e ( _Lcd_Write_String_8bits (1 :s 1C ]
-"90
-[; ;main.c: 90:   Lcd_Set_Cursor_8bits(1,7);
-[e ( _Lcd_Set_Cursor_8bits (2 , -> -> 1 `i `uc -> -> 7 `i `uc ]
-"91
-[; ;main.c: 91:   Lcd_Write_String_8bits("S2:");
-[e ( _Lcd_Write_String_8bits (1 :s 2C ]
-"92
-[; ;main.c: 92:   Lcd_Set_Cursor_8bits(1,13);
-[e ( _Lcd_Set_Cursor_8bits (2 , -> -> 1 `i `uc -> -> 13 `i `uc ]
-"93
-[; ;main.c: 93:   Lcd_Write_String_8bits("S3:");
-[e ( _Lcd_Write_String_8bits (1 :s 3C ]
-"95
-[; ;main.c: 95:   while(1)
-[e :U 141 ]
-"96
-[; ;main.c: 96:   {
-{
-"97
-[; ;main.c: 97:       readADC(0);
-[e ( _readADC (1 -> -> 0 `i `uc ]
-"99
-[; ;main.c: 99:       V1 = (ADRESH*5.0)/255;
-[e = _V1 -> / * -> -> _ADRESH `i `d .5.0 -> -> 255 `i `d `f ]
-"101
-[; ;main.c: 101:       sprintf(ADC1, "%.2f", V1);
-[e ( _sprintf (1 , (. , &U _ADC1 :s 4C -> _V1 `d ]
-"102
-[; ;main.c: 102:       Lcd_Set_Cursor_8bits(2,1);
-[e ( _Lcd_Set_Cursor_8bits (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
-"103
-[; ;main.c: 103:       Lcd_Write_String_8bits(ADC1);
-[e ( _Lcd_Write_String_8bits (1 &U _ADC1 ]
-"104
-[; ;main.c: 104:       Lcd_Set_Cursor_8bits(2,5);
-[e ( _Lcd_Set_Cursor_8bits (2 , -> -> 2 `i `uc -> -> 5 `i `uc ]
-"105
-[; ;main.c: 105:       Lcd_Write_Char_8bits('V');
-[e ( _Lcd_Write_Char_8bits (1 -> -> 86 `ui `uc ]
-"107
-[; ;main.c: 107:       readADC(1);
-[e ( _readADC (1 -> -> 1 `i `uc ]
-"109
-[; ;main.c: 109:       V2 = (ADRESH*5.0)/255;
-[e = _V2 -> / * -> -> _ADRESH `i `d .5.0 -> -> 255 `i `d `f ]
-"111
-[; ;main.c: 111:       sprintf(ADC2, "%.2f", V2);
-[e ( _sprintf (1 , (. , &U _ADC2 :s 5C -> _V2 `d ]
-"112
-[; ;main.c: 112:       Lcd_Set_Cursor_8bits(2,7);
-[e ( _Lcd_Set_Cursor_8bits (2 , -> -> 2 `i `uc -> -> 7 `i `uc ]
-"113
-[; ;main.c: 113:       Lcd_Write_String_8bits(ADC2);
-[e ( _Lcd_Write_String_8bits (1 &U _ADC2 ]
-"114
-[; ;main.c: 114:       Lcd_Set_Cursor_8bits(2,11);
-[e ( _Lcd_Set_Cursor_8bits (2 , -> -> 2 `i `uc -> -> 11 `i `uc ]
-"115
-[; ;main.c: 115:       Lcd_Write_Char_8bits('V');
-[e ( _Lcd_Write_Char_8bits (1 -> -> 86 `ui `uc ]
-"117
-[; ;main.c: 117:       char signo = read_char_UART();
-[v _signo `uc ~T0 @X0 1 a ]
-[e = _signo ( _read_char_UART ..  ]
-"119
-[; ;main.c: 119:       if (signo == '+')
-[e $ ! == -> _signo `ui -> 43 `ui 143  ]
-"120
-[; ;main.c: 120:         {
-{
-"121
-[; ;main.c: 121:             NUM++;
-[e ++ _NUM -> 1 `i ]
-"122
-[; ;main.c: 122:             signo = ' ';
-[e = _signo -> -> 32 `ui `uc ]
-"123
-[; ;main.c: 123:         }
+"16
+[; ;configUART.c: 16:     SPBRG = baudrate;
+[e = _SPBRG -> _baudrate `uc ]
+"18
+[; ;configUART.c: 18:     TXSTAbits.SYNC = 0;
+[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
+"19
+[; ;configUART.c: 19:     RCSTAbits.SPEN = 1;
+[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
+"20
+[; ;configUART.c: 20: }
+[e :UE 138 ]
 }
-[e $U 144  ]
-"124
-[; ;main.c: 124:         else if (signo == '-')
-[e :U 143 ]
-[e $ ! == -> _signo `ui -> 45 `ui 145  ]
-"125
-[; ;main.c: 125:         {
+"22
+[; ;configUART.c: 22: void configUART_TX(uint16_t baudrate){
+[v _configUART_TX `(v ~T0 @X0 1 ef1`ui ]
 {
-"126
-[; ;main.c: 126:             NUM--;
-[e -- _NUM -> 1 `i ]
-"127
-[; ;main.c: 127:             signo = ' ';
-[e = _signo -> -> 32 `ui `uc ]
-"128
-[; ;main.c: 128:         }
-}
-[e :U 145 ]
-[e :U 144 ]
-"130
-[; ;main.c: 130:       PORTB = NUM;
-[e = _PORTB -> _NUM `uc ]
-"132
-[; ;main.c: 132:       if (NUM < 0)
-[e $ ! < _NUM -> 0 `i 146  ]
-"133
-[; ;main.c: 133:       {
-{
-"134
-[; ;main.c: 134:           NUM = 0;
-[e = _NUM -> 0 `i ]
-"135
-[; ;main.c: 135:       }
-}
-[e :U 146 ]
-"137
-[; ;main.c: 137:       NUM_C = (NUM/100);
-[e = _NUM_C / _NUM -> 100 `i ]
-"138
-[; ;main.c: 138:       NUM_D = (NUM/10)%10;
-[e = _NUM_D % / _NUM -> 10 `i -> 10 `i ]
-"139
-[; ;main.c: 139:       NUM_U = NUM%10;
-[e = _NUM_U % _NUM -> 10 `i ]
-"141
-[; ;main.c: 141:       sprintf(CONT, "%.d", NUM_C);
-[e ( _sprintf (1 , (. , &U _CONT :s 6C _NUM_C ]
-"142
-[; ;main.c: 142:       Lcd_Set_Cursor_8bits(2,13);
-[e ( _Lcd_Set_Cursor_8bits (2 , -> -> 2 `i `uc -> -> 13 `i `uc ]
-"143
-[; ;main.c: 143:       Lcd_Write_String_8bits(CONT);
-[e ( _Lcd_Write_String_8bits (1 &U _CONT ]
-"145
-[; ;main.c: 145:       sprintf(CONT, "%.d", NUM_D);
-[e ( _sprintf (1 , (. , &U _CONT :s 7C _NUM_D ]
-"146
-[; ;main.c: 146:       Lcd_Set_Cursor_8bits(2,14);
-[e ( _Lcd_Set_Cursor_8bits (2 , -> -> 2 `i `uc -> -> 14 `i `uc ]
-"147
-[; ;main.c: 147:       Lcd_Write_String_8bits(CONT);
-[e ( _Lcd_Write_String_8bits (1 &U _CONT ]
-"149
-[; ;main.c: 149:       sprintf(CONT, "%.d", NUM_U);
-[e ( _sprintf (1 , (. , &U _CONT :s 8C _NUM_U ]
-"150
-[; ;main.c: 150:       Lcd_Set_Cursor_8bits(2,15);
-[e ( _Lcd_Set_Cursor_8bits (2 , -> -> 2 `i `uc -> -> 15 `i `uc ]
-"151
-[; ;main.c: 151:       Lcd_Write_String_8bits(CONT);
-[e ( _Lcd_Write_String_8bits (1 &U _CONT ]
-"152
-[; ;main.c: 152:   }
-}
-[e :U 140 ]
-[e $U 141  ]
-[e :U 142 ]
-"153
-[; ;main.c: 153:     return;
-[e $UE 139  ]
-"154
-[; ;main.c: 154: }
+[e :U _configUART_TX ]
+[v _baudrate `ui ~T0 @X0 1 r1 ]
+[f ]
+"23
+[; ;configUART.c: 23:     SPBRG = baudrate;
+[e = _SPBRG -> _baudrate `uc ]
+"25
+[; ;configUART.c: 25:     TXSTAbits.TXEN = 1;
+[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
+"27
+[; ;configUART.c: 27:     PIR1bits.TXIF = 0;
+[e = . . _PIR1bits 0 4 -> -> 0 `i `uc ]
+"29
+[; ;configUART.c: 29:     RCSTAbits.CREN = 1;
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+"30
+[; ;configUART.c: 30: }
 [e :UE 139 ]
 }
-"159
-[; ;main.c: 159: void setup (void){
-[v _setup `(v ~T0 @X0 1 ef ]
+"32
+[; ;configUART.c: 32: void write_char_UART (char *character){
+[v _write_char_UART `(v ~T0 @X0 1 ef1`*uc ]
 {
-[e :U _setup ]
+[e :U _write_char_UART ]
+[v _character `*uc ~T0 @X0 1 r1 ]
 [f ]
-"161
-[; ;main.c: 161:     ANSEL = 0;
-[e = _ANSEL -> -> 0 `i `uc ]
-"162
-[; ;main.c: 162:     ANSELH = 0;
-[e = _ANSELH -> -> 0 `i `uc ]
-"164
-[; ;main.c: 164:     TRISB = 0;
-[e = _TRISB -> -> 0 `i `uc ]
-"166
-[; ;main.c: 166:     TRISD = 0;
-[e = _TRISD -> -> 0 `i `uc ]
-"167
-[; ;main.c: 167:     TRISE = 0;
-[e = _TRISE -> -> 0 `i `uc ]
-"169
-[; ;main.c: 169:     PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
-"171
-[; ;main.c: 171:     PORTD = 0;
-[e = _PORTD -> -> 0 `i `uc ]
-"172
-[; ;main.c: 172:     PORTE = 0;
-[e = _PORTE -> -> 0 `i `uc ]
-"175
-[; ;main.c: 175:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"176
-[; ;main.c: 176:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"177
-[; ;main.c: 177:     PIE1bits.RCIE = 1;
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
-"178
-[; ;main.c: 178: }
-[e :UE 147 ]
+"34
+[; ;configUART.c: 34:     int i;
+[v _i `i ~T0 @X0 1 a ]
+"35
+[; ;configUART.c: 35:     for (i = 0; character[i] != '\0'; i++){
+{
+[e = _i -> 0 `i ]
+[e $U 144  ]
+[e :U 141 ]
+{
+"36
+[; ;configUART.c: 36:         if(TXSTAbits.TRMT == 1){
+[e $ ! == -> . . _TXSTAbits 0 1 `i -> 1 `i 145  ]
+{
+"38
+[; ;configUART.c: 38:         TXREG=character[i];
+[e = _TXREG -> *U + _character * -> _i `x -> -> # *U _character `i `x `uc ]
+"39
+[; ;configUART.c: 39:         _delay((unsigned long)((40)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"40
+[; ;configUART.c: 40:         }
 }
-[p f _sprintf 8462464 ]
-[a 4C 37 46 50 102 0 ]
-[a 5C 37 46 50 102 0 ]
-[a 6C 37 46 100 0 ]
-[a 7C 37 46 100 0 ]
-[a 8C 37 46 100 0 ]
-[a 3C 83 51 58 0 ]
-[a 2C 83 50 58 0 ]
-[a 1C 83 49 58 0 ]
+[e :U 145 ]
+"41
+[; ;configUART.c: 41:     }
+}
+[e ++ _i -> 1 `i ]
+[e :U 144 ]
+[e $ != -> *U + _character * -> _i `x -> -> # *U _character `i `x `ui -> 0 `ui 141  ]
+[e :U 142 ]
+}
+"42
+[; ;configUART.c: 42: }
+[e :UE 140 ]
+}
+"44
+[; ;configUART.c: 44: char read_char_UART(){
+[v _read_char_UART `(uc ~T0 @X0 1 ef ]
+{
+[e :U _read_char_UART ]
+[f ]
+"45
+[; ;configUART.c: 45:     if(PIR1bits.RCIF == 1){
+[e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 147  ]
+{
+"46
+[; ;configUART.c: 46:             PIR1bits.RCIF = 0;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+"47
+[; ;configUART.c: 47:             return RCREG;
+[e ) -> _RCREG `uc ]
+[e $UE 146  ]
+"48
+[; ;configUART.c: 48:             }
+}
+[e :U 147 ]
+"49
+[; ;configUART.c: 49: }
+[e :UE 146 ]
+}

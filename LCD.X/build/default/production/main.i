@@ -2772,7 +2772,7 @@ extern int printf(const char *, ...);
 
 # 1 "./configINTOSC.h" 1
 # 11 "./configINTOSC.h"
-void setupINTOSC (int valor);
+void setupINTOSC (int);
 # 45 "main.c" 2
 
 # 1 "./configADC.h" 1
@@ -2780,6 +2780,14 @@ void setupINTOSC (int valor);
 void setupADC (uint8_t);
 void readADC (uint8_t);
 # 46 "main.c" 2
+
+# 1 "./configUART.h" 1
+# 11 "./configUART.h"
+void configUART_RX(uint16_t baudrate);
+void configUART_TX(uint16_t baudrate);
+void write_char_UART(char *character);
+char read_char_UART();
+# 47 "main.c" 2
 
 # 1 "./configLCD_4bits.h" 1
 # 46 "./configLCD_4bits.h"
@@ -2800,7 +2808,7 @@ void Lcd_Write_String_4bits(char *a);
 void Lcd_Shift_Right_4bits(void);
 
 void Lcd_Shift_Left_4bits(void);
-# 47 "main.c" 2
+# 48 "main.c" 2
 
 # 1 "./configLCD_8bits.h" 1
 # 62 "./configLCD_8bits.h"
@@ -2821,24 +2829,33 @@ void Lcd_Write_String_8bits(char *a);
 void Lcd_Shift_Right_8bits(void);
 
 void Lcd_Shift_Left_8bits(void);
-# 48 "main.c" 2
-# 59 "main.c"
+# 49 "main.c" 2
+# 60 "main.c"
 void setup(void);
 
 void main(void) {
 
   int OsciladorInterno;
+  uint16_t baudrate;
+
+  int NUM = 1;
+  int NUM_U;
+  int NUM_D;
+  int NUM_C;
 
   float V1;
   float V2;
 
   char ADC1[3];
   char ADC2[3];
+  char CONT[3];
 
   setup();
   setupINTOSC(8);
   setupADC(0);
   setupADC(1);
+  configUART_RX(12);
+  configUART_TX(12);
   Lcd_Init_8bits();
 
   Lcd_Clear_8bits();
@@ -2847,7 +2864,7 @@ void main(void) {
   Lcd_Set_Cursor_8bits(1,7);
   Lcd_Write_String_8bits("S2:");
   Lcd_Set_Cursor_8bits(1,13);
-  Lcd_Write_String_8bits("CONT.");
+  Lcd_Write_String_8bits("S3:");
 
   while(1)
   {
@@ -2858,6 +2875,8 @@ void main(void) {
       sprintf(ADC1, "%.2f", V1);
       Lcd_Set_Cursor_8bits(2,1);
       Lcd_Write_String_8bits(ADC1);
+      Lcd_Set_Cursor_8bits(2,5);
+      Lcd_Write_Char_8bits('V');
 
       readADC(1);
 
@@ -2866,6 +2885,44 @@ void main(void) {
       sprintf(ADC2, "%.2f", V2);
       Lcd_Set_Cursor_8bits(2,7);
       Lcd_Write_String_8bits(ADC2);
+      Lcd_Set_Cursor_8bits(2,11);
+      Lcd_Write_Char_8bits('V');
+
+      char signo = read_char_UART();
+
+      if (signo == '+')
+        {
+            NUM++;
+            signo = ' ';
+        }
+        else if (signo == '-')
+        {
+            NUM--;
+            signo = ' ';
+        }
+
+      PORTB = NUM;
+
+      if (NUM < 0)
+      {
+          NUM = 0;
+      }
+
+      NUM_C = (NUM/100);
+      NUM_D = (NUM/10)%10;
+      NUM_U = NUM%10;
+
+      sprintf(CONT, "%.d", NUM_C);
+      Lcd_Set_Cursor_8bits(2,13);
+      Lcd_Write_String_8bits(CONT);
+
+      sprintf(CONT, "%.d", NUM_D);
+      Lcd_Set_Cursor_8bits(2,14);
+      Lcd_Write_String_8bits(CONT);
+
+      sprintf(CONT, "%.d", NUM_U);
+      Lcd_Set_Cursor_8bits(2,15);
+      Lcd_Write_String_8bits(CONT);
   }
     return;
 }
@@ -2879,12 +2936,17 @@ void setup (void){
     ANSELH = 0;
 
     TRISB = 0;
-    TRISC = 0;
+
     TRISD = 0;
     TRISE = 0;
 
     PORTB = 0;
-    PORTC = 0;
+
     PORTD = 0;
     PORTE = 0;
+
+
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    PIE1bits.RCIE = 1;
 }

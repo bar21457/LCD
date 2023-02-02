@@ -79,17 +79,21 @@
 [v _Lcd_Write_Char_8bits Lcd_Write_Char_8bits `(v  1 e 1 0 ]
 "115
 [v _Lcd_Write_String_8bits Lcd_Write_String_8bits `(v  1 e 1 0 ]
-"61 C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+"14 C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configUART.c
+[v _configUART_RX configUART_RX `(v  1 e 1 0 ]
+"22
+[v _configUART_TX configUART_TX `(v  1 e 1 0 ]
+"44
+[v _read_char_UART read_char_UART `(uc  1 e 1 0 ]
+"62 C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"109
+"159
 [v _setup setup `(v  1 e 1 0 ]
 "229 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-"291
-[v _PORTC PORTC `VEuc  1 e 1 @7 ]
 "353
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
-[s S93 . 1 `uc 1 RD0 1 0 :1:0 
+[s S186 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -99,27 +103,81 @@
 `uc 1 RD7 1 0 :1:7 
 ]
 "370
-[u S102 . 1 `S93 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES102  1 e 1 @8 ]
+[u S195 . 1 `S186 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES195  1 e 1 @8 ]
 "415
 [v _PORTE PORTE `VEuc  1 e 1 @9 ]
-[s S340 . 1 `uc 1 RE0 1 0 :1:0 
+[s S433 . 1 `uc 1 RE0 1 0 :1:0 
 `uc 1 RE1 1 0 :1:1 
 `uc 1 RE2 1 0 :1:2 
 `uc 1 RE3 1 0 :1:3 
 ]
 "428
-[u S345 . 1 `S340 1 . 1 0 ]
-[v _PORTEbits PORTEbits `VES345  1 e 1 @9 ]
+[u S438 . 1 `S433 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES438  1 e 1 @9 ]
+[s S94 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"483
+[s S103 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S108 . 1 `S94 1 . 1 0 `S103 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES108  1 e 1 @11 ]
+[s S553 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"554
+[u S561 . 1 `S553 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES561  1 e 1 @12 ]
+[s S509 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"1069
+[s S518 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S522 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S525 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S528 . 1 `S509 1 . 1 0 `S518 1 . 1 0 `S522 1 . 1 0 `S525 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES528  1 e 1 @24 ]
+"1134
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1141
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
 "1239
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
-[s S194 . 1 `uc 1 ADON 1 0 :1:0 
+[s S287 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1277
-[s S199 . 1 `uc 1 . 1 0 :1:0 
+[s S292 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -128,15 +186,15 @@
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S208 . 1 `uc 1 . 1 0 :1:0 
+[s S301 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S211 . 1 `uc 1 . 1 0 :1:0 
+[s S304 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[u S214 . 1 `S194 1 . 1 0 `S199 1 . 1 0 `S208 1 . 1 0 `S211 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES214  1 e 1 @31 ]
-[s S152 . 1 `uc 1 TRISA0 1 0 :1:0 
+[u S307 . 1 `S287 1 . 1 0 `S292 1 . 1 0 `S301 1 . 1 0 `S304 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES307  1 e 1 @31 ]
+[s S245 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -146,42 +204,72 @@
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "1434
-[u S161 . 1 `S152 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES161  1 e 1 @133 ]
+[u S254 . 1 `S245 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES254  1 e 1 @133 ]
 "1479
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-"1541
-[v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1603
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1665
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
-[s S295 . 1 `uc 1 SCS 1 0 :1:0 
+[s S126 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"1719
+[u S134 . 1 `S126 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES134  1 e 1 @140 ]
+[s S388 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 ]
 "1883
-[s S301 . 1 `uc 1 . 1 0 :4:0 
+[s S394 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S306 . 1 `S295 1 . 1 0 `S301 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES306  1 e 1 @143 ]
-[s S240 . 1 `uc 1 . 1 0 :4:0 
+[u S399 . 1 `S388 1 . 1 0 `S394 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES399  1 e 1 @143 ]
+[s S472 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2583
+[s S481 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S485 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S488 . 1 `S472 1 . 1 0 `S481 1 . 1 0 `S485 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES488  1 e 1 @152 ]
+"2643
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+[s S333 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 VCFG0 1 0 :1:4 
 `uc 1 VCFG1 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "2992
-[u S246 . 1 `S240 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES246  1 e 1 @159 ]
+[u S339 . 1 `S333 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES339  1 e 1 @159 ]
 "3388
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
-[s S173 . 1 `uc 1 ANS0 1 0 :1:0 
+[s S266 . 1 `uc 1 ANS0 1 0 :1:0 
 `uc 1 ANS1 1 0 :1:1 
 `uc 1 ANS2 1 0 :1:2 
 `uc 1 ANS3 1 0 :1:3 
@@ -191,8 +279,8 @@
 `uc 1 ANS7 1 0 :1:7 
 ]
 "3405
-[u S182 . 1 `S173 1 . 1 0 ]
-[v _ANSELbits ANSELbits `VES182  1 e 1 @392 ]
+[u S275 . 1 `S266 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES275  1 e 1 @392 ]
 "3450
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
 "3592
@@ -203,34 +291,46 @@
 [v __powers_ _powers_ `DC[13]d  1 e 52 0 ]
 "39
 [v __npowers_ _npowers_ `DC[13]d  1 e 52 0 ]
-"61 C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+"62 C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"66
-[v main@V2 V2 `f  1 a 4 43 ]
-"65
-[v main@V1 V1 `f  1 a 4 39 ]
+"117
+[v main@signo signo `uc  1 a 1 55 ]
+"73
+[v main@V2 V2 `f  1 a 4 39 ]
+"72
+[v main@V1 V1 `f  1 a 4 35 ]
+"77
+[v main@CONT CONT `[3]uc  1 a 3 56 ]
+"76
+[v main@ADC2 ADC2 `[3]uc  1 a 3 52 ]
+"75
+[v main@ADC1 ADC1 `[3]uc  1 a 3 49 ]
+"67
+[v main@NUM NUM `i  1 a 2 59 ]
+"70
+[v main@NUM_C NUM_C `i  1 a 2 47 ]
 "69
-[v main@ADC2 ADC2 `[3]uc  1 a 3 50 ]
+[v main@NUM_D NUM_D `i  1 a 2 45 ]
 "68
-[v main@ADC1 ADC1 `[3]uc  1 a 3 47 ]
-"104
+[v main@NUM_U NUM_U `i  1 a 2 43 ]
+"154
 } 0
 "505 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
 "533
-[v sprintf@fval fval `d  1 a 4 30 ]
-[u S542 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
-"543
-[v sprintf@tmpval tmpval `S542  1 a 4 23 ]
+[v sprintf@fval fval `d  1 a 4 27 ]
 "545
-[v sprintf@val val `ul  1 a 4 17 ]
+[v sprintf@val val `ul  1 a 4 23 ]
+[u S748 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
+"543
+[v sprintf@tmpval tmpval `S748  1 a 4 19 ]
 "517
-[v sprintf@prec prec `i  1 a 2 28 ]
+[v sprintf@prec prec `i  1 a 2 31 ]
 "534
-[v sprintf@eexp eexp `i  1 a 2 21 ]
+[v sprintf@eexp eexp `i  1 a 2 17 ]
 "525
 [v sprintf@flag flag `us  1 a 2 15 ]
 "512
@@ -241,7 +341,7 @@
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
 [v sprintf@f f `*.24DCuc  1 p 1 0 ]
 "550
-[v sprintf@sp sp `*.4uc  1 a 1 27 ]
+[v sprintf@sp sp `*.4uc  1 a 1 33 ]
 "1567
 } 0
 "433
@@ -250,31 +350,31 @@
 [v scale@scl scl `c  1 a 1 wreg ]
 [v scale@scl scl `c  1 a 1 wreg ]
 "436
-[v scale@scl scl `c  1 a 1 48 ]
+[v scale@scl scl `c  1 a 1 46 ]
 "449
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
-[v ___awmod@sign sign `uc  1 a 1 6 ]
-[v ___awmod@counter counter `uc  1 a 1 5 ]
+[v ___awmod@sign sign `uc  1 a 1 1 ]
+[v ___awmod@counter counter `uc  1 a 1 0 ]
 "5
-[v ___awmod@divisor divisor `i  1 p 2 0 ]
-[v ___awmod@dividend dividend `i  1 p 2 2 ]
+[v ___awmod@divisor divisor `i  1 p 2 9 ]
+[v ___awmod@dividend dividend `i  1 p 2 11 ]
 "34
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
 "10
-[v ___awdiv@quotient quotient `i  1 a 2 2 ]
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
 "11
-[v ___awdiv@sign sign `uc  1 a 1 1 ]
-[v ___awdiv@counter counter `uc  1 a 1 0 ]
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
 "5
-[v ___awdiv@divisor divisor `i  1 p 2 7 ]
-[v ___awdiv@dividend dividend `i  1 p 2 9 ]
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
 "41
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\isdigit.c
@@ -292,7 +392,7 @@
 [v fround@prec prec `uc  1 a 1 wreg ]
 [v fround@prec prec `uc  1 a 1 wreg ]
 "421
-[v fround@prec prec `uc  1 a 1 49 ]
+[v fround@prec prec `uc  1 a 1 47 ]
 "426
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
@@ -320,26 +420,26 @@
 "8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S740 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S946 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S745 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S748 . 4 `l 1 i 4 0 `d 1 f 4 0 `S740 1 fAsBytes 4 0 `S745 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S748  1 a 4 24 ]
+[s S951 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S954 . 4 `l 1 i 4 0 `d 1 f 4 0 `S946 1 fAsBytes 4 0 `S951 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S954  1 a 4 22 ]
 "12
-[v ___flmul@grs grs `ul  1 a 4 18 ]
-[s S817 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[v ___flmul@grs grs `ul  1 a 4 16 ]
+[s S1023 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S820 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S817 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S820  1 a 2 28 ]
+[u S1026 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1023 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1026  1 a 2 26 ]
 "10
-[v ___flmul@bexp bexp `uc  1 a 1 23 ]
+[v ___flmul@bexp bexp `uc  1 a 1 21 ]
 "11
-[v ___flmul@aexp aexp `uc  1 a 1 22 ]
+[v ___flmul@aexp aexp `uc  1 a 1 20 ]
 "9
-[v ___flmul@sign sign `uc  1 a 1 17 ]
+[v ___flmul@sign sign `uc  1 a 1 15 ]
 "8
-[v ___flmul@b b `d  1 p 4 4 ]
-[v ___flmul@a a `d  1 p 4 8 ]
+[v ___flmul@b b `d  1 p 4 2 ]
+[v ___flmul@a a `d  1 p 4 6 ]
 "205
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul8_16.c
@@ -433,33 +533,33 @@
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
 "45
-[v ___fltol@exp1 exp1 `uc  1 a 1 58 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 57 ]
+[v ___fltol@exp1 exp1 `uc  1 a 1 56 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 55 ]
 "43
-[v ___fltol@f1 f1 `d  1 p 4 49 ]
+[v ___fltol@f1 f1 `d  1 p 4 47 ]
 "70
 } 0
 "242 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\sprcadd.c
 [v ___flsub __flsub `(d  1 e 4 0 ]
 {
-[v ___flsub@a a `d  1 p 4 70 ]
-[v ___flsub@b b `d  1 p 4 74 ]
+[v ___flsub@a a `d  1 p 4 68 ]
+[v ___flsub@b b `d  1 p 4 72 ]
 "250
 } 0
 "10
 [v ___fladd __fladd `(d  1 e 4 0 ]
 {
 "17
-[v ___fladd@grs grs `uc  1 a 1 69 ]
+[v ___fladd@grs grs `uc  1 a 1 67 ]
 "15
-[v ___fladd@bexp bexp `uc  1 a 1 68 ]
+[v ___fladd@bexp bexp `uc  1 a 1 66 ]
 "16
-[v ___fladd@aexp aexp `uc  1 a 1 67 ]
+[v ___fladd@aexp aexp `uc  1 a 1 65 ]
 "13
-[v ___fladd@signs signs `uc  1 a 1 66 ]
+[v ___fladd@signs signs `uc  1 a 1 64 ]
 "10
-[v ___fladd@b b `d  1 p 4 50 ]
-[v ___fladd@a a `d  1 p 4 54 ]
+[v ___fladd@b b `d  1 p 4 48 ]
+[v ___fladd@a a `d  1 p 4 52 ]
 "237
 } 0
 "15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\flneg.c
@@ -497,10 +597,15 @@
 [v setupADC@canal canal `uc  1 a 1 1 ]
 "47
 } 0
-"109 C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
+"159 C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"123
+"178
+} 0
+"44 C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configUART.c
+[v _read_char_UART read_char_UART `(uc  1 e 1 0 ]
+{
+"49
 } 0
 "49 C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configADC.c
 [v _readADC readADC `(v  1 e 1 0 ]
@@ -511,24 +616,36 @@
 [v readADC@canal canal `uc  1 a 1 2 ]
 "75
 } 0
+"22 C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configUART.c
+[v _configUART_TX configUART_TX `(v  1 e 1 0 ]
+{
+[v configUART_TX@baudrate baudrate `ui  1 p 2 0 ]
+"30
+} 0
+"14
+[v _configUART_RX configUART_RX `(v  1 e 1 0 ]
+{
+[v configUART_RX@baudrate baudrate `ui  1 p 2 0 ]
+"20
+} 0
 "8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 {
 "21
-[v ___fldiv@grs grs `ul  1 a 4 50 ]
+[v ___fldiv@grs grs `ul  1 a 4 48 ]
 "22
-[v ___fldiv@rem rem `ul  1 a 4 43 ]
+[v ___fldiv@rem rem `ul  1 a 4 41 ]
 "20
-[v ___fldiv@new_exp new_exp `i  1 a 2 48 ]
+[v ___fldiv@new_exp new_exp `i  1 a 2 46 ]
 "19
-[v ___fldiv@aexp aexp `uc  1 a 1 55 ]
+[v ___fldiv@aexp aexp `uc  1 a 1 53 ]
 "18
-[v ___fldiv@bexp bexp `uc  1 a 1 54 ]
+[v ___fldiv@bexp bexp `uc  1 a 1 52 ]
 "16
-[v ___fldiv@sign sign `uc  1 a 1 47 ]
+[v ___fldiv@sign sign `uc  1 a 1 45 ]
 "8
-[v ___fldiv@a a `d  1 p 4 30 ]
-[v ___fldiv@b b `d  1 p 4 34 ]
+[v ___fldiv@a a `d  1 p 4 28 ]
+[v ___fldiv@b b `d  1 p 4 32 ]
 "185
 } 0
 "115 C:\Users\byron\OneDrive\Documents\GitHub\LCD\LCD.X\configLCD_8bits.c

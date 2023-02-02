@@ -44,6 +44,7 @@
 #include <stdio.h>
 #include "configINTOSC.h"
 #include "configADC.h"
+#include "configUART.h"
 #include "configLCD_4bits.h"
 #include "configLCD_8bits.h"
 
@@ -61,17 +62,26 @@ void setup(void);
 void main(void) {
     
   int OsciladorInterno;
+  uint16_t baudrate;
+  
+  int NUM = 1;
+  int NUM_U;
+  int NUM_D;
+  int NUM_C;
   
   float V1;
   float V2;
   
   char ADC1[3];
   char ADC2[3];
+  char CONT[3];
   
   setup();
   setupINTOSC(8);
   setupADC(0);
   setupADC(1);
+  configUART_RX(12);
+  configUART_TX(12);
   Lcd_Init_8bits();
   
   Lcd_Clear_8bits();
@@ -80,7 +90,7 @@ void main(void) {
   Lcd_Set_Cursor_8bits(1,7);
   Lcd_Write_String_8bits("S2:");
   Lcd_Set_Cursor_8bits(1,13);
-  Lcd_Write_String_8bits("CONT.");
+  Lcd_Write_String_8bits("S3:");
   
   while(1)
   {
@@ -91,6 +101,8 @@ void main(void) {
       sprintf(ADC1, "%.2f", V1);
       Lcd_Set_Cursor_8bits(2,1);
       Lcd_Write_String_8bits(ADC1);
+      Lcd_Set_Cursor_8bits(2,5);
+      Lcd_Write_Char_8bits('V');
       
       readADC(1);
       
@@ -99,6 +111,44 @@ void main(void) {
       sprintf(ADC2, "%.2f", V2);
       Lcd_Set_Cursor_8bits(2,7);
       Lcd_Write_String_8bits(ADC2);
+      Lcd_Set_Cursor_8bits(2,11);
+      Lcd_Write_Char_8bits('V');
+      
+      char signo = read_char_UART();
+      
+      if (signo == '+') 
+        {
+            NUM++;
+            signo = ' ';
+        } 
+        else if (signo == '-') 
+        {
+            NUM--;
+            signo = ' ';
+        }
+      
+      PORTB = NUM;
+      
+      if (NUM < 0)
+      {
+          NUM = 0;
+      }
+      
+      NUM_C = (NUM/100);
+      NUM_D = (NUM/10)%10;
+      NUM_U = NUM%10;
+      
+      sprintf(CONT, "%.d", NUM_C);
+      Lcd_Set_Cursor_8bits(2,13);
+      Lcd_Write_String_8bits(CONT);
+      
+      sprintf(CONT, "%.d", NUM_D);
+      Lcd_Set_Cursor_8bits(2,14);
+      Lcd_Write_String_8bits(CONT);
+      
+      sprintf(CONT, "%.d", NUM_U);
+      Lcd_Set_Cursor_8bits(2,15);
+      Lcd_Write_String_8bits(CONT);
   }
     return;
 }
@@ -112,12 +162,17 @@ void setup (void){
     ANSELH = 0;
     
     TRISB = 0;              //Configuración del PORTB como input
-    TRISC = 0;              //Configuración del PORTC como output
+//    TRISC = 0;              //Configuración del PORTC como output
     TRISD = 0;              //Configuración del PORTD como output
     TRISE = 0;              //Configuración del PORTE como output
     
     PORTB = 0;              //Limpiamos el PORTB
-    PORTC = 0;              //Limpiamos el PORTC
+//    PORTC = 0;              //Limpiamos el PORTC
     PORTD = 0;              //Limpiamos el PORTD
     PORTE = 0;              //Limpiamos el PORTD
+    
+    // Configuración de interrupciones
+    INTCONbits.GIE = 1; // Habilitamos interrupciones globales
+    INTCONbits.PEIE = 1; // Habilitamos interrupciones periféricas
+    PIE1bits.RCIE = 1; // Habilitamos interrupciones UART
 }

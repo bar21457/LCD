@@ -8,6 +8,6 @@
 #ifndef CONFIGINTOSC_H
 #define	CONFIGINTOSC_H
 
-void setupINTOSC (int valor);
+void setupINTOSC (int);
 
 #endif	/* CONFIGINTOSC_H */
