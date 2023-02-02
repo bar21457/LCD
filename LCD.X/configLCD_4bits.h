@@ -5,8 +5,8 @@
  * Created on January 26, 2023, 10:59 PM
  */
 
-#ifndef CONFIGLCD_H
-#define	CONFIGLCD_H
+#ifndef CONFIGLCD_4BITS_H
+#define	CONFIGLCD_4BITS_H
 
 // This is a guard condition so that contents of this file are not included
 // more than once.  
@@ -61,4 +61,4 @@ void Lcd_Shift_Right_4bits(void);
 
 void Lcd_Shift_Left_4bits(void);
 
-#endif	/* CONFIGLCD_H */
+#endif	/* CONFIGLCD_4BITS_H */

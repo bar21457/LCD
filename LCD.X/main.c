@@ -45,6 +45,7 @@
 #include "configINTOSC.h"
 #include "configADC.h"
 #include "configLCD_4bits.h"
+#include "configLCD_8bits.h"
 
 #define _XTAL_FREQ 8000000
 
@@ -71,15 +72,15 @@ void main(void) {
   setupINTOSC(8);
   setupADC(0);
   setupADC(1);
-  Lcd_Init_4bits();
+  Lcd_Init_8bits();
   
-  Lcd_Clear_4bits();
-  Lcd_Set_Cursor_4bits(1,1);
-  Lcd_Write_String_4bits("S1:");
-  Lcd_Set_Cursor_4bits(1,7);
-  Lcd_Write_String_4bits("S2:");
-  Lcd_Set_Cursor_4bits(1,13);
-  Lcd_Write_String_4bits("CONT.");
+  Lcd_Clear_8bits();
+  Lcd_Set_Cursor_8bits(1,1);
+  Lcd_Write_String_8bits("S1:");
+  Lcd_Set_Cursor_8bits(1,7);
+  Lcd_Write_String_8bits("S2:");
+  Lcd_Set_Cursor_8bits(1,13);
+  Lcd_Write_String_8bits("CONT.");
   
   while(1)
   {
@@ -88,16 +89,16 @@ void main(void) {
       V1 = (ADRESH*5.0)/255;
       
       sprintf(ADC1, "%.2f", V1);
-      Lcd_Set_Cursor_4bits(2,1);
-      Lcd_Write_String_4bits(ADC1);
+      Lcd_Set_Cursor_8bits(2,1);
+      Lcd_Write_String_8bits(ADC1);
       
       readADC(1);
       
       V2 = (ADRESH*5.0)/255;
       
       sprintf(ADC2, "%.2f", V2);
-      Lcd_Set_Cursor_4bits(2,7);
-      Lcd_Write_String_4bits(ADC2);
+      Lcd_Set_Cursor_8bits(2,7);
+      Lcd_Write_String_8bits(ADC2);
   }
     return;
 }

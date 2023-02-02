@@ -7,6 +7,7 @@
       <itemPath>configLCD_4bits.h</itemPath>
       <itemPath>configINTOSC.h</itemPath>
       <itemPath>configADC.h</itemPath>
+      <itemPath>configLCD_8bits.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -19,6 +20,7 @@
       <itemPath>configLCD_4bits.c</itemPath>
       <itemPath>configADC.c</itemPath>
       <itemPath>configINTOSC.c</itemPath>
+      <itemPath>configLCD_8bits.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

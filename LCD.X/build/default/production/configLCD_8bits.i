@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "configLCD_8bits.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,43 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
+# 1 "configLCD_8bits.c" 2
 
-
-
-
-
-
-
-
-#pragma config FOSC = INTRC_NOCLKOUT
-
-
-
-#pragma config WDTE = OFF
-
-
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-
-
-#pragma config CP = OFF
-
-#pragma config CPD = OFF
-
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-
-#pragma config FCMEN = OFF
-
-#pragma config LVP = OFF
-
-
-
-
-#pragma config BOR4V = BOR40V
-
-#pragma config WRT = OFF
 
 
 
@@ -2666,141 +2631,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 2 3
-# 42 "main.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdint.h" 1 3
-# 43 "main.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdio.h" 1 3
-
-
-
-# 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\__size_t.h" 1 3
-
-
-
-typedef unsigned size_t;
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdio.h" 2 3
-
-# 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\__null.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdio.h" 2 3
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdarg.h" 1 3
-
-
-
-
-
-
-typedef void * va_list[1];
-
-#pragma intrinsic(__va_start)
-extern void * __va_start(void);
-
-#pragma intrinsic(__va_arg)
-extern void * __va_arg(void *, ...);
-# 11 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdio.h" 2 3
-# 43 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdio.h" 3
-struct __prbuf
-{
- char * ptr;
- void (* func)(char);
-};
-# 85 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\conio.h" 1 3
-
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\errno.h" 1 3
-# 29 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\errno.h" 3
-extern int errno;
-# 8 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\conio.h" 2 3
-
-
-
-
-extern void init_uart(void);
-
-extern char getch(void);
-extern char getche(void);
-extern void putch(char);
-extern void ungetch(char);
-
-extern __bit kbhit(void);
-
-
-
-extern char * cgets(char *);
-extern void cputs(const char *);
-# 85 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdio.h" 2 3
-
-
-
-extern int cprintf(char *, ...);
-#pragma printf_check(cprintf)
-
-
-
-extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-# 180 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdio.h" 3
-#pragma printf_check(vprintf) const
-#pragma printf_check(vsprintf) const
-
-extern char * gets(char *);
-extern int puts(const char *);
-extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
-extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
-extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
-extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
-extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
-extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
-
-#pragma printf_check(printf) const
-#pragma printf_check(sprintf) const
-extern int sprintf(char *, const char *, ...);
-extern int printf(const char *, ...);
-# 44 "main.c" 2
-
-# 1 "./configINTOSC.h" 1
-# 11 "./configINTOSC.h"
-void setupINTOSC (int valor);
-# 45 "main.c" 2
-
-# 1 "./configADC.h" 1
-# 11 "./configADC.h"
-void setupADC (uint8_t);
-void readADC (uint8_t);
-# 46 "main.c" 2
-
-# 1 "./configLCD_4bits.h" 1
-# 46 "./configLCD_4bits.h"
-void Lcd_Port_4bits(char a);
-
-void Lcd_Cmd_4bits(char a);
-
-void Lcd_Clear_4bits(void);
-
-void Lcd_Set_Cursor_4bits(char a, char b);
-
-void Lcd_Init_4bits(void);
-
-void Lcd_Write_Char_4bits(char a);
-
-void Lcd_Write_String_4bits(char *a);
-
-void Lcd_Shift_Right_4bits(void);
-
-void Lcd_Shift_Left_4bits(void);
-# 47 "main.c" 2
+# 8 "configLCD_8bits.c" 2
 
 # 1 "./configLCD_8bits.h" 1
 # 62 "./configLCD_8bits.h"
@@ -2821,70 +2652,123 @@ void Lcd_Write_String_8bits(char *a);
 void Lcd_Shift_Right_8bits(void);
 
 void Lcd_Shift_Left_8bits(void);
-# 48 "main.c" 2
-# 59 "main.c"
-void setup(void);
+# 9 "configLCD_8bits.c" 2
 
-void main(void) {
 
-  int OsciladorInterno;
+void Lcd_Port_8bits(char a) {
+    if (a & 1)
+        PORTDbits.RD0 = 1;
+    else
+        PORTDbits.RD0 = 0;
 
-  float V1;
-  float V2;
+    if (a & 2)
+        PORTDbits.RD1 = 1;
+    else
+        PORTDbits.RD1 = 0;
 
-  char ADC1[3];
-  char ADC2[3];
+    if (a & 4)
+        PORTDbits.RD2 = 1;
+    else
+        PORTDbits.RD2 = 0;
 
-  setup();
-  setupINTOSC(8);
-  setupADC(0);
-  setupADC(1);
-  Lcd_Init_8bits();
+    if (a & 8)
+        PORTDbits.RD3 = 1;
+    else
+        PORTDbits.RD3 = 0;
 
-  Lcd_Clear_8bits();
-  Lcd_Set_Cursor_8bits(1,1);
-  Lcd_Write_String_8bits("S1:");
-  Lcd_Set_Cursor_8bits(1,7);
-  Lcd_Write_String_8bits("S2:");
-  Lcd_Set_Cursor_8bits(1,13);
-  Lcd_Write_String_8bits("CONT.");
+    if (a & 16)
+        PORTDbits.RD4 = 1;
+    else
+        PORTDbits.RD4 = 0;
 
-  while(1)
-  {
-      readADC(0);
+    if (a & 32)
+        PORTDbits.RD5 = 1;
+    else
+        PORTDbits.RD5 = 0;
 
-      V1 = (ADRESH*5.0)/255;
+    if (a & 64)
+        PORTDbits.RD6 = 1;
+    else
+        PORTDbits.RD6 = 0;
 
-      sprintf(ADC1, "%.2f", V1);
-      Lcd_Set_Cursor_8bits(2,1);
-      Lcd_Write_String_8bits(ADC1);
-
-      readADC(1);
-
-      V2 = (ADRESH*5.0)/255;
-
-      sprintf(ADC2, "%.2f", V2);
-      Lcd_Set_Cursor_8bits(2,7);
-      Lcd_Write_String_8bits(ADC2);
-  }
-    return;
+    if (a & 128)
+        PORTDbits.RD7 = 1;
+    else
+        PORTDbits.RD7 = 0;
 }
 
+void Lcd_Cmd_8bits(char a) {
+    PORTEbits.RE0 = 0;
+    Lcd_Port_8bits(a);
+    PORTEbits.RE1 = 1;
+    _delay((unsigned long)((4)*(8000000/4000.0)));
+    PORTEbits.RE1 = 0;
+}
+
+void Lcd_Clear_8bits(void) {
+    Lcd_Cmd_8bits(0x01);
+}
+
+void Lcd_Set_Cursor_8bits(char a, char b) {
+    char temp;
+    if (a == 1) {
+        temp = 0x80 + b - 1;
 
 
 
-void setup (void){
 
-    ANSEL = 0;
-    ANSELH = 0;
+        Lcd_Cmd_8bits(temp);
+    } else if (a == 2) {
+        temp = 0xC0 + b - 1;
 
-    TRISB = 0;
-    TRISC = 0;
-    TRISD = 0;
-    TRISE = 0;
 
-    PORTB = 0;
-    PORTC = 0;
-    PORTD = 0;
-    PORTE = 0;
+
+
+        Lcd_Cmd_8bits(temp);
+    }
+}
+
+void Lcd_Init_8bits(void) {
+    Lcd_Port_8bits(0x00);
+    _delay((unsigned long)((110)*(8000000/4000.0)));
+    Lcd_Cmd_8bits(0x30);
+    _delay((unsigned long)((5)*(8000000/4000.0)));
+    Lcd_Cmd_8bits(0x30);
+    _delay((unsigned long)((20)*(8000000/4000000.0)));
+    Lcd_Cmd_8bits(0x30);
+    _delay((unsigned long)((20)*(8000000/4000000.0)));
+
+    Lcd_Cmd_8bits(0x38);
+    _delay((unsigned long)((55)*(8000000/4000000.0)));
+    Lcd_Cmd_8bits(0x08);
+    _delay((unsigned long)((55)*(8000000/4000000.0)));
+    Lcd_Cmd_8bits(0x01);
+    _delay((unsigned long)((55)*(8000000/4000000.0)));
+    Lcd_Cmd_8bits(0x06);
+    Lcd_Cmd_8bits(0x0C);
+}
+
+void Lcd_Write_Char_8bits(char a) {
+
+
+
+    PORTEbits.RE0 = 1;
+    Lcd_Port_8bits(a);
+    PORTEbits.RE1 = 1;
+    _delay((unsigned long)((40)*(8000000/4000000.0)));
+    PORTEbits.RE1 = 0;
+}
+
+void Lcd_Write_String_8bits(char *a) {
+    int i;
+    for (i = 0; a[i] != '\0'; i++)
+        Lcd_Write_Char_8bits(a[i]);
+}
+
+void Lcd_Shift_Right_8bits(void) {
+    Lcd_Cmd_8bits(0x1C);
+}
+
+void Lcd_Shift_Left_8bits(void) {
+    Lcd_Cmd_8bits(0x18);
 }
